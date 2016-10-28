@@ -9,4 +9,5 @@ def palindrome(num):
 				return False
 		return True
 		
-print(palindrome(9009))
+a=0
+b=0
