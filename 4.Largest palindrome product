@@ -8,6 +8,10 @@ def palindrome(num):
 			if(wrd[x]!=wrd[len(wrd)-(x+1)]):
 				return False
 		return True
-		
-a=0
-b=0
+
+top=0
+for a in range(1000):
+	for b in range(1000):
+		if(palindrome(a*b) and a*b>=top):
+			top=a*b
+print(top)
