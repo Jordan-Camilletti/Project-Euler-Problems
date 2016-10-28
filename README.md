@@ -1,2 +1,2 @@
 # Project-Euler-Problems
-These are my code chunks that I used to solve project euler problems
+These are my python code chunks that I used to solve project euler problems
