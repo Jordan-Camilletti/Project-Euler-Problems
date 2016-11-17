@@ -9,6 +9,4 @@ def pythag(a,b,c):
     return True
   return False
 
-a=3;b=4;c=5
-if(pythag(a,b,c)):
-  print(a+b+c)
+//WORK ON THIS LATER
