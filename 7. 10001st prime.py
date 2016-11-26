@@ -9,7 +9,7 @@ def isPrime(n):
 
 tot=0
 num=1
-while(tot<6):
+while(tot<10001):
     num+=1
     if(isPrime(num)):
         tot+=1
