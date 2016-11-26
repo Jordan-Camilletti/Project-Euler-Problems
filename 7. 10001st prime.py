@@ -13,5 +13,4 @@ while(tot<10001):
     num+=1
     if(isPrime(num)):
         tot+=1
-print(tot)
 print(num)
