@@ -6,3 +6,13 @@ def isPrime(n):
         if(n%(x+2)==0):
             return False
     return True
+
+tot=0
+num=1
+while(tot<6):
+    num+=1
+    if(isPrime(num)):
+        tot+=1
+        print(num)
+print(tot)
+print(num)
