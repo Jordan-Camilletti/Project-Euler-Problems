@@ -9,14 +9,8 @@ def pythag(a,b,c):
     return True
   return False
   
-c=4
-b=3
-a=2
-while(c<=335):
-	c+=1
-	while(b<c):
-		b+=1
-		while(a<b):
-			a+=1
-			if(a,b,c):
+for c in range(1000):
+	for b in range(c):
+		for a in range(b):
+			if(pythag(a,b,c) and a+b+c==1000):
 				print(a*b*c)
