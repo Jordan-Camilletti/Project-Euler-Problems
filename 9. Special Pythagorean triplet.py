@@ -9,15 +9,14 @@ def pythag(a,b,c):
     return True
   return False
   
-a=4
+c=4
 b=3
-c=2
-while(a<=335):
-	a+=1
-	while(b<a):
+a=2
+while(c<=335):
+	c+=1
+	while(b<c):
 		b+=1
-		while(c<b):
-			c+=1
-			print("c:",c)
-			print("b:",b)
-			print("a:",a)
+		while(a<b):
+			a+=1
+			if(a,b,c):
+				print(a*b*c)
