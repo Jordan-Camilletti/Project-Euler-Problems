@@ -23,10 +23,11 @@ def phi(n):
 			tot=tot+1
     return(tot)
     
-top=0
-n=0
-for nem in range(9):
-    num=nem+2
+top=4
+n=210
+num=1
+while(num<10):
+    num+=1
     p=phi(num)
     if(num/p>top):
         top=num/p
