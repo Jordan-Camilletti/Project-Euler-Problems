@@ -25,9 +25,9 @@ def phi(n):
     
 top=4
 n=210
-num=1
-while(num<10):
-    num+=1
+num=2
+while(num<1000000):
+    num+=2
     p=phi(num)
     if(num/p>top):
         top=num/p
