@@ -30,3 +30,5 @@ while(True):
 	if(divisor(n)>5):
 		print(n)
 		break
+
+		9541896	4367
