@@ -10,12 +10,18 @@ It can be seen that this sequence (starting at 13 and finishing at 1) contains 1
 
 Which starting number, under one million, produces the longest chain?"""
 
-n=13
-tot=1
-while(n!=1):
-	tot+=1
-	if(n%2==0):
-		n=n/2
-	else:
-		n=(3*n)+1
-print(tot)
+topn=0
+top=0
+for n1 in range(1000000):
+	n=n1+1
+	tot=1
+	while(n!=1):
+		tot+=1
+		if(n%2==0):
+			n=n/2
+		else:
+			n=(3*n)+1
+	if(tot>top):
+		top=tot
+		topn=n1+1
+print(topn)
