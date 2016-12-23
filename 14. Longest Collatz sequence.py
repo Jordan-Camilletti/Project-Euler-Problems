@@ -12,7 +12,7 @@ Which starting number, under one million, produces the longest chain?"""
 
 topn=0
 top=0
-for n1 in range(1000000):
+for n1 in range(999999):
 	n=n1+1
 	tot=1
 	while(n!=1):
