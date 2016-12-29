@@ -4,4 +4,5 @@ What is the sum of the digits of the number 2^1000?"""
 str=str(2**15)
 tot=0
 for x in str:
-	print(x)
+	tot=tot+int(x)
+print(tot)
