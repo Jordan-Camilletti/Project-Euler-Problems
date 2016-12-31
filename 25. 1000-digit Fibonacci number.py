@@ -19,9 +19,9 @@ The 12th term, F12, is the first term to contain three digits.
 
 What is the index of the first term in the Fibonacci sequence to contain 1000 digits?"""
 
-a=0
-b=1
-x=0
+a=1
+b=0
+x=1
 while(True):
   x+=1
   if(x%2==0):
@@ -32,4 +32,4 @@ while(True):
     a+=b
     if(len(str(a))==1000):
       break
-print(x+1)
+print(x)
