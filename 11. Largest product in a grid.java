@@ -1,11 +1,21 @@
 /**/
 
-	public static int test(String arr[]){
+	public static int horizontal(String arr[]){
 		int total=0;
 		int top=0;
-		Integer.parseInt(arr[0]);
 		for(int x=0;x<=16;x++){
 			total=(Integer.parseInt(arr[x]))*Integer.parseInt(arr[x+1])*Integer.parseInt(arr[x+2])*Integer.parseInt(arr[x+3]);
+			if(total>=top){
+				top=total;
+			}
+		}
+		return top;
+	}
+	public static int vertical(String arr1[], String arr2[], String arr3[], String arr4[]){
+		int total=0;
+		int top=0;
+		for(int x=0;x<=19;x++){
+			total=(Integer.parseInt(arr1[x])*Integer.parseInt(arr2[x])*Integer.parseInt(arr3[x])*Integer.parseInt(arr4[x]));
 			if(total>=top){
 				top=total;
 			}
@@ -19,9 +29,9 @@
 		String row04[]="52 70 95 23 04 60 11 42 69 24 68 56 01 32 56 71 37 02 36 91".split(" ");
 		String row05[]="22 31 16 71 51 67 63 89 41 92 36 54 22 40 40 28 66 33 13 80".split(" ");
 		String row06[]="24 47 32 60 99 03 45 02 44 75 33 53 78 36 84 20 35 17 12 50".split(" ");
-		String row07[]="32 98 81 28 64 23 67 10 26 38 40 67 59 54 70 66 18 38 64 70".split(" ");
+		String row07[]="32 98 81 28 64 23 67 10 26 38 40 67 59 54 70 66 18 38 64 70".split(" ");//Vertical:  51267216
 		String row08[]="67 26 20 68 02 62 12 20 95 63 94 39 63 08 40 91 66 49 94 21".split(" ");
-		String row09[]="24 55 58 05 66 73 99 26 97 17 78 78 96 83 14 88 34 89 63 72".split(" ");//sideways:48477312
+		String row09[]="24 55 58 05 66 73 99 26 97 17 78 78 96 83 14 88 34 89 63 72".split(" ");//Horizontal:48477312
 		String row10[]="21 36 23 09 75 00 76 44 20 45 35 14 00 61 33 97 34 31 33 95".split(" ");
 		String row11[]="78 17 53 28 22 75 31 67 15 94 03 80 04 62 16 14 09 53 56 92".split(" ");
 		String row12[]="16 39 05 42 96 35 31 47 55 58 88 24 00 17 54 24 36 29 85 57".split(" ");
@@ -33,6 +43,4 @@
 		String row18[]="20 69 36 41 72 30 23 88 34 62 99 69 82 67 59 85 74 04 36 16".split(" ");
 		String row19[]="20 73 35 29 78 31 90 01 74 31 49 71 48 86 81 16 23 57 05 54".split(" ");
 		String row20[]="01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48".split(" ");
-		System.out.print(test(row09)+"\n");
-		System.out.print(test(row20));
 	}
