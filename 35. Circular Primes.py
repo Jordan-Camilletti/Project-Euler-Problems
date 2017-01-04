@@ -19,6 +19,6 @@ def rotate(num):
 	return True
 	
 total=0
-for x in range(99):
+for x in range(1000000):
 	if(rotate(x+2)): total+=1
 print(total)
