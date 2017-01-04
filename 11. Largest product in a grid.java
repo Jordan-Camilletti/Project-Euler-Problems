@@ -1,5 +1,4 @@
-"""
-"""
+/**/
 
 	public static int test(String arr[]){
 		int total=0;
