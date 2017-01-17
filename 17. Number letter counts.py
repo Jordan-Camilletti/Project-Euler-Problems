@@ -9,8 +9,8 @@ for i in range(1,1000):
     ones=i%10 
     tens=int(((i%100)-ones)/10)
     hundreds=int(((i%1000)-(tens*10)-ones)/100)
-    c = i % 10
-    b = ((i % 100) - c) / 10
+    c=i%10
+    b=((i%100)-c)/10
     if(hundreds!=0):
         total+=onesLen[hundreds]+7
         if(tens!=0 or ones!=0): 
