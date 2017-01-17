@@ -8,9 +8,9 @@ def num(starting):
 	while(i>=0):
 		i-=1
 		if(length-i==1 or length-i==4 or length-i==7):
-			wrd=tens[int(str(starting)[i])]+place[length-i-1]+wrd
+			wrd=tens[int(str(starting)[i])]+place[length-i-2]+wrd
 		else:
-			wrd=ones[int(str(starting)[i])]+place[length-i-1]+wrd
+			wrd=ones[int(str(starting)[i])]+place[length-i-2]+wrd
 	print(wrd)
 
 num(1)
