@@ -8,9 +8,15 @@ month=[31,28,31,30,31,30,31,31,30,31,30,31]
 leapMonth=[31,29,31,30,31,30,31,31,30,31,30,31]
 count=0
 day=0
-for n in month:
-    for x in range(n):
-        day+=1
-        if((day+1)%7==0):
-            count+=1
+for i in range(100):
+    year=i+190
+    if(leapYear(year)):
+        useMonth=leapMonth
+    else:
+        useMonth=month
+    for mon in useMonth:
+        for x in range(mon):
+            day+=1
+            if((day+1)%7==0):
+                count+=1
 print(count)
