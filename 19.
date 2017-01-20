@@ -14,9 +14,9 @@ for i in range(100):
         useMonth=leapMonth
     else:
         useMonth=month
-    for mon in useMonth:
+    for mon in month:
         for x in range(mon):
             day+=1
-            if((day+1)%7==0):
+            if((day+1)%7==0 and x==0):
                 count+=1
 print(count)
