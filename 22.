@@ -64,7 +64,7 @@ f=open("names.txt")
 next=f.read(1)
 wrd=""
 place=1
-while(next != "="):
+while(next != "="):#I put '=' at the end of the file to mark the end
 	if(next==","):
 		print(nameScore(wrd)*place)
 		wrd=""
