@@ -51,7 +51,7 @@ def alph(letter):
 		return 25
 	elif(letter=="Z"):
 		return 26
-	elif(letter=='"'):
+	elif(letter=='"' or letter==","):
 		return 0
 
 def nameScore(name):
@@ -63,7 +63,11 @@ def nameScore(name):
 f=open("names.txt")
 next=f.read(1)
 wrd=""
-while(next != ","):
+place=1
+while(next != "="):
+	if(next==","):
+		print(nameScore(wrd)*place)
+		wrd=""
+		place+=1
 	wrd+=next
 	next=f.read(1)
-print(nameScore(wrd))
