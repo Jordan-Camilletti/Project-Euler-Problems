@@ -66,9 +66,9 @@ place=1
 with open('namesCopy.txt','r') as r:
     for line in sorted(r):
         for n in line:
-                print(n)
                 wrd+=n
         total+=(nameScore(wrd)*place)
+        print(wrd+"has score of ",nameScore(wrd)," pos ",place," sco ",(nameScore(wrd)*place))
         place+=1
         wrd=""
 print(total)
