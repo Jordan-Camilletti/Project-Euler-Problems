@@ -55,19 +55,21 @@ def alph(letter):
 		return 0
 
 def nameScore(name):
-	total=0
+	tot=0
 	for x in name:
-		total=total+alph(x)
-	return total
+		tot+=alph(x)
+	return tot
 	
 f=open("names.txt")
 next=f.read(1)
 wrd=""
 place=1
+total=0
 while(next != "="):#I put '=' at the end of the file to mark the end
 	if(next==","):
-		print(nameScore(wrd)*place)
+		total+=(nameScore(wrd)*place)
 		wrd=""
 		place+=1
 	wrd+=next
 	next=f.read(1)
+print(total)
