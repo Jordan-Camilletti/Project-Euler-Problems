@@ -51,29 +51,19 @@ def alph(letter):
 		return 25
 	elif(letter=="Z"):
 		return 26
+	elif(letter=='"'):
+		return 0
 
 def nameScore(name):
 	total=0
 	for x in name:
 		total=total+alph(x)
 	return total
-
-nameExample="COLIN"
-print(nameScore(nameExample))
-
-
-
-////
-f=open("p022_names.txt")
+	
+f=open("names.txt")
 next=f.read(1)
+wrd=""
 while(next != ","):
-	print(next)
+	wrd+=next
 	next=f.read(1)
-////
-This outputes the following:
-"
-M
-A
-R
-Y
-"
+print(nameScore(wrd))
