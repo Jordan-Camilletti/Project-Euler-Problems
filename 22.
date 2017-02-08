@@ -60,7 +60,7 @@ def nameScore(name):
 		tot+=alph(x)
 	return tot
 	
-f=open("names.txt")
+"""f=open("names.txt")
 next=f.read(1)
 wrd=""
 place=1
@@ -72,4 +72,15 @@ while(next != "="):#I put '=' at the end of the file to mark the end
 		place+=1
 	wrd+=next
 	next=f.read(1)
+print(total)"""
+total=0
+wrd=""
+with open('text.txt','r') as r:
+    for line in sorted(r):
+        for n in line:
+                if(n==","):
+                        total+=(nameScore(wrd)*place)
+                        wrd=""
+                        place+=1
+                wrd+=n
 print(total)
