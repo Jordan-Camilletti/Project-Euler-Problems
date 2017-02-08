@@ -57,5 +57,23 @@ def nameScore(name):
 	for x in name:
 		total=total+alph(x)
 	return total
-	
+
 nameExample="COLIN"
+print(nameScore(nameExample))
+
+
+
+////
+f=open("p022_names.txt")
+next=f.read(1)
+while(next != ","):
+	print(next)
+	next=f.read(1)
+////
+This outputes the following:
+"
+M
+A
+R
+Y
+"
