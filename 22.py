@@ -51,36 +51,24 @@ def alph(letter):
 		return 25
 	elif(letter=="Z"):
 		return 26
-	elif(letter=='"' or letter==","):
+	else:
 		return 0
 
 def nameScore(name):
 	tot=0
 	for x in name:
-		tot+=alph(x)
+                tot=tot+alph(x)
 	return tot
 	
-"""f=open("names.txt")
-next=f.read(1)
+total=0
 wrd=""
 place=1
-total=0
-while(next != "="):#I put '=' at the end of the file to mark the end
-	if(next==","):
-		total+=(nameScore(wrd)*place)
-		wrd=""
-		place+=1
-	wrd+=next
-	next=f.read(1)
-print(total)"""
-total=0
-wrd=""
-with open('text.txt','r') as r:
+with open('namesCopy.txt','r') as r:
     for line in sorted(r):
         for n in line:
-                if(n==","):
-                        total+=(nameScore(wrd)*place)
-                        wrd=""
-                        place+=1
+                print(n)
                 wrd+=n
+        total+=(nameScore(wrd)*place)
+        place+=1
+        wrd=""
 print(total)
