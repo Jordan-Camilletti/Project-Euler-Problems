@@ -11,6 +11,5 @@ for x in range(10000):
 	b=div(a)
 	startingNum=x+1
 	if(a==div(b)and a!=b):
-		print(a)
-		total=total+a+b
+		total=total+a
 print(total)
