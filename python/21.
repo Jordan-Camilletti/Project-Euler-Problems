@@ -5,6 +5,8 @@ def div(num):
 			total+=(x+1)
 	return total
 
-startingNum=220
-if(div(startingNum)==div(div(startingNum)) and startingNum!=div(startingNum)):
-	print(startingNum
+for x in range(1000):
+	startingNum=x+1
+	total=0
+	if(startingNum==div(div(startingNum)) and startingNum!=div(startingNum)):
+		total+=(startingNum+div(startingNum))
