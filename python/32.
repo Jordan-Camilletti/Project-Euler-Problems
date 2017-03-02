@@ -12,9 +12,9 @@ def perf(n):#0==deficient, 1==perfect, 2==abundant
 	
 	
 #print(perf(12))
-good=True
 total=0
 for m in range(28124):
+	good=True
 	for n in range((m+1)/2):
 	#print((n+1),(24-(n+1)))
 	#print(perf(n+1),perf(24-(n+1)))
