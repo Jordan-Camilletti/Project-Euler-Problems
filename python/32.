@@ -11,4 +11,7 @@ def perf(n):#0==deficient, 1==perfect, 2==abundant
 	return 2
 	
 	
-print(perf(28))
+#print(perf(12))
+for n in range(29/2):
+	print((n+1),(29-(n+1)))
+	print(perf(n+1),perf(29-(n+1)))
