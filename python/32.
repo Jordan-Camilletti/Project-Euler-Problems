@@ -1,20 +1,18 @@
-"""
-"""
-
-def perf(n):#0==deficient, 1==perfect, 2==abundant
+def perf(n):#False==not abundant, True==abundant
 	total=0
 	for x in range(n/2):
 		if(n%(x+1)==0):
 			total+=(x+1)
-	if(total<n): return 0
-	elif(total==n): return 1
-	return 2
+			if(total>n):
+				return True
+				break
+	return False
 	 
 total=0
 for m in range(28124):
 	good=True
 	for n in range((m+1)/2):
-		if(perf(n+1)+perf((m+1)-(n+1))==4):
+		if(perf(n+1)==perf((m+1)-(n+1)) and perf(n+1)==True):
 			good=False
 			break
 	if(good):
