@@ -1,2 +1,14 @@
 """
 """
+
+def perf(n):#0==deficient, 1==perfect, 2==abundant
+	total=0
+	for x in range(n-1):
+		if(n%(x+1)==0):
+			total+=(x+1)
+	if(total<n): return 0
+	elif(total==n): return 1
+	return 2
+	
+	
+print(perf(28))
