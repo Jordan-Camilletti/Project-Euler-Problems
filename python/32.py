@@ -1,4 +1,5 @@
 def perf(n):#False==not abundant, True==abundant
+	if(n%2!=0 or n%3!=0): return False
 	total=0
 	for x in range(n):
 		if(x>n-x):
@@ -10,7 +11,7 @@ def perf(n):#False==not abundant, True==abundant
 	return False
 	 
 total=0
-for m in range(28124):
+for m in range(20162):
 	total+=(m+1)
 	print(m)
 	for n in range(m+1):
