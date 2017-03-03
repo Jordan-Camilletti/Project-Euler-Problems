@@ -1,6 +1,10 @@
 def perf(n):#False==not abundant, True==abundant
 	total=0
-	for x in range(n/2):
+	if(n%2==0):
+                i=n/2
+        else:
+                i=(n+1)/2
+	for x in range(i):
 		if(n%(x+1)==0):
 			total+=x+1
 			if(total>n):
@@ -11,8 +15,6 @@ total=0
 for m in range(28124):
 	total+=(m+1)
 	for n in range(m+1):
-                if(n>=(m+1)-n):
-			break
 		if(perf((m+1)-(n+1))==True and perf(n+1)==True):
 			total-=(m+1)
 			break
