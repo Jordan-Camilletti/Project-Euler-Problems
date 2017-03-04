@@ -15,5 +15,5 @@ def g(g):
 #print(g(24)==False and g(25)==True and g(36)==False and g(35)==True and g(40)==False and g(41)==True)
 t=0
 for n in range(20161):
-    if(!g(n+1)): t+=n+1
+    if(g(n+1)): t+=n+1
 print(t)
