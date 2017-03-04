@@ -10,6 +10,7 @@ Find the sum of all the positive integers which cannot be written as the sum of 
 #Did it take too long to run? Absolutely
 #Could it be improved and optimised? Absolutely
 #Was it fun to build and mess around with? Absolutely
+
 def a(n):
     t=0
     for x in range(n-1):
