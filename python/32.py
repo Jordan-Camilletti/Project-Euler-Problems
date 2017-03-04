@@ -1,14 +1,10 @@
-def perf(n):#False==not abundant, True==abundant
-	if(n%2!=0 or n%3!=0): return False
-	total=0
-	for x in range(n):
-		if(x>n-x):
-			return False
-		if(n%(x+1)==0):
-			total+=x+1
-			if(total>n):
-				return True
-	return False
+def abundant(n):
+    t=0
+    for x in range(n-1):
+        if(n%(x+1)==0):
+            t+=x+1
+            if(t>n): return True
+    return False
 	 
 total=0
 for m in range(20162):
