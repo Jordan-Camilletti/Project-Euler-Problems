@@ -6,8 +6,10 @@ As 12 is the smallest abundant number, 1 + 2 + 3 + 4 + 6 = 16, the smallest numb
 
 Find the sum of all the positive integers which cannot be written as the sum of two abundant numbers."""
 
-"""
-"""
+#Is this a non-optimal solution? Absolutely
+#Did it take too long to run? Absolutely
+#Could it be improved and optimised? Absolutely
+#Was it fun to build and mess around with? Absolutely
 def a(n):
     t=0
     for x in range(n-1):
