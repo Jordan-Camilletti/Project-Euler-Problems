@@ -1,16 +1,28 @@
 """
 """
 
+def prime(num):
+	for x in range(num-2):
+		if(num%(x+2)==0): return False
+	return True
+
 def endless(num):
 	length=0
-	
-	return length
-
+	for x in range(num):
+		if(prime(x+1)and(x+1!=2 or x+1!=5)):
+			return True
+	return False
+	#return length
+#Num repeates if denominator has prime factor other than 2 or 5 
 d=1
 top=6
 biggest=1
-while(d<1000):
+print(endless(6))
+print(endless(7))
+print(endless(8))
+print(endless(9))
+"""while(d<1000):
 	d+=1
 	if(endless(1/d)>=top):
 		top=endless(1/d)
-		biggest=d
+		biggest=d"""
