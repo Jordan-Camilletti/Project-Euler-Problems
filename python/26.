@@ -1,5 +1,4 @@
-"""
-"""
+""""""
 
 def prime(num):
 	for x in range(num-2):
@@ -16,14 +15,20 @@ def endless(num):
 	return False
 	
 def rep(num):
-	length=0
+	starting=-1
+	while(True):
+		starting+=1
+		length=0
+		while(length<=num-1):
+			length+=1
+			wrd=string(num)[starting:length]
+			if(#wrd is the repeting):
+				return length
 	return length
 	
-d=1
+d=1#the repeting decimal part can't be longer than d-1
 top=6
 biggest=1
-for x in range(9):
-	print(endless(x+2),x+2)
 """while(d<1000):
 	d+=1
 	if(endless(d) and rep(1/d))>=top):
