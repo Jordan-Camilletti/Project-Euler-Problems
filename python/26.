@@ -1,7 +1,6 @@
-"""
-"""
+""""""
 
-"""def prime(num):
+def prime(num):
 	for x in range(num-2):
 		if(num%(x+2)==0): return False
 	return True
@@ -15,34 +14,23 @@ def endless(num):
 			return True
 	return False
 	
-def rep(num):
-	starting=-1
-	while(True):
-		starting+=1
-		length=0
-		while(length<=len(str(num))-1):
-			length+=1
-			wrd=string(num)[starting:length+starting]
-			if(#wrd is the repeting):
-				return length
-	return length
+def rep(d):
+	wrd=1.0/d
+	starting=0
+	length=1
+	while(str(wrd)[starting:length+starting]!=str(wrd)[starting+length:(length*2)+starting]):
+		length+=1
+		if(length>d-1):
+			length=1
+			starting+=1
+	print(length)
 	
 d=1#the repeting decimal part can't be longer than d-1
 top=6
 biggest=1
 while(d<1000):
 	d+=1
-	if(endless(d) and rep(1/d))>=top):
+	if(endless(d) and rep(1/d)>=top):
 		top=endless(1/d)
-		biggest=d"""
-		
-d=7
-wrd=1.0/d
-starting=0
-length=1
-while(str(wrd)[starting:length+starting]!=str(wrd)[starting+length:(length*2)+starting]):
-	length+=1
-	if(length>d-1):
-		length=1
-		starting+=1
-print(length)
+		biggest=d
+print(d)
