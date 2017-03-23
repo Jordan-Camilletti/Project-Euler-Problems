@@ -1,6 +1,6 @@
 """"""
 
-"""def prime(num):
+def prime(num):
 	for x in range(num-2):
 		if(num%(x+2)==0): return False
 	return True
@@ -33,22 +33,4 @@ while(d<1000):
 	d+=1
 	if(endless(d) and rep(1/d))>=top):
 		top=endless(1/d)
-		biggest=d"""
-		
-d=0
-top=0
-best=0
-for x in range(1000):
-	d+=1
-	wrd=1.0/d
-	starting=0
-	length=1
-	while(str(wrd)[starting:length+starting]!=str(wrd)[starting+length:(length*2)+starting]):
-		length+=1
-		if(length>d-1):
-			length=1
-			starting+=1
-	if(length>best):
-		best=length
-		top=d
-print(d)
+		biggest=d
