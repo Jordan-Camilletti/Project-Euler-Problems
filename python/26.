@@ -8,19 +8,20 @@ def prime(num):
 
 def endless(num):
 	length=0
-	for x in range(num):
-		if(prime(x+1)and(x+1!=2 or x+1!=5)):
+	list=[]
+	for x in range(num-1):
+		if(num%(x+2)==0 and prime(x+2)): list.append(x+2)
+	for n in list:
+		if(n!=2 and n!=5):
 			return True
 	return False
 	#return length
-#Num repeates if denominator has prime factor other than 2 or 5 
+	
 d=1
 top=6
 biggest=1
-print(endless(6))
-print(endless(7))
-print(endless(8))
-print(endless(9))
+for x in range(9):
+	print(endless(x+2),x+2)
 """while(d<1000):
 	d+=1
 	if(endless(1/d)>=top):
