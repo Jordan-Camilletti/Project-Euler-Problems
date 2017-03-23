@@ -1,2 +1,16 @@
 """
 """
+
+def endless(num):
+	length=0
+	
+	return length
+
+d=1
+top=6
+biggest=1
+while(d<1000):
+	d+=1
+	if(endless(1/d)>=top):
+		top=endless(1/d)
+		biggest=d
