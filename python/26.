@@ -7,7 +7,6 @@ def prime(num):
 	return True
 
 def endless(num):
-	length=0
 	list=[]
 	for x in range(num-1):
 		if(num%(x+2)==0 and prime(x+2)): list.append(x+2)
@@ -15,7 +14,10 @@ def endless(num):
 		if(n!=2 and n!=5):
 			return True
 	return False
-	#return length
+	
+def rep(num):
+	length=0
+	return length
 	
 d=1
 top=6
@@ -24,6 +26,6 @@ for x in range(9):
 	print(endless(x+2),x+2)
 """while(d<1000):
 	d+=1
-	if(endless(1/d)>=top):
+	if(endless(d) and rep(1/d))>=top):
 		top=endless(1/d)
 		biggest=d"""
