@@ -3,10 +3,8 @@
 
 num=0
 tot=0
-while(score>=num):
-	num+=1
+for x in range(1,100):
 	score=0
-	for n in str(num):
-		score+=(int(n)**5)
-	if(score==num): tot+=score
+	for n in str(x): score+=(int(n)**5)
+	if(score==x): tot+=x
 print(tot)
