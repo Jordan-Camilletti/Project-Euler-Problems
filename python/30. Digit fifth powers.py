@@ -11,7 +11,7 @@ Find the sum of all the numbers that can be written as the sum of fifth powers o
 
 num=0
 tot=0
-for x in range(1,443841):
+for x in range(1,500000):
 	score=0
 	for n in str(x): 
 		score+=(int(n)**5)
