@@ -21,16 +21,10 @@ def rep(num):
 		length=0
 		while(length<=len(str(num))-1):
 			length+=1
-			wrd=string(num)[starting:length+starting]
-			if(#wrd is the repeting):
+			wrd=str(num)[starting:length+starting]
+			if(str(num)[starting:length+starting]==str(num)[starting+length:(2*length)+starting]):
 				return length
-	return length
-	
-d=1#the repeting decimal part can't be longer than d-1
-top=6
-biggest=1
-while(d<1000):
-	d+=1
-	if(endless(d) and rep(1/d))>=top):
-		top=endless(1/d)
-		biggest=d
+				
+for x in range(998):
+	if(endless(x+2)):
+		print(rep(1.0/(x+2)),x+2)
