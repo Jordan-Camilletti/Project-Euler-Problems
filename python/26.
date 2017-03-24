@@ -1,7 +1,8 @@
-""""""
+"""
+"""
 
 from decimal import *
-getcontex().prec=28
+getcontext().prec=28
 def prime(num):
 	for x in range(num-2):
 		if(num%(x+2)==0): return False
@@ -23,20 +24,15 @@ def rep(num):
 		length=0
 		while(length<=len(str(num))-1):
 			length+=1
-			wrd=str(num)[starting:length+starting]
 			if(str(num)[starting:length+starting]==str(num)[starting+length:(2*length)+starting]):
 				return length
 		
 top=0
 longest=0
-for x in range(9):
+for x in range(999):
 	if(endless(x+2)):
-		print(Decimal(rep(1.0/(x+2))),x+2)
-		if(Decimal(rep(1.0/(x+2)))>longest):
-			longest=Decimal(rep(1.0/(x+2)))
+		#print(rep(Decimal(1)/Decimal(x+2)),x+2)
+		if(rep(Decimal(1)/Decimal(x+2))>longest):
+			longest=rep(Decimal(1)/Decimal(x+2))
 			top=x+2
 print(top," is the longest with a chain of ", longest)
-print Decimal((1.0/7)))
-print 1.0/7
-print Decimal((1.0/81))
-print 1.0/81
