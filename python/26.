@@ -1,5 +1,7 @@
 """"""
 
+from decimal import *
+getcontex().prec=28
 def prime(num):
 	for x in range(num-2):
 		if(num%(x+2)==0): return False
@@ -29,8 +31,12 @@ top=0
 longest=0
 for x in range(9):
 	if(endless(x+2)):
-		print(rep(1.0/(x+2)),x+2)
-		if(rep(1.0/(x+2))>longest):
-			longest=rep(1.0/(x+2))
+		print(Decimal(rep(1.0/(x+2))),x+2)
+		if(Decimal(rep(1.0/(x+2)))>longest):
+			longest=Decimal(rep(1.0/(x+2)))
 			top=x+2
 print(top," is the longest with a chain of ", longest)
+print Decimal((1.0/7)))
+print 1.0/7
+print Decimal((1.0/81))
+print 1.0/81
