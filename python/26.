@@ -15,7 +15,7 @@ def endless(num):
 	return False
 	
 def rep(num):
-	starting=-1
+	starting=1
 	while(True):
 		starting+=1
 		length=0
@@ -24,7 +24,13 @@ def rep(num):
 			wrd=str(num)[starting:length+starting]
 			if(str(num)[starting:length+starting]==str(num)[starting+length:(2*length)+starting]):
 				return length
-				
-for x in range(998):
+		
+top=0
+longest=0
+for x in range(9):
 	if(endless(x+2)):
 		print(rep(1.0/(x+2)),x+2)
+		if(rep(1.0/(x+2))>longest):
+			longest=rep(1.0/(x+2))
+			top=x+2
+print(top," is the longest with a chain of ", longest)
