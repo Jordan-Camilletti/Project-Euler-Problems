@@ -1,38 +1,26 @@
 """
 """
 
-from decimal import *
-getcontext().prec=28
 def prime(num):
 	for x in range(num-2):
 		if(num%(x+2)==0): return False
 	return True
-
-def endless(num):
-	list=[]
-	for x in range(num-1):
-		if(num%(x+2)==0 and prime(x+2)): list.append(x+2)
-	for n in list:
-		if(n!=2 and n!=5):
-			return True
-	return False
 	
-def rep(num):
-	starting=1
-	while(True):
-		starting+=1
-		length=0
-		while(length<=len(str(num))-1):
-			length+=1
-			if(str(num)[starting:length+starting]==str(num)[starting+length:(2*length)+starting]):
-				return length
-		
-top=0
-longest=0
-for x in range(999):
-	if(endless(x+2)):
-		#print(rep(Decimal(1)/Decimal(x+2)),x+2)
-		if(rep(Decimal(1)/Decimal(x+2))>longest):
-			longest=rep(Decimal(1)/Decimal(x+2))
-			top=x+2
-print(top," is the longest with a chain of ", longest)
+def rep(n, d):
+    x = n * 9
+    z = x
+    k = 1
+    while z % d:
+        z = z * 10 + x
+        k += 1
+    return k
+	
+longest=7
+chain=6
+for x in range(10,1001):
+	if(prime(x)):
+		if(rep(1,x)>chain):
+			longest=x
+			chain=rep(1,x)
+	
+print(longest," is the longest with a chain of ",chain)
