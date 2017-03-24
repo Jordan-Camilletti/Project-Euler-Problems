@@ -15,6 +15,5 @@ for x in range(1,443841):
 	score=0
 	for n in str(x): 
 		score+=(int(n)**5)
-		if(n=="1"): score-=1
 	if(score==x): tot+=x
-print(tot)
+print(tot-1)
