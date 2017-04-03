@@ -14,3 +14,13 @@ def allPrimes(a, b):
 	return n-1
 	
 print(allPrimes(-79,1601))
+top=0
+topA=0
+topB=0
+for a in range(-1000,1000):
+	for b in range(-1001,1001):
+		if(allPrimes(a,b)>=top):
+			top=allPrimes(a,b)
+			topA=a
+			topB=b
+print(abs(topA)*abs(topB))
