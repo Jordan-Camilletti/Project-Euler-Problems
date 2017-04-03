@@ -1,1 +1,15 @@
 """"
+
+def prime(num):
+	for x in range(num-2):
+		if(num%(x+2)==0): return False
+	return True
+
+def allPrimes(nMax, a, b):
+	for n in range(0, nMax+1):
+		if(prime((n*n)+(a*n)+b)==False): return False
+	return True
+	
+for n in range(0,80):
+	print(prime((n*n)-(n*79)+1601))
+	
