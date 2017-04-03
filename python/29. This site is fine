@@ -1,5 +1,0 @@
-nums=[]
-for a in range(2,6):
-	for b in range(2,6):
-		if(a**b not in nums): nums.append(a**b)
-print(len(nums))
