@@ -2,7 +2,7 @@
 """
 
 def prime(num):
-	for x in range(2,(num/2)+1):
+	for x in range(2,int(num**0.5)+1):
 		if(num%x==0):
 			return False
 	return True
@@ -13,7 +13,7 @@ topB=0
 for a in range(-999,1000):
 	for b in range(-1000,1001):
 		n=0
-		while(prime((n*n)+(a*n)+b)):
+		while(prime(abs((n*n)+(a*n)+b))):
 			n+=1
 		if(n>top):
 			top=n
