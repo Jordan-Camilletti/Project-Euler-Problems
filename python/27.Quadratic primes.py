@@ -11,7 +11,7 @@ n2+an+bn2+an+b, where |a|<1000 and |b|≤1000
 
 where |n| is the modulus/absolute value of nn
 e.g. |11|=11 and |−4|=4
-Find the product of the coefficients, aa and bb, for the quadratic expression that produces the maximum number of primes for consecutive values of nn, starting with n=0."""
+Find the product of the coefficients, a and b, for the quadratic expression that produces the maximum number of primes for consecutive values of nn, starting with n=0."""
 
 def prime(num):
 	for x in range(2,int(num**0.5)+1):
