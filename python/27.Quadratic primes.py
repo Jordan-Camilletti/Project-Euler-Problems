@@ -11,7 +11,7 @@ top=0
 topA=0
 topB=0
 for a in range(-999,1000):
-	for b in range(-1000,1000):
+	for b in range(-1000,1001):
 		n=0
 		while(prime((n*n)+(a*n)+b)):
 			n+=1
@@ -20,4 +20,4 @@ for a in range(-999,1000):
 			topA=a
 			topB=b
 
-print(topA*topB,top)
+print(topA*topB,"top a:",topA, "top b:",topB,top)
