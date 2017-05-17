@@ -20,4 +20,4 @@ for a in range(-999,1000):
 			topA=a
 			topB=b
 
-print(topA*topB)
+print(topA*topB,top)
