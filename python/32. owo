@@ -1,9 +1,10 @@
-/**/
-
-def thingy(num):
+def fac(num):
+	tot=0
 	for n in range(len(str(num))):
-		if str(n+1) not in str(num):
-			return False
-	return True
+		i=1
+		for x in range(int(str(num)[n])):
+			i=i*x
+		tot=tot+i
+	return(tot)
 	
-print(thingy(391867254))
+print(fac(145))
