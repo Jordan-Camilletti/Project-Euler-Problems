@@ -7,4 +7,8 @@ def fac(num):
 		tot=tot+i
 	return(tot)
 	
-print(fac(145))
+total=0
+for x in range(3,10000):
+	if(x==fac(x)):
+		print(x)
+		total=total+x
