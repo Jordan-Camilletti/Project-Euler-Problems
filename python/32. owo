@@ -1,1 +1,9 @@
 /**/
+
+def thingy(num):
+	for n in range(len(str(num))):
+		if str(n+1) not in str(num):
+			return False
+	return True
+	
+print(thingy(391867254))
