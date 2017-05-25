@@ -3,7 +3,7 @@ def fac(num):
 	for n in range(len(str(num))):
 		i=1
 		for x in range(int(str(num)[n])):
-			i=i*x
+			i=i*(x+1)
 		tot=tot+i
 	return(tot)
 	
