@@ -18,7 +18,7 @@ def circ(num):
 	return True
 
 tot=0
-for n in range(2,100):
+for n in range(2,1000000):
 	if(circ(n)):
 		#print(n)
 		tot+=1
