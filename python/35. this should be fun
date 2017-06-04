@@ -1,10 +1,18 @@
 """
 """
 
-num=197
-wrd=str(num)
-currWrd=""
-for x in range(len(wrd)):
-	currWrd=wrd[x:]+wrd[:x]
-	print(currWrd)
-	currWrd=""
+def prime(i):
+	for x in range(2,i):
+		if(i%x==0):
+			return False
+	return True
+
+def circ(num):
+	wrd=str(num)
+	for x in range(len(wrd)):
+		currWrd=""
+		currWrd=wrd[x:]+wrd[:x]
+		#print(currWrd)
+		if not(prime(int(currWrd))):
+			return False
+	return True
