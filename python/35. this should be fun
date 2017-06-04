@@ -1,3 +1,10 @@
 """
 """
 
+num=197
+wrd=str(num)
+currWrd=""
+for x in range(len(wrd)):
+	currWrd=wrd[x:]+wrd[:x]
+	print(currWrd)
+	currWrd=""
