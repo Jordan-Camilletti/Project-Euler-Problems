@@ -16,7 +16,7 @@ def cancel(n,d):
 			newD=str(d).replace(w,"")
 	return(int(newN)/int(newD)==n/d)
 
-x=49
-y=98
-if(haveSim(x,y)):
-	print(cancel(x,y))
+for y in range(10,101):
+	for x in range(10,y):
+		if(haveSim(x,y)):
+			print(cancel(x,y))
