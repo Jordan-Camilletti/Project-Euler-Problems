@@ -25,8 +25,7 @@ totX=1
 totY=1
 for y in range(10,100):
 	for x in range(10,y):
-		if(haveSim(x,y)):
-			if(cancel(x,y)):
-				totX=totX*x
-				totY=totY*y
+		if(haveSim(x,y) and cancel(x,y)):
+			totX=totX*x
+			totY=totY*y
 print(totX,totY)
