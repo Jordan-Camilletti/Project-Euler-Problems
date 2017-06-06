@@ -14,9 +14,12 @@ def cancel(n,d):
 		if(w in str(d)):
 			newN=str(n).replace(w,"")
 			newD=str(d).replace(w,"")
-	if(int(newN)==0 or int(newD)==0):
-		return False
-	return(float(int(newN)/int(newD))==float(n/d))
+	try:
+		return(float(int(newN)/int(newD))==float(n/d))
+	except ValueError:
+		return(False)
+	except ZeroDivisionError:
+		return(False)
 
 for y in range(10,100):
 	for x in range(10,y):
