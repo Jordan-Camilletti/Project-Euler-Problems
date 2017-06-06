@@ -3,12 +3,20 @@
 
 def haveSim(n, d):
 	for w in str(n):
-		if(w in str(d)):
+		if(w in str(d) and int(w)!=0):
 			return True
 	return False
 
-"""def cancel(n,d):
-	for x in str(n):
-		if(not x in str(d)):
-			d"""
-print(haveSim(49,98))
+def cancel(n,d):
+	newN=""
+	newD=""
+	for w in str(n):
+		if(w in str(d)):
+			newN=str(n).replace(w,"")
+			newD=str(d).replace(w,"")
+	return(int(newN)/int(newD)==n/d)
+
+x=49
+y=98
+if(haveSim(x,y)):
+	print(cancel(x,y))
