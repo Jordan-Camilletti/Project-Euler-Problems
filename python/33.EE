@@ -19,4 +19,5 @@ def cancel(n,d):
 for y in range(10,101):
 	for x in range(10,y):
 		if(haveSim(x,y)):
-			print(cancel(x,y))
+			if(cancel(x,y)):
+				print(x,y)
