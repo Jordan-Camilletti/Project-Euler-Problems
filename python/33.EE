@@ -21,8 +21,12 @@ def cancel(n,d):
 	except ZeroDivisionError:
 		return(False)
 
+totX=1
+totY=1
 for y in range(10,100):
 	for x in range(10,y):
 		if(haveSim(x,y)):
 			if(cancel(x,y)):
-				print(x,y)
+				totX=totX*x
+				totY=totY*y
+print(totX,totY)
