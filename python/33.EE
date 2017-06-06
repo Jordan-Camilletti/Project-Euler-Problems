@@ -14,9 +14,11 @@ def cancel(n,d):
 		if(w in str(d)):
 			newN=str(n).replace(w,"")
 			newD=str(d).replace(w,"")
-	return(int(newN)/int(newD)==n/d)
+	if(int(newN)==0 or int(newD)==0):
+		return False
+	return(float(int(newN)/int(newD))==float(n/d))
 
-for y in range(10,101):
+for y in range(10,100):
 	for x in range(10,y):
 		if(haveSim(x,y)):
 			if(cancel(x,y)):
