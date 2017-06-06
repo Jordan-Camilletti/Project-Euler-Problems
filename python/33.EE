@@ -1,0 +1,14 @@
+"""
+"""
+
+def haveSim(n, d):
+	for w in str(n):
+		if(w in str(d)):
+			return True
+	return False
+
+"""def cancel(n,d):
+	for x in str(n):
+		if(not x in str(d)):
+			d"""
+print(haveSim(49,98))
