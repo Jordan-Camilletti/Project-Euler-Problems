@@ -1,1 +1,18 @@
 /**/
+
+def palindrome(num):
+	wrd=str(num)
+	if(len(wrd)%2==0):
+		for x in range(int(len(wrd)/2)):
+			if(wrd[x]!=wrd[-(x+1)]):
+				return False
+		return True
+	else:
+		
+print(palindrome(1221))
+print(palindrome(123321))
+print(palindrome(12344321))
+print(palindrome(1234554321))
+print(palindrome(12332416))
+wrd="123321"
+print(len(wrd)%2==0)
