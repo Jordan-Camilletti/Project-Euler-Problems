@@ -23,4 +23,5 @@ while(count<11):
 	if(trun(num)):
 		count+=1
 		tot+=num
+		print(num)
 print(tot)
