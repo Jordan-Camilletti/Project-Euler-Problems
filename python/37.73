@@ -1,2 +1,17 @@
 """
 """
+
+def isPrime(num):
+	for x in range(num-2):
+		if(num%(x+2)==0):
+			return False
+	return True
+
+def trun(num):
+	word=str(num)
+	for n in range(len(word)):
+		if(not isPrime(int(word[n:])) or not isPrime(int(word[:n+1]))):
+			return False
+	return True
+
+print(trun(3797))
