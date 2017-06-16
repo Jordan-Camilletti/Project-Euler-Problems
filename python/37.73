@@ -11,7 +11,7 @@ def isPrime(num):
 
 def trun(num):
 	word=str(num)
-	if("0" in word or "2" in word or "4" in word or "6" in word or "8" in word):
+	if("0" in word or "4" in word or "6" in word or "8" in word):
 		return False
 	for x in range(len(word)):
 		if(isPrime(int(word[x:]))==False or isPrime(int(word[:x+1]))==False):
@@ -25,5 +25,4 @@ while(count<11):
 	if(trun(num)):
 		count+=1
 		tot+=num
-		print(num)
 print(tot)
