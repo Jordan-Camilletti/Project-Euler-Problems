@@ -2,6 +2,8 @@
 """
 
 def isPrime(num):
+	if(num==1 or num==0):
+		return False
 	for x in range(num-2):
 		if(num%(x+2)==0):
 			return False
@@ -9,19 +11,16 @@ def isPrime(num):
 
 def trun(num):
 	word=str(num)
-	for n in range(len(word)):
-		if(not isPrime(int(word[n:])) or not isPrime(int(word[:n+1]))):
+	for x in range(len(word)):
+		if(isPrime(int(word[x:]))==False or isPrime(int(word[:x+1]))==False):
 			return False
 	return True
-
 count=0
+num=9
 tot=0
-curr=9
-while(True):
-	curr+=2
-	if(trun(curr)):
-		tot+=curr
+while(count<11):
+	num+=2
+	if(trun(num)):
 		count+=1
-	if(count==11):
-		break
+		tot+=num
 print(tot)
