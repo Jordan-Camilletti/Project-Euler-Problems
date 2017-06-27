@@ -11,9 +11,9 @@ def thing(num,n):
 		if(str(x) not in wrd): return 0
 	return int(wrd)
 
-num=1
-n=2
-topPan=0
+num=9
+n=4
+topPan=918273645
 while(num<=987654321):
 	n+=1
 	if(thing(num,n)>topPan):
