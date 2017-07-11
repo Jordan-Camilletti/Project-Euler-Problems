@@ -1,0 +1,11 @@
+"""
+"""
+
+def py(a,b,c,p):
+	if(a+b+c!=p): return False
+	return((a*a)+(b*b)==(c*c))
+
+scores=[]
+for p in range(1001):
+	scores.append(0)
+	
