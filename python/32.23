@@ -10,7 +10,7 @@ for p in range(1001):
 	scores.append(0)
 	for c in range(p):
 		for b in range(c):
-			for a in range(c):
+			for a in range(b+1):
 				if(py(a,b,c,p)):
 					scores[p]+=1
 topN=0
