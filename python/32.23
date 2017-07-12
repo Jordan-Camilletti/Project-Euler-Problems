@@ -1,22 +1,21 @@
 """
 """
 
-def py(a,b,c,p):
-	if(a+b+c!=p): return False
-	return((a*a)+(b*b)==(c*c))
-
-scores=[]
-for p in range(1001):
-	scores.append(0)
-	for c in range(p):
-		for b in range(c):
-			for a in range(b+1):
-				if(py(a,b,c,p)):
-					scores[p]+=1
+tris=[]
+for c in range(999):
+	for b in range(c):
+		for a in range(b+1):
+			if(a+b+c<=1000 and (a*a)+(b*b)==(c*c)):
+				tris.append((a,b,c))
+score=[]
+for n in range(1000):
+	score.append(0)
+for t in tris:
+	score[t[0]+t[1]+t[2]]+=1
 topN=0
 top=0
-for n in range(len(p)):
-	if(p[n]>top):
-		top=p[n]
-		topN=n
-print(topN)
+for t in range(len(tris)):
+	if(tris[t]>topN):
+		topN=tris[t]
+		top=t
+print(t+1)
