@@ -11,7 +11,7 @@ score=[]
 for n in range(1000):
 	score.append(0)
 for t in tris:
-	score[t[0]+t[1]+t[2]]+=1
+	score[t[0]+t[1]+t[2]-1]+=1
 topN=0
 top=0
 for t in range(len(tris)):
