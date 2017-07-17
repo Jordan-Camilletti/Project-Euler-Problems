@@ -4,5 +4,5 @@ for n in range(1,1000000):
 tot=0
 for n in range(len(wrd)):
 	if(n==1 or n==10 or n==100 or n==1000 or n==10000 or n==100000 or n==1000000):
-		tot+=wrd[n]
+		tot+=int(wrd[n])
 print(tot)
