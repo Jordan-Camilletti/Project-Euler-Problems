@@ -5,7 +5,7 @@ def panPrime(n):
 	for x in range(len(str(n))):
 		if(str(x+1) not in str(n)):
 			return False
-	for x in range(3,n):
+	for x in range(3,n,2):
 		if(n%x==0):
 			return False
 	return True
