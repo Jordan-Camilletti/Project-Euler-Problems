@@ -15,8 +15,8 @@ num=perA+perB
 print(perA/(perA+perB))
 while((perA/(perA+perB))<0.99):
 	print(num,(perA/(perA+perB)))
-	num+1
+	num+=1
 	if(bouncy(num)):
-		perA+1
+		perA+=1
 	else:
-		perB+1
+		perB+=1
