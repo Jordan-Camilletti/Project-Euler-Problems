@@ -13,7 +13,6 @@ perA=19602
 perB=2178
 num=perA+perB
 while((perA/(perA+perB))<0.99):
-	print(num,(perA/(perA+perB)))
 	num+=1
 	if(bouncy(num)):
 		perA+=1
