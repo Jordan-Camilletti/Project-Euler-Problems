@@ -9,3 +9,14 @@ def bouncy(n):
 		if(int(str(n)[num-1])>int(str(n)[num])): dec=True
 		elif(int(str(n)[num-1])<int(str(n)[num])): inc=True
 	return(inc and dec)
+perA=0
+perB=0
+num=perA+perB
+print(perA/(perA+perB))
+while((perA/(perA+perB))<0.99):
+	print(num,(perA/(perA+perB)))
+	num+1
+	if(bouncy(num)):
+		perA+1
+	else:
+		perB+1
