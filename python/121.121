@@ -14,8 +14,6 @@ perB=2178
 num=perA+perB
 while((perA/(perA+perB))<0.99):
 	num+=1
-	if(bouncy(num)):
-		perA+=1
-	else:
-		perB+=1
+	if(bouncy(num)): perA+=1
+	else: perB+=1
 print(num,(perA/(perA+perB)))
