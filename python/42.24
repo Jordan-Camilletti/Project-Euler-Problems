@@ -11,7 +11,7 @@ def word(str):
 tris=[]
 wrd=""
 tot=0
-for num in range(1,1000):
+for num in range(1,100):
 	tris.append((num/2)*(num+1))
 with open("words.txt","r") as f:
 	for x in f.readline():
