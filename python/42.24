@@ -13,11 +13,12 @@ wrd=""
 tot=0
 for num in range(1,10000):
 	tris.append((num/2)*(num+1))
-print(word('"SKY"'))
 with open("words.txt","r") as f:
 	for x in f.readline():
 		if(x!=","):
 			wrd=wrd+x
 		else:
-			#print(wrd)
+			if(word(wrd) in tris):
+				tot+=1
 			wrd=""
+print(tot)
