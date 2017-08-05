@@ -7,10 +7,13 @@ def pan(num):
 			return False
 	return True
 def subDiv(num):
-	x=3
+	x=1
 	if(int(str(num)[1:4])%2!=0) return False
+	for x in range(3,9):
+		x+=2
+		if(int(str(num)[x-1:x+2])%x!=0) return False
 	return True
 num=1406357289
-print(pan(num))
+"""print(pan(num))
 for x in range(2,9):
-	print(str(num)[x-1:x+2])
+	print(str(num)[x-1:x+2])"""
