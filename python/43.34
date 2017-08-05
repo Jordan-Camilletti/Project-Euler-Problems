@@ -1,2 +1,9 @@
 """
 """
+
+def pan(num):
+	for x in range(10):
+		if(str(x) not in str(num)):
+			return False
+	return True
+print(pan(1406357289))
