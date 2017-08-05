@@ -4,16 +4,22 @@
 def pan(num):
 	for x in range(10):
 		if(str(x) not in str(num)):
-			return False
+			if(x==0 and len(str(num))==10):
+				return False
 	return True
 def subDiv(num,divs):
 	for x in range(2,9):
 		if(int(str(num)[x-1:x+2])%divs[x-2]!=0): return False
 	return True
-num=1406357289
 divs=[2,3,5,7,11,13,17]
+tot=0
+for x in range(123456789,9876543211):
+	if(pan(x)):
+		if(subDiv(x,divs)): tot+=x
+print(tot)
+"""num=1406357289
 if(pan(num)):
 	print(subDiv(num,divs))
-"""print(pan(num))
+print(pan(num))
 for x in range(2,9):
 	print(str(num)[x-1:x+2])"""
