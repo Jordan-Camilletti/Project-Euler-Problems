@@ -6,14 +6,14 @@ def pan(num):
 		if(str(x) not in str(num)):
 			return False
 	return True
-def subDiv(num):
-	x=1
-	if(int(str(num)[1:4])%2!=0) return False
-	for x in range(3,9):
-		x+=2
-		if(int(str(num)[x-1:x+2])%x!=0) return False
+def subDiv(num,divs):
+	for x in range(2,9):
+		if(int(str(num)[x-1:x+2])%divs[x-2]!=0): return False
 	return True
 num=1406357289
+divs=[2,3,5,7,11,13,17]
+if(pan(num)):
+	print(subDiv(num,divs))
 """print(pan(num))
 for x in range(2,9):
 	print(str(num)[x-1:x+2])"""
