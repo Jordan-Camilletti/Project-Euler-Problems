@@ -9,7 +9,7 @@ def pan(num):
 			return False
 	return True
 
-
+#WORK ON THIS
 divs=[[2],[3],[5],[7],[11],[13],[17]]#2,3,5,7,11,13,17
 for x in range(100,1000):
 	for a in divs:
@@ -20,14 +20,16 @@ def subDiv(num,divs=divs):
 	for x in range(2,9):
 		if(int(str(num)[x-1:x+2]) not in divs[x-2]): return False
 	return True
-
+#WORK ON THIS
 
 tot=0
 for n in permutations(range(10)):
 	num=""
 	for x in n:
 		num+=str(x)
-	print(num)
+	#print(num)
+	if(pan(int(num))):
+		if(subDiv(int(num))): tot+=int(num)
 print(tot)
 """print(divs)
 num=1406357289
