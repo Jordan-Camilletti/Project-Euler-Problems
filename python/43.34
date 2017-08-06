@@ -21,8 +21,3 @@ for n in permutations(range(10)):
 	if(pan(int(num))):
 		if(subDiv(int(num))): tot+=int(num)
 print(tot)
-"""print(divs)
-num=1406357289
-for x in range(2,9):
-	print(str(num)[x-1:x+2])
-	print(int(str(num)[x-1:x+2]) in divs[x-2])"""
