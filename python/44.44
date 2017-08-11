@@ -1,1 +1,12 @@
 /**/
+
+pents=[]
+for x in range(1,11):
+	#print(x*((3*x)-1)/2)
+	pents.append(x*((3*x)-1)/2)
+print(pents)
+for a in range(len(pents)):
+	for b in range(a):
+		if((a+b) in pents and ((a-b) in pents or (b-a) in pents)):
+			print(a-b)
+			print(b-a)
