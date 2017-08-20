@@ -1,15 +1,13 @@
 """
 """
 
-tris=[]
 pents=[]
 hexs=[]
 x=285
 while(True):
 	x+=1
-	tris.append(x*(x+1)/2)
 	pents.append(x*((3*x)-1)/2)
 	hexs.append(x*((2*x)-1))
-	if(tris[-1] in pents and tris[-1] in hexs):
-		print(tris[-1])
+	if((x*(x+1)/2) in pents and (x*(x+1)/2) in hexs):
+		print(x*(x+1)/2)
 		break
