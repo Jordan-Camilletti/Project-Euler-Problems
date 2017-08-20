@@ -10,10 +10,9 @@ for x in range(1,286):
 	tris.append(x*(x+1)/2)
 	pents.append(x*((3*x)-1)/2)
 	hexs.append(x*((2*x)-1))
+	if(tris[-1] in pents and tris[-1] in hexs):
+		print(tris[-1])
+		break
 #print(tris)
 #print(pents)
 #print(hexs)
-for a in tris:
-	if(a in pents and a in hexs):
-		print(a)
-print(time.time()-start)
