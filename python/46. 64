@@ -1,3 +1,17 @@
 """
 """
 
+def isPrime(num):
+	for x in range(2,num):
+		if(num%x==0): return False
+	return True
+
+primes=[1]
+sqr=1
+for p in range(3,32):
+	if(isPrime): primes.append(p)
+for x in range(9,35,2):
+	#if(not isPrime(x)):
+	#	print(x)
+	for prime in primes:
+		if()
