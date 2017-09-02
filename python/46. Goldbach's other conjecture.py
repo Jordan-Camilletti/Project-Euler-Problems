@@ -17,10 +17,6 @@ def conjecture(x,primes):
 primes=[3]
 curr=9
 lastPrime=3
-"""for p in range(3,):
-	if(isPrime): 
-		primes.append(p)
-		lastPrime=p"""
 while(True):
 	curr+=2
 	if(lastPrime<curr):
