@@ -10,12 +10,10 @@ primes=[]
 for p in range(3,32):
 	if(isPrime): primes.append(p)
 for x in range(9,12,2):
-	#if(not isPrime(x)):
-	#	print(x)
-	for prime in primes:
-		sqr=1
-		while(prime+(2*(sqr*sqr))<=x):
-			if(prime+(2*(sqr*sqr))==x):
-				print(x,"=",prime,"+2x",sqr,"^2")
-			else if(prime+(2*(sqr*sqr))<x):
+	if(not isPrime(x)):
+		for prime in primes:
+			sqr=1
+			while(prime+(2*(sqr*sqr))<=x):
+				if(prime+(2*(sqr*sqr))==x):
+					print(x,"=",prime,"+2x",sqr,"^2")
 				sqr+=1
