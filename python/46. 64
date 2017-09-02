@@ -14,9 +14,18 @@ def conjecture(x,primes):
 			sqr+=1
 	return False
 
-primes=[]
-for p in range(3,35):
-	if(isPrime): primes.append(p)
-for x in range(9,35,2):
-	if(not isPrime(x) and conjecture(x,primes)):
-			print(x)
+primes=[3]
+curr=9
+"""for p in range(3,):
+	if(isPrime): 
+		primes.append(p)
+		lastPrime=p"""
+while(not isPrime(curr) and conjecture(curr,primes)):
+	curr+=2
+	if(lastPrime<curr):
+		for p in range(lastPrime,curr+1):
+			if(isPrime):
+				primes.append(p)
+				lastPrime=p
+	if(not isPrime(curr) and not conjecture(curr,primes)):
+			print(curr)
