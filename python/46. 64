@@ -6,14 +6,17 @@ def isPrime(num):
 		if(num%x==0): return False
 	return True
 
+def conjecture(x,primes):
+	for prime in primes:
+		sqr=1
+		while(prime+(2*(sqr*sqr))<=x):
+			if(prime+(2*(sqr*sqr))==x): return True
+			sqr+=1
+	return False
+
 primes=[]
-for p in range(3,32):
+for p in range(3,35):
 	if(isPrime): primes.append(p)
-for x in range(9,12,2):
-	if(not isPrime(x)):
-		for prime in primes:
-			sqr=1
-			while(prime+(2*(sqr*sqr))<=x):
-				if(prime+(2*(sqr*sqr))==x):
-					print(x,"=",prime,"+2x",sqr,"^2")
-				sqr+=1
+for x in range(9,35,2):
+	if(not isPrime(x) and conjecture(x,primes)):
+			print(x)
