@@ -4,10 +4,8 @@
 def paths(sqrSize,currX=0,currY=0,tot=0):
 	if(currX==sqrSize and currY==sqrSize):
 		return tot+1
-	elif(currX<sqrSize and currY<sqrSize):
-		return paths(sqrSize,currX+1,currY,tot)+paths(sqrSize,currX,currY+1,tot)
 	elif(currX<sqrSize):
 		return paths(sqrSize,currX+1,currY,tot)
 	elif(currY<sqrSize):
 		return paths(sqrSize,currX,currY+1,tot)
-print(paths(2))
+print(paths(20))
