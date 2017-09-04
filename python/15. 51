@@ -1,13 +1,13 @@
 """
 """
 
-def paths(sqrSize,currX,currY,tot):
+def paths(sqrSize,currX=0,currY=0,tot=0):
 	if(currX==sqrSize and currY==sqrSize):
 		return tot
 	elif(currX<sqrSize and currY<sqrSize):
 		return paths(sqrSize,currX+1,currY,tot+1)+paths(sqrSize,currX,currY+1,tot+1)
 	elif(currX<sqrSize):
 		return paths(sqrSize,currX+1,currY,tot+1)
-	else:
+	elif(currY<sqrSize):
 		return paths(sqrSize,currX,currY+1,tot+1)
-print(paths(20,0,0,0))
+print(paths(2))
