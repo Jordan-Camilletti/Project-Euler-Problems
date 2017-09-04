@@ -8,5 +8,6 @@ def paths(sqrSize,currX,currY,tot):
 		return paths(sqrSize,currX,currY+1,tot+1)
 	elif(currY==sqrSize):
 		return paths(sqrSize,currX+1,currY,tot+1)
+	return paths(sqrSize,currX+1,currY,tot+1)+paths(sqrSize,currX,currY+1,tot+1)
 
-print(paths(2,0,0,tot))
+print(paths(2,0,0,0))
