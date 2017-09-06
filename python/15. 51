@@ -10,9 +10,7 @@ for t in range(3,(sqrLength*2)+2):
 		if(n==0 or n==len(lastRow)):
 			currRow.append(1)
 		else:
-			currRow.append(lastRow[n]+lastRow[n-1])
-	#print(currRow)
-	if(t%2!=0):
+			currRow.append(lastRow[n]+lastRow[n-1])	if(t%2!=0):
 		print(sqrCurr-1,currRow[int(len(currRow)/2)])
 		sqrCurr+=1
 	lastRow=currRow
