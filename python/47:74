@@ -1,20 +1,13 @@
 /**/
 
 def isPrime(num):
+	for sqr in range(1,num):#this makes 2^2 prime
+		if((sqr*sqr==num) and isPrime(sqr)): return True
 	for x in range(2,num):
-		if(num%x==0): return False
+		if(num%x==0): 
+			return False
 	return True
-	
-def primeFacs(num,facs):
-	retT=False#signals to return true or false
-	for n1 in range(1,num):
-		for n2 in range(n1,num):
-			#print(n1,n2)
-			if(isPrime(n1) and isPrime(n2) and ([n1,n2] not in facs)):
-				retT=True
-				facs.append([n1,n2])
-		
-		
+
 facs=[]
 #print(primeFacs(15,facs))
 for num in range(1,20):
