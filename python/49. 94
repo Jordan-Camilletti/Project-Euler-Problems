@@ -12,8 +12,9 @@ increase=3330
 for number in range(1001,9998,2):
 	for increase in range(2,(10000-number)/2,2):
 		perms=list(permutations(str(number)))
-		if((tuple(str(number+increase)) in perms) and (tuple(str(number+increase+increase)) in perms)):
-			print(str(number)+str(number+increase)+str(number+increase+increase))
+		if(isPrime(number) and isPrime(number+increase) and isPrime(number+increase+increase)):
+			if((tuple(str(number+increase)) in perms) and (tuple(str(number+increase+increase)) in perms)):
+				print(str(number)+str(number+increase)+str(number+increase+increase))
 
 """perms=list(permutations(str(number)))
 print(tuple(str(number)) in perms)
