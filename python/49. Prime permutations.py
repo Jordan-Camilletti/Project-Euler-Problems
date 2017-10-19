@@ -11,7 +11,6 @@ def isPrime(num):
 		if(num%x==0): return False
 	return True
 
-increase=3330
 for number in range(1001,9998,2):
 	for increase in range(2,(10000-number)/2,2):
 		perms=list(permutations(str(number)))
