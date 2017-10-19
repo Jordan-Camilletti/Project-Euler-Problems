@@ -9,8 +9,7 @@
 
 It turns out that the conjecture was false.
 
-What is the smallest odd composite that cannot be written as the sum of a prime and twice a square?
-Created by Jordan Camilletti"""
+What is the smallest odd composite that cannot be written as the sum of a prime and twice a square?"""
 
 def isPrime(num):
 	for x in range(2,num):
