@@ -7,7 +7,8 @@ What 12-digit number do you form by concatenating the three terms in this sequen
 from itertools import permutations
 
 def isPrime(num):
-	for x in range(2,num):
+	if(num%2==0): return False
+	for x in range(3,num,2):
 		if(num%x==0): return False
 	return True
 
