@@ -1,0 +1,16 @@
+"""
+"""
+
+from itertools import permutations
+
+def isPrime(num):
+	for x in range(2,num):
+		if(num%x==0): return False
+	return True
+
+n=list(permutations(str(1487)))
+for num in n:
+	print(''.join(str(i) for i in num),isPrime(int(''.join(str(i) for i in num))))
+	
+number=1000
+increase=1
