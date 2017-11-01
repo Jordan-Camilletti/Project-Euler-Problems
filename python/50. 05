@@ -1,7 +1,14 @@
 """
 """
 
-def makePrimes(n):
-	for x in range(3,n+1,2):
-		if()
+def isPrime(num):
+	if(num%2==0): return False
+	for x in range(3,num,2):
+		if(num%x==0): return False
+	return True
+
 primes=[2]
+for x in range(3,14):
+	if(isPrime(x)):
+		primes.append(x)
+print(primes)
