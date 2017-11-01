@@ -12,6 +12,8 @@ lastPrime=2
 for x in range(3,100):
 	if(isPrime(x)):
 		tot+=x
-	if():
-		lastPrime=
+	if(isPrime(tot)):
+		lastPrime=tot
+	if(len(str(tot))>2):
+		break
 print(lastPrime)
