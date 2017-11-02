@@ -11,15 +11,15 @@ def sectionTotal(length,spot,primes=primes):
 	
 	return 0#TODO: calculate the sum of 'length' number of items from 'primes' starting from 'spot'
 
-primes=[2]
+#primes=[2]
 topLen=0
 topNum=0
 consecLen=1
 spot=0
-for n in range(3,999,2):
+"""for n in range(3,999,2):
 	if(isPrime(n)):
 		primes.append(n)
-print(primes)
+print(primes)"""
 while(True):
 	if(len(str(sectionTotal(consecLen,spot)))>2 and spot==0):
 		print(sectionTotal(consecLen,spot))
