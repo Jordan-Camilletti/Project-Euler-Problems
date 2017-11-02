@@ -8,6 +8,7 @@ def isPrime(num):
 	return True
 
 def sectionTotal(length,spot,primes=primes):
+	
 	return 0#TODO: calculate the sum of 'length' number of items from 'primes' starting from 'spot'
 
 primes=[2]
@@ -20,14 +21,14 @@ for n in range(3,999,2):
 		primes.append(n)
 print(primes)
 while(True):
-	if(len(str(sectionTotal()))>2 and spot==0):
-		print(sectionTotal())
+	if(len(str(sectionTotal(consecLen,spot)))>2 and spot==0):
+		print(sectionTotal(consecLen,spot))
 		break
-	elif(len(str(sectionTotal()))>2):
+	elif(len(str(sectionTotal(consecLen,spot)))>2):
 		consecLen+=1
 		spot=0
-	if(consecLen>topLen and isPrime(sectionTotal()):
+	if(consecLen>topLen and isPrime(sectionTotal(consecLen,spot)):
 		topLen=consecLen
-		topNum=sectionTotal()
+		topNum=sectionTotal(consecLen,spot)
 	spot+=1
 print("X",topNum,"X",topLen)
