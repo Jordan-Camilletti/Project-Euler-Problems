@@ -18,14 +18,14 @@ topLen=0
 topNum=0
 consecLen=1
 spot=0
-for n in range(3,1061,2):
+for n in range(3,1000004,2):#1,000,003=prime
 	if(isPrime(n)):
 		primes.append(n)
-while(sectionTotal(consecLen,spot,primes)<100 or spot!=0):
-	if(sectionTotal(consecLen,spot,primes)>=100):
+while(sectionTotal(consecLen,spot,primes)<1000000 or spot!=0):
+	if(sectionTotal(consecLen,spot,primes)>=1000000):
 		consecLen+=1
 		spot=-1
-	if(consecLen>topLen and isPrime(sectionTotal(consecLen,spot,primes)) and sectionTotal(consecLen,spot,primes)<100):
+	if(consecLen>topLen and isPrime(sectionTotal(consecLen,spot,primes)) and sectionTotal(consecLen,spot,primes)<1000000):
 		topLen=consecLen
 		topNum=sectionTotal(consecLen,spot,primes)
 	spot+=1
