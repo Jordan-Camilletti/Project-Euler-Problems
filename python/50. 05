@@ -1,6 +1,15 @@
 """
 """
 
+def isPrime(num):
+	if(num%2==0): return False
+	for x in range(3,num,2):
+		if(num%x==0): return False
+	return True
+
+def sectionTotal(length,spot,primes=primes):
+	return 0#TODO: calculate the sum of 'length' number of items from 'primes' starting from 'spot'
+
 primes=[2]
 currLen=0
 consecLen=1
