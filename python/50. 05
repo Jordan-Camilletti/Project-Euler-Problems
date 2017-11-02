@@ -7,13 +7,20 @@ def isPrime(num):
 		if(num%x==0): return False
 	return True
 
-tot=2
-lastPrime=2
-x=1
-while(len(str(tot))<=2):
-	x+=2
-	if(isPrime(x)):
-		tot+=x
-	if(isPrime(tot)):
-		lastPrime=tot
-print(lastPrime)
+def sectionTotal(length,spot,primes=primes):
+	return 0#TODO: calculate the sum of 'length' number of items from 'primes' starting from 'spot'
+
+primes=[2]
+consecLen=1
+spot=0
+for n in range(3,999,2):
+	if(isPrime(n)):
+		primes.append(n)
+print(primes)
+while(True):
+	if(sectionTotal()>2 and spot==0):
+		print(sectionTotal())
+		break
+	elif(sectionTotal()>2):
+		consecLen+=1
+		spot=0
