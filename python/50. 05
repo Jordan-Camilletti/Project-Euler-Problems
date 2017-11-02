@@ -11,28 +11,22 @@ def sectionTotal(length,spot,primes):
 	tot=0
 	for n in range(length):
 		tot+=primes[n+spot]
-	return tot#TODO: calculate the sum of 'length' number of items from 'primes' starting from 'spot'
+	return tot
 
 primes=[2]
 topLen=0
 topNum=0
 consecLen=1
 spot=0
-for n in range(3,500000,2):
+for n in range(3,1061,2):
 	if(isPrime(n)):
 		primes.append(n)
-#print(primes)
-print("N")
-while(True):
-	if(sectionTotal(consecLen,spot,primes)>1000000 and spot==0):
-		#print(sectionTotal(consecLen,spot,primes))
-		break
-	elif(sectionTotal(consecLen,spot,primes)>1000000):
+while(sectionTotal(consecLen,spot,primes)<100 or spot!=0):
+	if(sectionTotal(consecLen,spot,primes)>=100):
 		consecLen+=1
 		spot=-1
-	if(consecLen>topLen and isPrime(sectionTotal(consecLen,spot,primes))):
+	if(consecLen>topLen and isPrime(sectionTotal(consecLen,spot,primes)) and sectionTotal(consecLen,spot,primes)<100):
 		topLen=consecLen
 		topNum=sectionTotal(consecLen,spot,primes)
 	spot+=1
-	#print(sectionTotal(consecLen,spot,primes))
-print("X",topNum,"X",topLen)
+print("Biggest Prime:",topNum," Primes in it:",topLen)
