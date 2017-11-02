@@ -3,7 +3,7 @@
 
 def isPrime(num):
 	if(num%2==0): return False
-	for x in range(3,num,2):
+	for x in range(3,num/2,2):
 		if(num%x==0): return False
 	return True
 
@@ -18,15 +18,16 @@ topLen=0
 topNum=0
 consecLen=1
 spot=0
-for n in range(3,9999,2):
+for n in range(3,500000,2):
 	if(isPrime(n)):
 		primes.append(n)
 #print(primes)
+print("N")
 while(True):
-	if(sectionTotal(consecLen,spot,primes)>100 and spot==0):
+	if(sectionTotal(consecLen,spot,primes)>1000000 and spot==0):
 		#print(sectionTotal(consecLen,spot,primes))
 		break
-	elif(sectionTotal(consecLen,spot,primes)>100):
+	elif(sectionTotal(consecLen,spot,primes)>1000000):
 		consecLen+=1
 		spot=-1
 	if(consecLen>topLen and isPrime(sectionTotal(consecLen,spot,primes))):
