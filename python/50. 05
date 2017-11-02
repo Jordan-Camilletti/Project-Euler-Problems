@@ -1,16 +1,8 @@
 """
 """
 
-def isPrime(num):
-	if(num%2==0): return False
-	for x in range(3,num,2):
-		if(num%x==0): return False
-	return True
-
-def sectionTotal(length,spot,primes=primes):
-	return 0#TODO: calculate the sum of 'length' number of items from 'primes' starting from 'spot'
-
 primes=[2]
+currLen=0
 consecLen=1
 spot=0
 for n in range(3,999,2):
@@ -18,9 +10,11 @@ for n in range(3,999,2):
 		primes.append(n)
 print(primes)
 while(True):
-	if(sectionTotal()>2 and spot==0):
+	if(len(str(sectionTotal()))>2 and spot==0):
 		print(sectionTotal())
 		break
-	elif(sectionTotal()>2):
+	elif(len(str(sectionTotal()))>2):
 		consecLen+=1
 		spot=0
+	elif(consecLen>currLen and isPrime(sectionTotal()):
+		currLen=consecLen
