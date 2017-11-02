@@ -24,7 +24,7 @@ for n in range(3,9999,2):
 #print(primes)
 while(True):
 	if(sectionTotal(consecLen,spot,primes)>100 and spot==0):
-		print(sectionTotal(consecLen,spot,primes))
+		#print(sectionTotal(consecLen,spot,primes))
 		break
 	elif(sectionTotal(consecLen,spot,primes)>100):
 		consecLen+=1
@@ -33,5 +33,5 @@ while(True):
 		topLen=consecLen
 		topNum=sectionTotal(consecLen,spot,primes)
 	spot+=1
-	print(sectionTotal(consecLen,spot,primes))
+	#print(sectionTotal(consecLen,spot,primes))
 print("X",topNum,"X",topLen)
