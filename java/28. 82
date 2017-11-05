@@ -8,7 +8,9 @@ public static void main(String[] args){
 			tot+=currNum;
 			currNum+=increase;
 		}
+		currNum+=jump;
 		jump+=2;
+		increase+=2;
 	}
 	System.out.print(tot);
 }
