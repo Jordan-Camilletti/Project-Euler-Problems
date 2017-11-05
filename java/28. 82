@@ -2,7 +2,7 @@
 
 public static void main(String[] args){
 	int currNum=3,increase=2,jump=4,tot=1;
-	while(currNum<=25){
+	for(int row=0;row<(1001-1)/2;row++){
 		for(int n=0;n<3;n++){
 			System.out.print(currNum+" I: "+increase+" J: "+jump+"\n");
 			tot+=currNum;
