@@ -2,4 +2,13 @@
 
 public static void main(String[] args){
 	System.out.print("XD");
+	int currNum=1,increase=2,jump=4,tot=0;
+	while(currNum<=25){
+		for(int n=0;n<4;n++){
+			tot+=currNum;
+			currNum+=increase;
+		}
+		jump+=2;
+	}
+	System.out.print(tot);
 }
