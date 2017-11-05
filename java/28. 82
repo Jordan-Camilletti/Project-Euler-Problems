@@ -1,13 +1,15 @@
 /**/
 
 public static void main(String[] args){
-	int currNum=1,increase=2,jump=4,tot=0;
+	int currNum=3,increase=2,jump=4,tot=1;
 	while(currNum<=25){
-		for(int n=0;n<4;n++){
-			System.out.print(currNum+"\n");
+		for(int n=0;n<3;n++){
+			System.out.print(currNum+" I: "+increase+" J: "+jump+"\n");
 			tot+=currNum;
 			currNum+=increase;
 		}
+		System.out.print(currNum+" I: "+increase+" J: "+jump+"\n\n");
+		tot+=currNum;
 		currNum+=jump;
 		jump+=2;
 		increase+=2;
