@@ -4,12 +4,12 @@ public static void main(String[] args){
 	int[][] rows={
 		{3},
 		{7,4},
-		{2,4,6,},
+		{2,4,6},
 		{8,5,9,3}
 	};
-	for(int l=0;l<4;l++){
-		for(int x=0;x<=l;x++){
-			System.out.print(x);
+	for(int r1=0;r1<4;r1++){
+		for(int r2=0;r2<=r1;r2++){
+			System.out.print(rows[r1][r2]);
 		}
 		System.out.print("\n");
 	}
