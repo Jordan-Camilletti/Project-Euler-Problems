@@ -1,10 +1,12 @@
 /**/
 
 public static void main(String[] args){
-	int[] row1={3};
-	int[] row2={7,4};
-	int[] row3={2,4,6};
-	int[] row4={8,5,9,3};
+	int[][] rows={
+			{3},
+			{7,4},
+			{2,4,6,},
+			{8,5,9,3}
+	};
 	for(int l=0;l<4;l++){
 		for(int x=0;x<=l;x++){
 			System.out.print(x);
