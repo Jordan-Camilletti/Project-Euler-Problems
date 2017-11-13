@@ -10,6 +10,7 @@ def formsPan(n1,n2,n3,prevNums):
 	if(n1*n2==n3 and pan(str(n1)+str(n2)+str(n3)) and str(n1)+str(n2)+str(n3) not in prevNums):
 		return(True)
 	return(False)
+	
 #print(pan(524319))
 #print(pan(391867254))
 print(formsPan(39,186,7254,[]))
