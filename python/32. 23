@@ -6,11 +6,16 @@ def pan(num):
 		if(str(n+1) not in str(num)):
 			return(False)
 	return(True)
-def formsPan(n1,n2,n3,prevNums):
-	if(n1*n2==n3 and pan(str(n1)+str(n2)+str(n3)) and str(n1)+str(n2)+str(n3) not in prevNums):
+def formsPan(n1,n2,prevNums):
+	if(pan(str(n1)+str(n2)+str(n1*n1))) and str(n1)+str(n2)+str(n1*n2) not in prevNums):
 		return(True)
 	return(False)
 	
-#print(pan(524319))
-#print(pan(391867254))
-print(formsPan(39,186,7254,[]))
+total=0
+prevNums=[]
+print(formsPan(39,186,39*186,[]))
+#for x in range(1,10000):
+#	for y in range(1,x+1):
+		if(formsPan(x,y,prevNums)):
+			tot+=(x*y)
+			prevNums.append(str(n1)+str(n2)+str(n1*n2))
