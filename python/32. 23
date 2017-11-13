@@ -14,8 +14,8 @@ def formsPan(n1,n2,prevNums):
 total=0
 prevNums=[]
 print(formsPan(39,186,39*186,[]))
-#for x in range(1,10000):
-#	for y in range(1,x+1):
+"""for x in range(1,10000):
+	for y in range(1,x+1):
 		if(formsPan(x,y,prevNums)):
 			tot+=(x*y)
-			prevNums.append(str(n1)+str(n2)+str(n1*n2))
+			prevNums.append(str(n1)+str(n2)+str(n1*n2))"""
