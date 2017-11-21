@@ -1,2 +1,13 @@
 """
 """
+
+rows=[[3],[7,4],[2,4,6],[8,5,9,3]]
+biggest=0
+spot=0
+total=0
+bNum=0
+for n in range(8):
+	bNum="{0:b}".format(n)
+	while(len(bNum)<3):
+		bNum="0"+bNum
+	print(bNum)
