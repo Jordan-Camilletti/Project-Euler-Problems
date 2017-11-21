@@ -14,8 +14,7 @@ while(n<=200):
 	n+=1
 	total=0
 	for num in (toStr(n,8)):
-		print(coins[int(num)])
-		total+=coins[int(nums)]
+		total+=coins[int(num)]
 	if(total==200):
 		ways+=1
-	print("\n")
+print(ways)
