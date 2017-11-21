@@ -1,13 +1,15 @@
 /**/
 
 def toStr(n,base):
-   convertString = "0123456789ABCDEF"
+   convertString="0123456789ABCDEF"
    if n < base:
       return convertString[n]
    else:
       return toStr(n//base,base) + convertString[n%base]
 
 coins=[1,2,5,10,20,50,100,200]
-possibleCoins=0
 for n in range(20):
-	print(coins[int(toStr(n,8))%10])
+	#print(int(toStr(n,8)))
+	for num in (toStr(n,8)):
+		print(coins[int(num)])
+	print("\n")
