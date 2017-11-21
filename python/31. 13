@@ -15,6 +15,8 @@ while(len(toStr(n,8))<=200):
 	total=0
 	for num in (toStr(n,8)):
 		total+=coins[int(num)]
+		if(total>200):
+			break
 	if(total==200):
 		ways+=1
 print(ways)
