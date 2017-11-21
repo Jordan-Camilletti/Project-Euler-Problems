@@ -3,11 +3,19 @@
 
 rows=[[3],[7,4],[2,4,6],[8,5,9,3]]
 biggest=0
-spot=0
-total=0
 bNum=0
 for n in range(8):
+	total=0
+	spot=0
 	bNum="{0:b}".format(n)
-	while(len(bNum)<3):
+	while(len(bNum)<4):
 		bNum="0"+bNum
-	print(bNum)
+	#print(bNum)
+	for row in range(len(rows)):
+		if(bNum[row]=="1"):
+			spot+=1
+		total+=rows[row][spot]
+	if(total>biggest):
+		biggest=total
+	#print(total)
+print(biggest)
