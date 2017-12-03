@@ -4,8 +4,8 @@
 def findWays(coins,value,currCoin):
 	if(value<0): return(0)
 	elif(value==0): return(1)
-	if(currCoin==len(value) and value>0): return(0)
-	return(total(coins,value-coins[currCoin],currCoin)+total(coins,value,currCoin+1))
+	if(currCoin==len(coins) and value>0): return(0)
+	return(findWays(coins,value-coins[currCoin],currCoin)+findWays(coins,value,currCoin+1))
 
 coins=[1,2,3]
 print(findWays(coins,5,0))
