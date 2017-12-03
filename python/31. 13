@@ -1,14 +1,10 @@
 """
 200 coin isn't included as it can only be used once"""
 
-def base8(n):
-   convertString="012345678"
-   if (n<9):
-      return convertString[n]
-   else:
-      return base8(n//9) + convertString[n%9]
-	  
-coins=[0,1,2,5,10,20,50,100]
-ways=1
-for n in range(10):
-	print(base8(n))
+def findWays(coins,value,currCoin):
+	if(value<0) return(0)
+	elif(value==0) return(1)
+	if(currCoin==len(value) and value>0) return(0)
+	return(total(coins,value-coins[currCoin],currCoin)+total(coins,value,currCoin+1))
+
+coins=[1,2,3]
