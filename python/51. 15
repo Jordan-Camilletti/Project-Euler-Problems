@@ -6,3 +6,5 @@ Find the smallest prime which, by replacing part of the number (not necessarily 
 
 def replace(n):
   return(0)
+
+
