@@ -17,15 +17,6 @@ def sameNums(num):
 		if(s1!=s2):
 			return(False)
 	return(True)
-	"""if(len(str(num1))!=len(str(num2))):
-		return(False)
-	s1=0
-	s2=0
-	for n in str(num1):
-		s1+=int(n)
-	for n in str(num2):
-		s2+=int(n)
-	return(s1==s2)"""
 
 num=1
 print(sameNums([11,15,13,53,591,64]))
