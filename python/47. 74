@@ -17,18 +17,23 @@ def isPrime(num):
 		if(num%n==0): return(False)
 	return(True)
 
-primes=[]
+
 n1=2
 n2=2
-ans1=-1
+n3=2
+ans=[]
+ans2=[0,0]
 """while(not isPrime(n1) or not isPrime(n2) or n1*n2!=ans1+1):
 	if(isPrime(n1) and isPrime(n2)):
 		ans1=n1*n2"""
-for n1 in range(2,100000):
+for n1 in range(2,25):
 	for n2 in range(2,n1+1):
-		if(isPrime(n1) and isPrime(n2)):
-			#print(n1,n2)
-			if(n1*n2==ans1+1):
-				print(ans1+1)
-			else:
-				ans1=n1*n2
+		for n3 in range(2,n2+1):
+			if(isPrime(n1) and isPrime(n2) and isPrime(n3)):
+				ans.append(n1*n2*n3)
+				"""print(n1,n2)
+				if(n1*n2==ans1+1 and ):
+					print(ans1+1)
+				else:
+					ans1=n1*n2"""
+print(sorted(ans))
