@@ -21,7 +21,6 @@ def divis(num,used):
 							return([n1,n2,n3,n4])
 	return([0,0,0,0])
 
-used=[]
 num=1
 #print(divis(210,used))
 """x=[3,4]
@@ -30,8 +29,12 @@ print(used)
 print(3 in used)"""
 while(True):
 	num+=1
+	used=[]
 	if(divis(num,used)[0]!=0):
-		print(num)
-		print(divis(num,used))
 		used+=divis(num,used)
-		#print(used)
+		if(divis(num+1,used)[0]!=0):
+			used+=divis(num+1,used)
+			if(divis(num+2,used)[0]!=0):
+				used+=divis(num+2,used)
+				if(divis(num+3,used)[0]!=0):
+					print(num)
