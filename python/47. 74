@@ -5,36 +5,45 @@ def isPrime(num):
 		if(num%n==0): return(False)
 	return(True)
 
-def divis(num,used):
-	for n1 in range(2,num):
-		for n2 in range(2,n1+1):
-			if(n1*n2>num):
-				break
-			for n3 in range(2,n2+1):
-				if(n1*n2*n3>num):
-					break
-				for n4 in range(2,n3+1):
-					if(n1*n2*n3*n4>num):
-						break
-					if(isPrime(n1) and isPrime(n2) and isPrime(n3) and isPrime(n4) and n1*n2*n3*n4==num):
-						if(n1 not in used and n2 not in used and n3 not in used and n4 not in used):
-							return([n1,n2,n3,n4])
-	return([0,0,0,0])
+def divis(num,used):#testing w/ 3 case
+	if(isPrime(num) and len(used)==1):
+		return(True)
+	if(len(used)>=4 or num%1!=0):
+		return(False)
+	print(num,len(used))
+	for n in range(2,num):
+		used=[]
+		if(isPrime(n)):
+			if(n==num and len(used)==1):
+				return(True)
+			elif(num%n==0 and n not in used):
+				used.append(n)
+				return(divis(int(num/n),used))
+			elif(num%n==0 and n in used):
+				return(divis(int(num/n),used))
+	return(False)
+	"""if(len(used)>=4 or num%1!=0):
+		return(False)
+	for n in range(2,int(num)):
+		used2=[]
+		num2=0
+		if(n==num and len(used)==3 and isPrime(n)):
+			return(True)
+		if(n not in used and isPrime(n) and num%n==0):
+			used2.append(used)
+			used2.append(n)
+			num2=num/n
+			return(divis(num2,used2))
+		elif(n in used and isPrime(n) and num%n==0):
+			num2=num/n
+			return(divis(num2,used2))"""
 
 num=1
-#print(divis(210,used))
-"""x=[3,4]
-used+=x
-print(used)
-print(3 in used)"""
-while(True):
+print(divis(643,[]))
+print(divis(644,[]),"\n")
+print(divis(645,[]),"\n")
+print(divis(646,[]),"\n")
+"""while(True):
 	num+=1
-	used=[]
-	if(divis(num,used)[0]!=0):
-		used+=divis(num,used)
-		if(divis(num+1,used)[0]!=0):
-			used+=divis(num+1,used)
-			if(divis(num+2,used)[0]!=0):
-				used+=divis(num+2,used)
-				if(divis(num+3,used)[0]!=0):
-					print(num)
+	if(divis(num,[])):
+		print(num)"""
