@@ -17,23 +17,19 @@ def isPrime(num):
 		if(num%n==0): return(False)
 	return(True)
 
+def primeD(num):
+	for n1 in range(2,num):
+		for n2 in range(2,n1+1):
+			if(isPrime(n1) and isPrime(n2) and n1*n2==num):
+				return([num,n1,n2])
+	return([0,0,0])
 
-n1=2
-n2=2
-n3=2
-ans=[]
-ans2=[0,0]
-"""while(not isPrime(n1) or not isPrime(n2) or n1*n2!=ans1+1):
-	if(isPrime(n1) and isPrime(n2)):
-		ans1=n1*n2"""
-for n1 in range(2,25):
-	for n2 in range(2,n1+1):
-		for n3 in range(2,n2+1):
-			if(isPrime(n1) and isPrime(n2) and isPrime(n3)):
-				ans.append(n1*n2*n3)
-				"""print(n1,n2)
-				if(n1*n2==ans1+1 and ):
-					print(ans1+1)
-				else:
-					ans1=n1*n2"""
-print(sorted(ans))
+ans=[0,0,0]
+num=1
+while(True):
+	num+=1
+	if(primeD(num)[0]!=0):
+		if(primeD(num)[0]==ans[0]+1 and ans[1] not in primeD(num) and ans[2] not in primeD(num)):
+			print(ans[0],primeD(num)[0])
+		else:
+			ans=primeD(num)
