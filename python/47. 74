@@ -1,12 +1,14 @@
 """
 """
 
-nums=[0]*650
-for n in range(len(nums)):
+nums=[0]*100000
+for n in range(4,len(nums)):
     if(nums[n]==0):
         for n2 in range(2,n):
             if(nums[n2]==0 and n%n2==0):
                 nums[n]+=1
-for n in range(len(nums)):
+    if(nums[n]==4 and nums[n-1]==4 and nums[n-2]==4 and nums[n-3]==4):
+      print(n-3)
+"""for n in range(len(nums)):
     if(nums[n]==4 and nums[n+1]==4 and nums[n+2]==4 and nums[n+3]==4):
-        print(n)
+        print(n)"""
