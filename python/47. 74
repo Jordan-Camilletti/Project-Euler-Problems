@@ -1,31 +1,12 @@
 """
 """
 
-import math
-
-def isPrime(num):
-	for n in range(2,math.ceil(num/2)+1):
-		if(num%n==0): return(False)
-	return(True)
-
-def divis(num,used=[]):#testing w/ 4 case
-	#print(num,used)
-	if(len(used)>=5 or num%1!=0):
-		return(False)
-	if(num==1):
-		return(len(used)==4)
-	for n in range(2,num+1):
-		#used=[]
-		if(isPrime(n) and num%n==0 and n in used):
-			return(divis(int(num/n),used))
-		elif(isPrime(n) and num%n==0 and n not in used):
-			used.append(n)
-			return(divis(int(num/n),used))
-	return(False)
-
-num=1
-while(True):
-	num+=1
-	if(not isPrime(num) and not isPrime(num+1) and not isPrime(num+2) and not isPrime(num+3)):
-		if(divis(num,[]) and divis(num+1,[]) and divis(num+2,[]) and divis(num+3,[])):
-			print(num)
+nums=[0]*650
+for n in range(len(nums)):
+    if(nums[n]==0):
+        for n2 in range(2,n):
+            if(nums[n2]==0 and n%n2==0):
+                nums[n]+=1
+for n in range(len(nums)):
+    if(nums[n]==4 and nums[n+1]==4 and nums[n+2]==4 and nums[n+3]==4):
+        print(n)
