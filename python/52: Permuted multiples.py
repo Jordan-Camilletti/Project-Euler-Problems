@@ -13,7 +13,7 @@ def sameNums(num):
 	return(True)
 
 num=1
-while(not sameNums([num,num*2,num*3,num*4,num*5,num*6])):
+while(not sameNums([num*1,num*2,num*3,num*4,num*5,num*6])):
 	num+=1
 	
 print(num)
