@@ -24,5 +24,4 @@ for n in range(1,101):
 	for r in range(1,n):
 		if(pwr(n)/( pwr(r)*pwr(n-r) )>1000000):
 			tot+=1
-			print(tot)
 print(tot)
