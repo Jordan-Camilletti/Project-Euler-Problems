@@ -53,3 +53,4 @@ How many hands does Player 1 win?"""
 
 with open('poker.txt','r') as r:
     for line in sorted(r):
+      print(line)
