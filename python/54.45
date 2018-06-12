@@ -62,5 +62,6 @@ p2=["","","","",""]
 
 with open('poker.txt','r') as r:
     for line in r:
-      print(line)
-      p1=
+      print(line[15:])
+      p1=line[:14]
+      p2=line[15:]
