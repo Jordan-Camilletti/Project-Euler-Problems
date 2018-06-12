@@ -56,8 +56,7 @@ def getHand(p):
 
 def findWinner():
 	return("X")
-
-
+	
 p2=[]
 p1=[]
 with open('poker.txt','r') as r:
