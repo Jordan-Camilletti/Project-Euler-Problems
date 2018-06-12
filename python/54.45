@@ -58,14 +58,14 @@ def findWinner():
 	return("X")
 
 
-p2=["","","","",""]
-p1=["","","","",""]
-
+p2=[]
+p1=[]
 with open('poker.txt','r') as r:
     for line in r:
       #print(line[15:])
-      p1=line[:14].split(" ")
-      p2=line[15:29].split(" ")
+      p1=list(line[:14])
+      p2=list(line[15:29])
       print(p1)
       print(p2)
+      print("S" in p1)
       break
