@@ -51,15 +51,16 @@ The file, poker.txt, contains one-thousand random hands dealt to two players. Ea
 
 How many hands does Player 1 win?"""
 
-def getHand():
+def getHand(line):
 	return("X")
 def findWinner():
 	return("X")
 
 
-p1=0
-p2=0
+p1=["","","","",""]
+p2=["","","","",""]
 
 with open('poker.txt','r') as r:
     for line in r:
       print(line)
+      p1=
