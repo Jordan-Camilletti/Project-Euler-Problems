@@ -102,7 +102,7 @@ def getHand(pS,pC):
 			score=max(score,5)#Straight
 	return(score)
 
-def getWinner(n1,n2,p1C,p2C):
+def getWinner(n1,n2,p1C,p2C):TODO: find way to determin winner in the event of a stalemate
 	if(n1[0]>n2[0]):
 		return(n1)
 	if(n2[0]>n1[0]):
