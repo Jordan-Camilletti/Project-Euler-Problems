@@ -77,7 +77,7 @@ How many hands does Player 1 win?"""
 		if(n==2)
 	return(1)"""
 def getHand(pS,pC):
-	score=1
+	score=0
 	if(5 in pS):
 		score=max(score,6)#Flush
 		if(pC[8]==1 and pC[9]==1 and pC[10]==1 and pC[11]==1 and pC[12]==1):
@@ -102,9 +102,12 @@ def getHand(pS,pC):
 			score=max(score,5)#Straight
 	return(score)
 
-
-def findWinner():
-	return("X")
+def getWinner(n1,n2,p1C,p2C):
+	if(n1[0]>n2[0]):
+		return(n1)
+	if(n2[0]>n1[0]):
+		return(n2)
+	return(max(n1[1],n2[1]))
 
 suits=["D","C","H","S"]
 cards=["2","3","4","5","6","7","8","9","T","J","Q","K","A"]
@@ -124,10 +127,11 @@ with open('poker.txt','r') as r:
       	p1C[cards.index(p1[n-1])]+=1
       	p2S[suits.index(p2[n])]+=1
       	p2C[cards.index(p2[n-1])]+=1
-      print(p1S)
+      print(getWinner(getHand(p1S,p1C),getHand(p2S,p2C),p1C,p2C))
+      """print(p1S)
       print(p1C)
       print(p2S)
       print(p2C)
       print(getHand(p1S,p1C))
       print(getHand(p2S,p2C))
-      break
+      break"""
