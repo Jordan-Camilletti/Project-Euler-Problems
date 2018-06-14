@@ -113,22 +113,22 @@ def getWinner(n1,n2,p1C,p2C):#TODO: find way to determin winner in the event of 
 suits=["D","C","H","S"]
 cards=["2","3","4","5","6","7","8","9","T","J","Q","K","A"]
 with open('tt.txt','r') as r:
-    for line in r:
-      p1S=[0,0,0,0]#Diamond, club, heart, spade
-	  p1C=[0,0,0,0,0,0,0,0,0,0,0,0,0]#Ace,2,3,4,5,6,7,8,9,10,jack,queen,king
-	  p2S=[0,0,0,0]
-	  p2C=[0,0,0,0,0,0,0,0,0,0,0,0,0]
-      #print(line[15:])
-      p1=list(line[:14])
-      #p1=["A","C"," ","T","C"," ","J","C"," ","Q","C"," ","K","C"]
-      p2=list(line[15:29])
-      #p2=["2","C"," ","2","nH"," ","2","S"," ","2","D"," ","6","C"]
-      for n in range(1,len(p1),3):
-      	p1S[suits.index(p1[n])]+=1
-      	p1C[cards.index(p1[n-1])]+=1
-      	p2S[suits.index(p2[n])]+=1
-      	p2C[cards.index(p2[n-1])]+=1
-      print(getWinner(getHand(p1S,p1C),getHand(p2S,p2C),p1C,p2C))
+	for line in r:
+		p1S=[0,0,0,0]#Diamond, club, heart, spade
+		p1C=[0,0,0,0,0,0,0,0,0,0,0,0,0]#Ace,2,3,4,5,6,7,8,9,10,jack,queen,king
+		p2S=[0,0,0,0]
+		p2C=[0,0,0,0,0,0,0,0,0,0,0,0,0]
+		#print(line[15:])
+		p1=list(line[:14])
+		#p1=["A","C"," ","T","C"," ","J","C"," ","Q","C"," ","K","C"]
+		p2=list(line[15:29])
+		#p2=["2","C"," ","2","nH"," ","2","S"," ","2","D"," ","6","C"]
+		for n in range(1,len(p1),3):
+			p1S[suits.index(p1[n])]+=1
+			p1C[cards.index(p1[n-1])]+=1
+			p2S[suits.index(p2[n])]+=1
+			p2C[cards.index(p2[n-1])]+=1
+		print(getWinner(getHand(p1S,p1C),getHand(p2S,p2C),p1C,p2C))
       #print(p1C)
       """print(p1S)
       print(p1C)
