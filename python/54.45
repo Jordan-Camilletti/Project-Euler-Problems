@@ -51,32 +51,6 @@ The file, poker.txt, contains one-thousand random hands dealt to two players. Ea
 
 How many hands does Player 1 win?"""
 
-"""def getHand(pS,pC):
-	if(5 in pS):#Flush
-		if(pC[8]==1 and pC[9]==1 and pC[10]==1 and pC[11]==1 and pC[12]==1):
-			return(10)#Royal Flush
-		for n in range(0,len(pC)-4):
-			if(pC[n]==1 and pC[n+1]==1 and pC[n+2]==1 and pC[n+3]==1 and pC[n+4]==1):
-				return(9)#Straight Flush
-		#return(6)#Flush
-	for n in pC:
-		if(n==4):
-			return(8)#Four of a kind
-		if(n==3):
-			for n2 in pC:
-				if(n==2):
-					return(7)#Full House
-	if(5 in pS):
-		return(6)#Flush
-	for n in range(0,len(pC)-4):
-		if(pC[n]==1 and pC[n+1]==1 and pC[n+2]==1 and pC[n+3]==1 and pC[n+4]==1):
-			return(5)#Straight
-	for n in pC:
-		if(n==3):
-			return(4)#Three of a kind
-		if(n==2)
-	return(1)"""
-
 #FLUSH
 #FULLHOUSE
 #TWO PAIR
