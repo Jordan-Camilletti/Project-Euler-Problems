@@ -128,8 +128,8 @@ with open('tt.txt','r') as r:
       	p1C[cards.index(p1[n-1])]+=1
       	p2S[suits.index(p2[n])]+=1
       	p2C[cards.index(p2[n-1])]+=1
-      #print(getWinner(getHand(p1S,p1C),getHand(p2S,p2C),p1C,p2C))
-      print(p1C)
+      print(getWinner(getHand(p1S,p1C),getHand(p2S,p2C),p1C,p2C))
+      #print(p1C)
       """print(p1S)
       print(p1C)
       print(p2S)
