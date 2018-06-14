@@ -76,58 +76,60 @@ How many hands does Player 1 win?"""
 			return(4)#Three of a kind
 		if(n==2)
 	return(1)"""
+
+#FLUSH
+#FULLHOUSE
+#TWO PAIR
+
 def getHand(pS,pC):
-	score=0
+	score=[1,0]
 	if(5 in pS):
-		score=max(score,6)#Flush
+		score[0]=max(score[0],6)#Flush
 		if(pC[8]==1 and pC[9]==1 and pC[10]==1 and pC[11]==1 and pC[12]==1):
-			return(10)#Royal Flush
+			score[0]=max(score[0],10)#Royal Flush
 		for n in range(0,len(pC)-4):
 			if(pC[n]==1 and pC[n+1]==1 and pC[n+2]==1 and pC[n+3]==1 and pC[n+4]==1):
-				score=max(score,9)#Straight Flush
+				score[0]=max(score[0],9)#Straight Flush
 	for n in pC:
 		if(n==4):
-			score=max(score,8)#Four of a Kind
+			score[0]=max(score[0],8)#Four of a Kind
 		if(n==3):
-			score=max(score,4)#Three of a kind
+			score[0]=max(score[0],4)#Three of a kind
 			for n2 in pC:
 				if(n2==2):
-					socre=max(score,7)#Full House
+					score[0]=max(score[0],7)#Full House
 		if(n==2):
-			score=max(score,2)#One Pair
+			score[0]=max(score[0],2)#One Pair
 			for n2 in pC:
 				if(n2!=n and n2==2):
-					score=max(score,3)#Two Pairs
+					score[0]=max(score[0],3)#Two Pairs
 		if(n<len(pC)-4 and pC[n]==1 and pC[n+1]==1 and pC[n+2]==1 and pC[n+3]==1 and pC[n+4]==1):
-			score=max(score,5)#Straight
+			score[0]=max(score[0],5)#Straight
 	return(score)
 
-def getWinner(n1,n2,p1C,p2C):TODO: find way to determin winner in the event of a stalemate
-	if(n1[0]>n2[0]):
-		return(n1)
-	if(n2[0]>n1[0]):
-		return(n2)
-	return(max(n1[1],n2[1]))
+def getWinner(n1,n2,p1C,p2C):#TODO: find way to determin winner in the event of a stalemate
+	return(n1[0],n2[0])
 
 suits=["D","C","H","S"]
 cards=["2","3","4","5","6","7","8","9","T","J","Q","K","A"]
-p1S=[0,0,0,0]#Diamond, club, heart, spade
-p1C=[0,0,0,0,0,0,0,0,0,0,0,0,0]#Ace,2,3,4,5,6,7,8,9,10,jack,queen,king
-p2S=[0,0,0,0]
-p2C=[0,0,0,0,0,0,0,0,0,0,0,0,0]
-with open('poker.txt','r') as r:
+with open('tt.txt','r') as r:
     for line in r:
+      p1S=[0,0,0,0]#Diamond, club, heart, spade
+	  p1C=[0,0,0,0,0,0,0,0,0,0,0,0,0]#Ace,2,3,4,5,6,7,8,9,10,jack,queen,king
+	  p2S=[0,0,0,0]
+	  p2C=[0,0,0,0,0,0,0,0,0,0,0,0,0]
       #print(line[15:])
       p1=list(line[:14])
       #p1=["A","C"," ","T","C"," ","J","C"," ","Q","C"," ","K","C"]
       p2=list(line[15:29])
-      #p2=["2","C"," ","2","H"," ","2","S"," ","2","D"," ","6","C"]
+      #p2=["2","C"," ","2","nH"," ","2","S"," ","2","D"," ","6","C"]
       for n in range(1,len(p1),3):
       	p1S[suits.index(p1[n])]+=1
       	p1C[cards.index(p1[n-1])]+=1
       	p2S[suits.index(p2[n])]+=1
       	p2C[cards.index(p2[n-1])]+=1
-      print(getWinner(getHand(p1S,p1C),getHand(p2S,p2C),p1C,p2C))
+      #print(getWinner(getHand(p1S,p1C),getHand(p2S,p2C),p1C,p2C))
+      print(p1C)
       """print(p1S)
       print(p1C)
       print(p2S)
