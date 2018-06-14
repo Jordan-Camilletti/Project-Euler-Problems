@@ -129,11 +129,11 @@ with open('tt.txt','r') as r:
 			p2S[suits.index(p2[n])]+=1
 			p2C[cards.index(p2[n-1])]+=1
 		print(getWinner(getHand(p1S,p1C),getHand(p2S,p2C),p1C,p2C))
-      #print(p1C)
-      """print(p1S)
-      print(p1C)
-      print(p2S)
-      print(p2C)
-      print(getHand(p1S,p1C))
-      print(getHand(p2S,p2C))
-      break"""
+		#print(p1C)
+		"""print(p1S)
+		print(p1C)
+		print(p2S)
+		print(p2C)
+		print(getHand(p1S,p1C))
+		print(getHand(p2S,p2C))
+		break"""
