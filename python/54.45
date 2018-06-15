@@ -106,8 +106,9 @@ def getHand(pS,pC):
 							if(pC[n]==2):
 								score[2]=n
 		if(n==2):
-			for n2 in pC:
-				if(n2!=n and n2==2):
+			n1=pC.index(2)
+			for n2 in range(len(pC),0,-1):
+				if(pC[n2-1]==2 and n1!=n2-1):
 					if(3>score[0]):#Two Pairs
 						spot=3
 						score=[3,0,0,0,0,0]
