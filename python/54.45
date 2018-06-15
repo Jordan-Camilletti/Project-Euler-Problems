@@ -52,8 +52,8 @@ The file, poker.txt, contains one-thousand random hands dealt to two players. Ea
 How many hands does Player 1 win?"""
 
 """
-High Card:
-One Pair: ok
+High Card: OK
+One Pair: OK
 Two Pair: OK
 Three of a Kind: OK
 Straight: NO
