@@ -51,10 +51,6 @@ The file, poker.txt, contains one-thousand random hands dealt to two players. Ea
 
 How many hands does Player 1 win?"""
 
-#FLUSH
-#FULLHOUSE
-#TWO PAIR
-
 def getHand(pS,pC):
 	score=[1,0,0,0,0,0]
 	spot=1
@@ -66,7 +62,7 @@ def getHand(pS,pC):
 				if(pC[n-1]>0):
 					score[spot]=n-1
 					spot+=1
-		if(pC[8]==1 and pC[9]==1 and pC[10]==1 and pC[11]==1 and pC[12]==1):
+		if(pC[10]==1 and pC[11]==1 and pC[12]==1 and pC[13]==1 and pC[14]==1):
 			score[0]=max(score[0],10)#Royal Flush
 		for n in range(0,len(pC)-4):
 			if(pC[n]==1 and pC[n+1]==1 and pC[n+2]==1 and pC[n+3]==1 and pC[n+4]==1):
@@ -145,17 +141,27 @@ def getHand(pS,pC):
 			spot+=1
 	return(score)
 
-def getWinner(n1,n2,p1C,p2C):#TODO: find way to determin winner in the event of a stalemate
-	return(n1[0],n2[0])
+def getWinner(n1,n2,p1C,p2C):
+	"""if(n1[0]>n2[0]):
+		return(True)
+	if(n2[0]>n1[0]):
+		return(False)"""
+	for n in range(len(n1)):
+		if(n1[n]>n2[n]):
+			return(True)
+		if(n2[n]>n1[n]):
+			return(False)
+
 
 suits=["D","C","H","S"]
-cards=["2","3","4","5","6","7","8","9","T","J","Q","K","A"]
+cards=[" "," ","2","3","4","5","6","7","8","9","T","J","Q","K","A"]
+p1Score=0
 with open('tt.txt','r') as r:
 	for line in r:
 		p1S=[0,0,0,0]#Diamond, club, heart, spade
-		p1C=[0,0,0,0,0,0,0,0,0,0,0,0,0]#Ace,2,3,4,5,6,7,8,9,10,jack,queen,king
+		p1C=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]#empty,empty,2,3,4,5,6,7,8,9,10,jack,queen,king,Ace
 		p2S=[0,0,0,0]
-		p2C=[0,0,0,0,0,0,0,0,0,0,0,0,0]
+		p2C=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 		#print(line[15:])
 		p1=list(line[:14])
 		#p1=["A","C"," ","T","C"," ","J","C"," ","Q","C"," ","K","C"]
@@ -166,8 +172,10 @@ with open('tt.txt','r') as r:
 			p1C[cards.index(p1[n-1])]+=1
 			p2S[suits.index(p2[n])]+=1
 			p2C[cards.index(p2[n-1])]+=1
-		#print(getWinner(getHand(p1S,p1C),getHand(p2S,p2C),p1C,p2C))
-		print(getHand(p1S,p1C),(getHand(p2S,p2C)))
+		if(getWinner(getHand(p1S,p1C),getHand(p2S,p2C),p1C,p2C)):
+			p1Score+=1
+print(p1Score)
+		#print(getHand(p1S,p1C),(getHand(p2S,p2C)))
 		#print(p1C)
 		"""print(p1S)
 		print(p1C)
