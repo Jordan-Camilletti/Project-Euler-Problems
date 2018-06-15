@@ -139,12 +139,17 @@ def getHand(pS,pC):
 					if(pC[n-1]==1):
 						score[spot]=n-1
 						spot+=1
-		if(n<len(pC)-4 and n==1 and n+1==1 and n+2==1 and n+3==1 and n+4==1):
+		"""if(n<len(pC)-4 and pC.index(n==1 and n+1==1 and n+2==1 and n+3==1 and n+4==1):
 			if(5>score[0]):#Straight
 				score=[5,0,0,0,0,0]
 				for n in range(len(pC)):
 					if(pC[n]==1):
-						score[1]=n
+						score[1]=n"""
+	for n in range(len(pC)-4):
+		if(pC[n]==1 and pC[n+1]==1 and pC[n+2]==1 and pC[n+3]==1 and pC[n+4]==1):
+			if(5>score[0]):#Straight
+				score=[5,0,0,0,0,0]
+				score[1]=n+4
 	if(score[0]!=1):
 		return(score)
 	spot=1
