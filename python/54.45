@@ -189,4 +189,4 @@ with open('tt.txt','r') as r:
 		print(getWinner(getHand(p1S,p1C),getHand(p2S,p2C),p1C,p2C))
 		if(getWinner(getHand(p1S,p1C),getHand(p2S,p2C),p1C,p2C)):
 			p1Score+=1
-#print(p1Score)
+print(p1Score)
