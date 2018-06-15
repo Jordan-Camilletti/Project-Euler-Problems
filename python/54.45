@@ -139,7 +139,7 @@ def getHand(pS,pC):
 					if(pC[n-1]==1):
 						score[spot]=n-1
 						spot+=1
-		if(n<len(pC)-4 and pC[n]==1 and pC[n+1]==1 and pC[n+2]==1 and pC[n+3]==1 and pC[n+4]==1):
+		if(n<len(pC)-4 and n==1 and n+1==1 and n+2==1 and n+3==1 and n+4==1):
 			if(5>score[0]):#Straight
 				score=[5,0,0,0,0,0]
 				for n in range(len(pC)):
@@ -185,8 +185,8 @@ with open('tt.txt','r') as r:
 			p1C[cards.index(p1[n-1])]+=1
 			p2S[suits.index(p2[n])]+=1
 			p2C[cards.index(p2[n-1])]+=1
-		print(getHand(p1S,p1C),getHand(p2S,p2C))
-		print(getWinner(getHand(p1S,p1C),getHand(p2S,p2C),p1C,p2C))
+		#print(getHand(p1S,p1C),getHand(p2S,p2C))
+		#print(getWinner(getHand(p1S,p1C),getHand(p2S,p2C),p1C,p2C))
 		if(getWinner(getHand(p1S,p1C),getHand(p2S,p2C),p1C,p2C)):
 			p1Score+=1
-#print(p1Score)
+print(p1Score)
