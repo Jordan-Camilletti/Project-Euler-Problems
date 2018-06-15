@@ -51,6 +51,19 @@ The file, poker.txt, contains one-thousand random hands dealt to two players. Ea
 
 How many hands does Player 1 win?"""
 
+"""
+High Card:
+One Pair:
+Two Pair: OK
+Three of a Kind: OK
+Straight: NO
+Flush: OK
+Full House: OK
+Four of a Kind: OK
+Straight Flush: OK
+Royal Flush: OK
+"""
+
 def getHand(pS,pC):
 	score=[1,0,0,0,0,0]
 	spot=1
@@ -172,15 +185,8 @@ with open('tt.txt','r') as r:
 			p1C[cards.index(p1[n-1])]+=1
 			p2S[suits.index(p2[n])]+=1
 			p2C[cards.index(p2[n-1])]+=1
+		print(getHand(p1S,p1C),getHand(p2S,p2C))
+		print(getWinner(getHand(p1S,p1C),getHand(p2S,p2C),p1C,p2C))
 		if(getWinner(getHand(p1S,p1C),getHand(p2S,p2C),p1C,p2C)):
 			p1Score+=1
-print(p1Score)
-		#print(getHand(p1S,p1C),(getHand(p2S,p2C)))
-		#print(p1C)
-		"""print(p1S)
-		print(p1C)
-		print(p2S)
-		print(p2C)
-		print(getHand(p1S,p1C))
-		print(getHand(p2S,p2C))
-		break"""
+#print(p1Score)
