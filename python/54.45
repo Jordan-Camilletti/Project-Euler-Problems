@@ -51,19 +51,6 @@ The file, poker.txt, contains one-thousand random hands dealt to two players. Ea
 
 How many hands does Player 1 win?"""
 
-"""
-High Card: OK
-One Pair: OK
-Two Pair: OK
-Three of a Kind: OK
-Straight: NO
-Flush: OK
-Full House: OK
-Four of a Kind: OK
-Straight Flush: OK
-Royal Flush: OK
-"""
-
 def getHand(pS,pC):
 	score=[1,0,0,0,0,0]
 	spot=1
@@ -139,12 +126,6 @@ def getHand(pS,pC):
 					if(pC[n-1]==1):
 						score[spot]=n-1
 						spot+=1
-		"""if(n<len(pC)-4 and pC.index(n==1 and n+1==1 and n+2==1 and n+3==1 and n+4==1):
-			if(5>score[0]):#Straight
-				score=[5,0,0,0,0,0]
-				for n in range(len(pC)):
-					if(pC[n]==1):
-						score[1]=n"""
 	for n in range(len(pC)-4):
 		if(pC[n]==1 and pC[n+1]==1 and pC[n+2]==1 and pC[n+3]==1 and pC[n+4]==1):
 			if(5>score[0]):#Straight
@@ -160,10 +141,6 @@ def getHand(pS,pC):
 	return(score)
 
 def getWinner(n1,n2,p1C,p2C):
-	"""if(n1[0]>n2[0]):
-		return(True)
-	if(n2[0]>n1[0]):
-		return(False)"""
 	for n in range(len(n1)):
 		if(n1[n]>n2[n]):
 			return(True)
@@ -174,24 +151,19 @@ def getWinner(n1,n2,p1C,p2C):
 suits=["D","C","H","S"]
 cards=[" "," ","2","3","4","5","6","7","8","9","T","J","Q","K","A"]
 p1Score=0
-with open('tt.txt','r') as r:
+with open('poker.txt','r') as r:
 	for line in r:
 		p1S=[0,0,0,0]#Diamond, club, heart, spade
 		p1C=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]#empty,empty,2,3,4,5,6,7,8,9,10,jack,queen,king,Ace
 		p2S=[0,0,0,0]
 		p2C=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
-		#print(line[15:])
 		p1=list(line[:14])
-		#p1=["A","C"," ","T","C"," ","J","C"," ","Q","C"," ","K","C"]
 		p2=list(line[15:29])
-		#p2=["2","C"," ","2","nH"," ","2","S"," ","2","D"," ","6","C"]
 		for n in range(1,len(p1),3):
 			p1S[suits.index(p1[n])]+=1
 			p1C[cards.index(p1[n-1])]+=1
 			p2S[suits.index(p2[n])]+=1
 			p2C[cards.index(p2[n-1])]+=1
-		#print(getHand(p1S,p1C),getHand(p2S,p2C))
-		#print(getWinner(getHand(p1S,p1C),getHand(p2S,p2C),p1C,p2C))
 		if(getWinner(getHand(p1S,p1C),getHand(p2S,p2C),p1C,p2C)):
 			p1Score+=1
 print(p1Score)
