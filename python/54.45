@@ -56,33 +56,76 @@ How many hands does Player 1 win?"""
 #TWO PAIR
 
 def getHand(pS,pC):
-	score=[1,0]
+	score=[1,0,0,0,0,0]
+	spot=1
 	if(5 in pS):
-		score[0]=max(score[0],6)#Flush
+		if(6>score[0]):#Flush
+			score=[6,0,0,0,0,0]
+			spot=1
+			for n in range(len(pC)):
+				if(pC[n]>0):
+					score[spot]=n
+					spot+=1
+		#score[0]=max(score[0],6)#Flush
 		if(pC[8]==1 and pC[9]==1 and pC[10]==1 and pC[11]==1 and pC[12]==1):
 			score[0]=max(score[0],10)#Royal Flush
 		for n in range(0,len(pC)-4):
 			if(pC[n]==1 and pC[n+1]==1 and pC[n+2]==1 and pC[n+3]==1 and pC[n+4]==1):
-				score[0]=max(score[0],9)#Straight Flush
+				if(9>score[0])#Straight Flush
+					score=[9,0,0,0,0,0]
+					spot=1
+					for n in range(len(pC)):
+						if(pC[n]>0):
+							score[spot]=n
+							spot+=1
+				#score[0]=max(score[0],9)#Straight Flush
 	for n in pC:
 		if(n==4):
-			score[0]=max(score[0],8)#Four of a Kind
+			if(8>score[0]):#Four of a Kind
+				score=[8,0,0,0,0,0]
+				for n in range(len(pC)):
+					if(pC[n]==4):
+						score[1]=n
+					if(pC[n]==1):
+						score[2]=n
+			#score[0]=max(score[0],8)#Four of a Kind
 		if(n==3):
-			score[0]=max(score[0],4)#Three of a kind
+			if(4>score[0]):#Three of a Kind
+				score=[4,0,0,0,0,0]
+				for n in range(len(pC)):
+					if(pC[n]==3):
+						score[1]=n
+					if(pC[n]==1 and score[2]==0):
+						score[2]=n
+					else:
+						score[3]=n
+			#score[0]=max(score[0],4)#Three of a kind
 			for n2 in pC:
 				if(n2==2):
-					score[0]=max(score[0],7)#Full House
+					if(7>score[0]):#Full House
+						score=[1,0,0,0,0,0]
+						for n in range(len(pC)):
+							if(pC[n]==3):
+								score[1]=n
+							if(pC[n]==2):
+								score[2]=n
+					#score[0]=max(score[0],7)#Full House
 		if(n==2):
 			score[0]=max(score[0],2)#One Pair
 			for n2 in pC:
 				if(n2!=n and n2==2):
 					score[0]=max(score[0],3)#Two Pairs
 		if(n<len(pC)-4 and pC[n]==1 and pC[n+1]==1 and pC[n+2]==1 and pC[n+3]==1 and pC[n+4]==1):
-			score[0]=max(score[0],5)#Straight
+			if(5>score[0]):#Straight
+				score=[5,0,0,0,0,0]
+				for n in range(len(pC)):
+					if(pC[n]==1):
+						score[1]=n
+			#score[0]=max(score[0],5)#Straight
 	return(score)
 
 def getWinner(n1,n2,p1C,p2C):#TODO: find way to determin winner in the event of a stalemate
-	return(n1[0],n2[0])
+	#return(n1[0],n2[0])
 
 suits=["D","C","H","S"]
 cards=["2","3","4","5","6","7","8","9","T","J","Q","K","A"]
@@ -102,7 +145,8 @@ with open('tt.txt','r') as r:
 			p1C[cards.index(p1[n-1])]+=1
 			p2S[suits.index(p2[n])]+=1
 			p2C[cards.index(p2[n-1])]+=1
-		print(getWinner(getHand(p1S,p1C),getHand(p2S,p2C),p1C,p2C))
+		#print(getWinner(getHand(p1S,p1C),getHand(p2S,p2C),p1C,p2C))
+		print(getHand(p1S,p1C),(getHand(p2S,p2C)))
 		#print(p1C)
 		"""print(p1S)
 		print(p1C)
