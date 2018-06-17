@@ -43,15 +43,18 @@ def getHand(pS,pC):
 	score=[1,0,0,0,0,0]
 	spot=1
 	if(5 in pS):
+		
 		if(6>score[0]):#Flush
 			score=[6,0,0,0,0,0]
 			spot=1
 			for n in range(len(pC),0,-1):
 				if(pC[n-1]>0):
 					score[spot]=n-1
-					spot+=1
-		if(pC[10]==1 and pC[11]==1 and pC[12]==1 and pC[13]==1 and pC[14]==1):
+					spot+=1:#Flush
+					
+		if(pC[10]==1 and pC[11]==1 and pC[12]==1 and pC[13]==1 and pC[14]==1):#Royal Flush
 			score[0]=max(score[0],10)#Royal Flush
+			
 		for n in range(0,len(pC)-4):
 			if(pC[n]==1 and pC[n+1]==1 and pC[n+2]==1 and pC[n+3]==1 and pC[n+4]==1):
 				if(9>score[0]):#Straight Flush
@@ -60,7 +63,7 @@ def getHand(pS,pC):
 					for n in range(len(pC),0,-1):
 						if(pC[n-1]>0):
 							score[spot]=n-1
-							spot+=1
+							spot+=1#Straight Flush
 	for n in pC:
 		if(n==4):
 			if(8>score[0]):#Four of a Kind
@@ -69,7 +72,8 @@ def getHand(pS,pC):
 					if(pC[n]==4):
 						score[1]=n
 					if(pC[n]==1):
-						score[2]=n
+						score[2]=n#Four of a Kind
+						
 		if(n==3):
 			if(4>score[0]):#Three of a Kind
 				score=[4,0,0,0,0,0]
@@ -79,7 +83,8 @@ def getHand(pS,pC):
 					if(pC[n]==1 and score[2]==0):
 						score[2]=n
 					else:
-						score[3]=n
+						score[3]=n#Three of a Kind
+						
 			for n2 in pC:
 				if(n2==2):
 					if(7>score[0]):#Full House
@@ -88,7 +93,8 @@ def getHand(pS,pC):
 							if(pC[n]==3):
 								score[1]=n
 							if(pC[n]==2):
-								score[2]=n
+								score[2]=n#Full House
+								
 		if(n==2):
 			n1=pC.index(2)
 			for n2 in range(len(pC),0,-1):
@@ -103,7 +109,8 @@ def getHand(pS,pC):
 								score[2]=n
 							if(pC[n-1]==1):
 								score[spot]=n
-								spot+=1
+								spot+=1:#Two Pairs
+									
 			if(2>score[0]):#One Pair
 				spot=2
 				score=[2,0,0,0,0,0]
@@ -112,12 +119,14 @@ def getHand(pS,pC):
 						score[1]=n-1
 					if(pC[n-1]==1):
 						score[spot]=n-1
-						spot+=1
+						spot+=1#One Pair
+						
 	for n in range(len(pC)-4):
 		if(pC[n]==1 and pC[n+1]==1 and pC[n+2]==1 and pC[n+3]==1 and pC[n+4]==1):
 			if(5>score[0]):#Straight
 				score=[5,0,0,0,0,0]
 				score[1]=n+4
+				
 	if(score[0]!=1):
 		return(score)
 	spot=1
