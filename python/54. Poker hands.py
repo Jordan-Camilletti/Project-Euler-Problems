@@ -104,7 +104,6 @@ def getHand(pS,pC):
 							if(pC[n-1]==1):
 								score[spot]=n
 								spot+=1
-
 			if(2>score[0]):#One Pair
 				spot=2
 				score=[2,0,0,0,0,0]
@@ -134,7 +133,6 @@ def getWinner(n1,n2,p1C,p2C):
 			return(True)
 		if(n2[n]>n1[n]):
 			return(False)
-
 
 suits=["D","C","H","S"]
 cards=[" "," ","2","3","4","5","6","7","8","9","T","J","Q","K","A"]
