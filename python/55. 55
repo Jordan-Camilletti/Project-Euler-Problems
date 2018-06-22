@@ -1,6 +1,11 @@
 """
 """
 
-def palin(num):
-	for n in range(int(len(str(num))/2.0)):
-		print(str(num)[n])
+def palin(nu):
+	num=str(nu)
+	for n in range(int(len(num)/2.0)):
+		if(num[n] != num[len(num)-n-1]):
+			return(False)
+	return(True)
+
+print(palin(121))
