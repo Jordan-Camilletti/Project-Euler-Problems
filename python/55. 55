@@ -1,2 +1,6 @@
 """
 """
+
+def palin(num):
+	for n in range(int(len(str(num))/2.0)):
+		print(str(num)[n])
