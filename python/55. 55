@@ -8,7 +8,9 @@ def palin(nu):
 def findPalin(num,t=0):
 	if(palin(num)):
 		return(num,t)
+	num+=int(str(num)[::-1])
 	t+=1
-	return(findPalin(num+int(str(num)[::-1]) ,t))
+	#print(num,t)
+	return(findPalin(num,t))
 
 print(findPalin(349))
