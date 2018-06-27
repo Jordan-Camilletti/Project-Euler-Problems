@@ -5,20 +5,25 @@ def palin(nu):
 	num=str(nu)
 	return(num==num[::-1])
 
-def findPalin(num,t=0):
-	if(palin(num) and t!=0):
+def lyvhrel(num,use=[],t=0):
+	if(num in use):
 		return(True)
+	use.append(num)
+	use.append(int(str(num)[::-1]))
 	num+=int(str(num)[::-1])
 	t+=1
-	if(t>50):
+	if(palin(num)):
 		return(False)
+	if(t>=50):
+		used.append(use)
+		return(True)
 	#print(num,t)
-	return(findPalin(num,t))
+	return(lyvhrel(num,use,t))
 
-#print(palin(4994),findPalin(4994))
 tot=0
+used=[]
 for n in range(10000):
-	#print(n)
-	if(palin(n) and not findPalin(n)):
+	if(palin(n) and lyvhrel(n)):
+		print(n)
 		tot+=1
 print(tot)
