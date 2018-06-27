@@ -15,7 +15,7 @@ def findPalin(num,t=0):
 	#print(num,t)
 	return(findPalin(num,t))
 
-print(palin(4994),findPalin(4994))
+#print(palin(4994),findPalin(4994))
 tot=0
 for n in range(10000):
 	#print(n)
