@@ -6,11 +6,13 @@ def palin(nu):
 	return(num==num[::-1])
 
 def findPalin(num,t=0):
-	if(palin(num)):
-		return(num,t)
+	if(palin(num) and t!=0):
+		return(True)
 	num+=int(str(num)[::-1])
 	t+=1
+	if(t>50):
+		return(False)
 	#print(num,t)
 	return(findPalin(num,t))
 
-print(findPalin(349))
+print(palin(4994),findPalin(4994))
