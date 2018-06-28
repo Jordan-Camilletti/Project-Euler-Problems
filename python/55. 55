@@ -17,6 +17,5 @@ def lychrel(num,t=0):
 tot=0
 for n in range(10000):
 	if(lychrel(n)):
-		print(n)
 		tot+=1
 print(tot)
