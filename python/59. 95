@@ -4,5 +4,8 @@ print(bin(42))
 print(65^42)
 print(107^42)
 
-with open("cipher.txt","r+")as n:
-    for x in n.readline():
+print(chr(0))
+print(chr(255))
+cipher=open("cipher.txt", "r")
+print(cipher.read().split(","))
+cipher.close()
