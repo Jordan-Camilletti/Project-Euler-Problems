@@ -1,0 +1,5 @@
+key="AAA"
+print(bin(107))
+print("0"+bin(42))
+print(0b1000001)
+print(ord("A"))
