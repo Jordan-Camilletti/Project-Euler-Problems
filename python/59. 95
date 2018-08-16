@@ -1,4 +1,4 @@
-key=[0,0,0]
+key=[0]
 print(bin(65))
 print(bin(42))
 print(65^42)
@@ -6,10 +6,14 @@ print(107^42)
 
 print(chr(0))
 print(chr(255))
-ciphered=[107]
-"""cipher=open("cipher.txt", "r")
+ciphered=[]
+normal=[]
+cipher=open("cipher.txt", "r")
 ciphered=(cipher.read().split(","))
-cipher.close()"""
+cipher.close()
 
-for n in ciphered:
-	print(n^ord(key))
+
+for n in range(len(ciphered)):
+	#print(chr(int(ciphered[n])^key[0]))
+	normal.append(chr(int(ciphered[n])^key[0]))
+
