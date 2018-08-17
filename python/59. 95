@@ -1,17 +1,17 @@
-key=[0,0,0]
-"""print(bin(65))
-print(bin(42))
-print(65^42)
-print(107^42)
-print(chr(0))
-print(chr(255))"""
+#CORRECT KEY:[103,111,100]
+key=[103,111,100]
 
 ciphered=[]
 cipher=open("cipher.txt", "r")
 ciphered=(cipher.read().split(","))
 cipher.close()
 
-for n1 in range(97,123):
+sum=0
+for n in range(len(ciphered)):
+	sum+=int(int(ciphered[n])^key[n%3])
+print(sum)
+
+"""for n1 in range(97,123):#Finding the correct key
 	for n2 in range(97,123):
 		for n3 in range(97,123):
 			key=[n1,n2,n3]
@@ -23,4 +23,4 @@ for n1 in range(97,123):
 			joined="".join(normal).lower()
 			if("the" in joined and "and" in joined and "that" in joined and "have" in joined):#Attempting to detect the most common 3+ letter english words
 				print(key)
-			#print(joined)
+				print(joined)"""
