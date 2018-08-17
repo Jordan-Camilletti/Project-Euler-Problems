@@ -11,9 +11,18 @@ cipher=open("cipher.txt", "r")
 ciphered=(cipher.read().split(","))
 cipher.close()
 
-normal=[]
-for n in range(len(ciphered)):
-	#print(chr(int(ciphered[n])^key[0]))
-	normal.append(chr(int(ciphered[n])^key[n%len(key)]))
+for n1 in range(256):
+	for n2 in range(256):
+		for n3 in range(256):
+			key[0]=n1
+			key[1]=n2
+			key[2]=n3
+			normal=[]
+			for n in range(len(ciphered)):
+				#print(chr(int(ciphered[n])^key[0]))
+				normal.append(chr(int(ciphered[n])^key[n%len(key)]))
 
-print("".join(normal))
+			joined="".join(normal).lower()
+			if("the" in joined and "and" in joined and "that" in joined and "have" in joined):#Attempting to detect the most common 3+ letter english words
+				print(key)
+			#print(joined)
