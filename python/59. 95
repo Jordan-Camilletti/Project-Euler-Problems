@@ -8,19 +8,14 @@ Unfortunately, this method is impractical for most users, so the modified method
 
 Your task has been made easy, as the encryption key consists of three lower case characters. Using cipher.txt (right click and 'Save Link/Target As...'), a file containing the encrypted ASCII codes, and the knowledge that the plain text must contain common English words, decrypt the message and find the sum of the ASCII values in the original text."""
 #CORRECT KEY:[103,111,100]
-key=[103,111,100]
+key=[0]
 
 ciphered=[]
 cipher=open("cipher.txt", "r")
 ciphered=(cipher.read().split(","))
 cipher.close()
 
-sum=0
-for n in range(len(ciphered)):
-	sum+=int(int(ciphered[n])^key[n%3])
-print(sum)
-
-"""for n1 in range(97,123):#Finding the correct key
+for n1 in range(97,123):#Finding the correct key
 	for n2 in range(97,123):
 		for n3 in range(97,123):
 			key=[n1,n2,n3]
@@ -32,4 +27,8 @@ print(sum)
 			joined="".join(normal).lower()
 			if("the" in joined and "and" in joined and "that" in joined and "have" in joined):#Attempting to detect the most common 3+ letter english words
 				print(key)
-				print(joined)"""
+				print(joined)
+				sum=0#Using the correct key to find the sum
+				for n in range(len(ciphered)):
+					sum+=int(int(ciphered[n])^key[n%3])
+				print(sum)
