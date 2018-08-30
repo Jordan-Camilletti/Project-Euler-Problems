@@ -7,3 +7,7 @@ def prime(num):
   for n in range(3,n,2):
     if(num%n==0) return(False)
   return(True)
+
+def primeSet(num1,num2):
+  if(not prime(num1) or not prime(num2)) return(False)
+  
