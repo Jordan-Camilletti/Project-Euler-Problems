@@ -12,3 +12,4 @@ def primeSet(num1,num2):
   sum=num1+num2
   if(not prime(num1) or not prime(num2)) return(False)
   
+primes=[3,3,3,3,3]
