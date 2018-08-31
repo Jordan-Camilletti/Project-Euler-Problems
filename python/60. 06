@@ -15,5 +15,5 @@ def primeSet(num1,num2):
 primes=[3,3,3,3,3]
 for num1 in range(len(primes)):
   for num2 in range(num1+1,len(primes)):
-    if():
+    if(not primeSet(num1,num2)):
     
