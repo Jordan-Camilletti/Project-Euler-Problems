@@ -13,7 +13,7 @@ def primeSet(num1,num2):
   if(not prime(num1) or not prime(num2)) return(False)
   
 primes=[3,3,3,3,3]
-for num1 in range(len(primes)):
-  for num2 in range(num1+1,len(primes)):
-    if(not primeSet(num1,num2)):
-    
+def allPrimeSet(primes):
+  for num1 in range(len(primes)):
+    for num2 in range(num1+1,len(primes)):
+      if(not primeSet(num1,num2)):
