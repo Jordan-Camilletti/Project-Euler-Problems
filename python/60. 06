@@ -20,3 +20,5 @@ def allPrimeSet(primes):
   return(True)
   
 primes=[3,3,3,3,3]
+while(True):
+  primes[4]+=1
