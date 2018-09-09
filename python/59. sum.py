@@ -3,10 +3,14 @@
 Considering natural numbers of the form, ab, where a, b < 100, what is the maximum digital sum?"""
 
 tot=0
-sum=0
+top=0
+print(1**0)
+print(2**3)
+print(0**0)
+print(10**100)
 for a in range(100):
 	for b in range(100):
-		tot=(a**b)
-		for n in str(tot):
-			sum+=int(n)
-print(sum)
+		for n in str(a**b):
+			tot+=int(n)
+		top=max(top,tot)
+#print(sum)
