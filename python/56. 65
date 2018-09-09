@@ -3,3 +3,5 @@
 Considering natural numbers of the form, ab, where a, b < 100, what is the maximum digital sum?"""
 
 int a=1,b=1,sum=0
+for a in range(100):
+  for b in range(100):
