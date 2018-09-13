@@ -15,7 +15,7 @@ In the first one-thousand expansions, how many fractions contain a numerator wit
 
 def squareSum(sum, n):
   if(n==0):
-    return(sum)
-  return()
+    return(1+sum)
+  return(1/(2+squareSum() ))
   
 while():
