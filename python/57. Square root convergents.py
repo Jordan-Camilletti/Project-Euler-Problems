@@ -19,6 +19,5 @@ def squareSum(n):
   return(1/(2+squareSum(n-1)))
 
 num=0
-#print(1+squareSum(0))
 for n in range(0,10):
 	print(1+squareSum(n))
