@@ -29,4 +29,4 @@ for n in range(990):
 	if(len(x)>len(y)):
 		sum+=1
 		
-print(num)
+print(sum)
