@@ -18,11 +18,10 @@ from fractions import Fraction, gcd
 def squareSum(n):
 	if(n==0):
 		return(2)
-	return(2+(1/squareSum(n-1)))
+	return(2+Fraction(1/squareSum(n-1)))
 
 num=0
 for n in range(10):
 	#print(squareSum(n)-1)
-	#x,y=(str(Fraction(1+squareSum(n)))).split("/")
-	#print((float(n)).as_integer_ratio())
+	print(Fraction(squareSum(n)-1))
 	#print((squareSum(n)).as_integer_ratio())
