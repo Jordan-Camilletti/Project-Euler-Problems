@@ -28,4 +28,5 @@ for n in range(990):
 	x,y=str(Fraction(squareSum(n+1)-1)).split("/")
 	if(len(x)>len(y)):
 		num+=1
+		
 print(num)
