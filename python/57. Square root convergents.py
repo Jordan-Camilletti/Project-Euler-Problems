@@ -21,7 +21,11 @@ def squareSum(n):
 	return(2+Fraction(1/squareSum(n-1)))
 
 num=0
-for n in range(10):
-	#print(squareSum(n)-1)
-	print(Fraction(squareSum(n)-1))
+for n in range(1000):
+	#print(squareSum(n+1)-1)
 	#print((squareSum(n)).as_integer_ratio())
+	x,y=str(Fraction(squareSum(n+1)-1)).split("/")
+	if(len(x)>len(y)):
+		num+=1
+print(num)
+	
