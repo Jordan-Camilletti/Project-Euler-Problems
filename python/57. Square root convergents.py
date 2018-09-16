@@ -13,13 +13,16 @@ The next three expansions are 99/70, 239/169, and 577/408, but the eighth expans
 
 In the first one-thousand expansions, how many fractions contain a numerator with more digits than denominator?"""
 
-from fractions import Fraction
+from fractions import Fraction, gcd
 
 def squareSum(n):
-  if(n==0):
-    return(1/2)
-  return(1/(2+squareSum(n-1)))
+	if(n==0):
+		return(2)
+	return(2+(1/squareSum(n-1)))
 
 num=0
-for n in range(0,10):
-	print(str(Fraction(1+squareSum(n))))
+for n in range(10):
+	#print(squareSum(n)-1)
+	#x,y=(str(Fraction(1+squareSum(n)))).split("/")
+	#print((float(n)).as_integer_ratio())
+	#print((squareSum(n)).as_integer_ratio())
