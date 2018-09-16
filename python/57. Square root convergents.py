@@ -13,7 +13,7 @@ The next three expansions are 99/70, 239/169, and 577/408, but the eighth expans
 
 In the first one-thousand expansions, how many fractions contain a numerator with more digits than denominator?"""
 
-#This can only go up to 990 without causing a RecursionError, giving an answer of 152. The last 10 possible answers can just be guessed.
+#The squareSum() method can only go up to 990 without causing a RecursionError, giving an answer of 152. The last 10 possible answers can just be guessed.
 
 from fractions import Fraction
 
