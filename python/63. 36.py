@@ -2,3 +2,13 @@
 
 How many n-digit positive integers exist which are also an nth power?"""
 
+sum=0
+power=1
+for num in range(1,10):
+	power=1
+	while(len(str(pow(num,power)))>=power):
+		if(len(str(pow(num,power)))==power):
+			sum+=1
+		power+=1
+print(sum)
+		
