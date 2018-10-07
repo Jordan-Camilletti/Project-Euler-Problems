@@ -3,7 +3,10 @@
 How many n-digit positive integers exist which are also an nth power?"""
 
 def isPow(num):
-	return(False)
+	pwr=1
+	while(pow(pwr,len(str(num)))<num):
+		pwr+=1
+	return(pow(pwr,len(str(num)))==num)
 
 sum=0
 digit=0
