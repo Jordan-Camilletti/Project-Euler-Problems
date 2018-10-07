@@ -6,7 +6,9 @@ def isPow(num):
 	pwr=1
 	while(pow(pwr,len(str(num)))<num):
 		pwr+=1
-	return(pow(pwr,len(str(num)))==num)
+	if(pow(pwr,len(str(num)))!=num):
+		return(0)
+	return(pwr)
 
 sum=0
 digit=0
