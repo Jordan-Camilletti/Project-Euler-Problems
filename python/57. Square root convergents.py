@@ -22,10 +22,10 @@ def squareSum(n):
 		return(2)
 	return(2+Fraction(1/squareSum(n-1)))
 
-num=0
+sum=0
 for n in range(990):
 	#print(squareSum(n+1)-1)
 	x,y=str(Fraction(squareSum(n+1)-1)).split("/")
 	if(len(x)>len(y)):
-		num+=1
-print(num)
+		sum+=1
+print(sum)
