@@ -12,3 +12,8 @@ def isPow(num):
 
 sum=0
 digit=0
+while(isPow(digit)!=1):
+	if(isPow(digit)>1):
+		sum+=1
+	digit+=1
+print(sum)
