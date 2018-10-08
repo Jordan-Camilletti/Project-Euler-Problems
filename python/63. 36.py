@@ -11,4 +11,3 @@ for num in range(1,10):
 			sum+=1
 		power+=1
 print(sum)
-		
