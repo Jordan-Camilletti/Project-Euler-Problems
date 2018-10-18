@@ -11,4 +11,7 @@ for num in range(1,10):
 			sum+=1
 		power+=1
 print(sum)
+<<<<<<< HEAD:python/63. 36.py
 		
+=======
+>>>>>>> 968cf746122f1bca3f1503acbaced25ab678d87f:python/63. Powerful digit counts.py
