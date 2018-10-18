@@ -1,11 +1,11 @@
 """
 """
 
-length=3
-spiral=[[]]
-for n1 in range(length):
-	spiral.append([])
-	for n2 in range(length):
-		currNum=(length*length)-(2*(length-1))+n1
-		spiral[n1].append(currNum-n2)
-print(spiral)
+length=7
+cornerNums=[1]
+currNum=1
+for n in range((length-1)/2):
+	for corner in range(4):
+		currNum+=(n*2)
+		cornerNums.append(currNum)
+print(cornerNums)
