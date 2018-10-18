@@ -9,14 +9,18 @@ def isPrime(num):
 			return(False)
 	return(True)
 	
-length=7
-cornerNums=[1]
-primeRatio=0
-for n in range(int((length-1)/2)):
-	for corner in range(4):
-		cornerNums.append(cornerNums[-1]+((n+1)*2))
+length=5
+while(True):
+	length+=2
+	cornerNums=[1]
+	primeRatio=0
+	for n in range(int((length-1)/2)):
+		for corner in range(4):
+			cornerNums.append(cornerNums[-1]+((n+1)*2))
 
-for num in cornerNums:
-	if(isPrime(num)):
-		primeRatio+=1
-print(float(primeRatio/len(cornerNums)))
+	for num in cornerNums:
+		if(isPrime(num)):
+			primeRatio+=1
+	if(float(primeRatio/len(cornerNums))<0.1):
+		print(length)
+		break
