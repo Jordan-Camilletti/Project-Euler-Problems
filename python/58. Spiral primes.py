@@ -35,3 +35,4 @@ while(True):
 	if(float(primeRatio/len(cornerNums))<0.1):
 		print(length)
 		break
+print(length)
