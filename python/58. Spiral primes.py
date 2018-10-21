@@ -20,7 +20,7 @@ def isPrime(num):
 			return(False)
 	return(True)
 	
-length=5
+length=1
 while(True):
 	length+=2
 	cornerNums=[1]
