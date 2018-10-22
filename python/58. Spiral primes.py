@@ -20,18 +20,19 @@ def isPrime(num):
 			return(False)
 	return(True)
 	
-length=7
-primes=0
-allNums=1
-currNum=1
+length=3
+inc=2
+primes=3
+allNums=5
+currNum=9
 while(float(primes/allNums)>0.1):
-	length+=2 
-	for n1 in range(int(length/3)+1):
-		for n2 in range(4):
-			currNum+=((n1+1)*2)
-			allNums+=1
-			if(isPrime(currNum)):
-				primes+=1
-		
+	length+=2
+	inc+=2
+	for n in range(4):
+		currNum+=inc
+		allNums+=1
+		if(isPrime(currNum)):
+			primes+=1
 	print(float(primes/allNums))
+	
 print(length)
