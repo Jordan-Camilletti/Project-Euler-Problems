@@ -20,19 +20,18 @@ def isPrime(num):
 			return(False)
 	return(True)
 	
-length=1
-while(True):
-	length+=2
-	cornerNums=[1]
-	primeRatio=0
-	for n in range(int((length-1)/2)):
-		for corner in range(4):
-			cornerNums.append(cornerNums[-1]+((n+1)*2))
-
-	for num in cornerNums:
-		if(isPrime(num)):
-			primeRatio+=1
-	if(float(primeRatio/len(cornerNums))<0.1):
-		print(length)
-		break
+length=7
+primes=0
+allNums=1
+currNum=1
+while(float(primes/allNums)>0.1):
+	length+=2 
+	for n1 in range(int(length/3)+1):
+		for n2 in range(4):
+			currNum+=((n1+1)*2)
+			allNums+=1
+			if(isPrime(currNum)):
+				primes+=1
+		
+	print(float(primes/allNums))
 print(length)
