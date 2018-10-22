@@ -31,8 +31,8 @@ while(float(primes/allNums)>0.1):
 	for n in range(4):
 		currNum+=inc
 		allNums+=1
-		if(isPrime(currNum)):
+		if(isPrime(currNum) and n!=3):
 			primes+=1
-	print(float(primes/allNums))
+	#print(float(primes/allNums))
 	
 print(length)
