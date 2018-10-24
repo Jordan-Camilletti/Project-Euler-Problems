@@ -13,8 +13,6 @@ It is interesting to note that the odd squares lie along the bottom right diagon
 If one complete new layer is wrapped around the spiral above, a square spiral with side length 9 will be formed. If this process is continued, what is the side length of the square spiral for which the ratio of primes along both diagonals first falls below 10%?"""
 
 def isPrime(num):
-	if(num==1):
-		return(False)
 	for n in range(3,int(num/2),2):
 		if(num%n==0):
 			return(False)
