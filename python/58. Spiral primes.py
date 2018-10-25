@@ -26,7 +26,9 @@ while(float(primes/allNums)>0.1):
 	inc+=2
 	for n in range(4):
 		currNum+=inc
-		print(currNum)
-	#print(float(primes/allNums))
+		allNums+=1
+		if(isPrime(currNum)):
+			primes+=1
+	print(float(primes/allNums))
 	
 print(allNums/4)
