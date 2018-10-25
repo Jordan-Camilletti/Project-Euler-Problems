@@ -15,11 +15,11 @@ If one complete new layer is wrapped around the spiral above, a square spiral wi
 import math
 
 def isPrime(num):#Code from https://en.wikipedia.org/wiki/Primality_test#Pseudocode
-	if(num%2==0 or num%3==0)
+	if(num%2==0 or num%3==0):
 		return(False)
 	i=5
 	while(i*i<=num):
-		if(n%i==0 or n%(i+2)==0)
+		if(num%i==0 or num%(i+2)==0):
 			return(False)
 		i+=6
 	return(True)
@@ -33,7 +33,7 @@ while(float(primes/allNums)>0.1):
 	for n in range(4):
 		currNum+=inc
 		allNums+=1
-		if(isPrime(currNum)):
+		if(isPrime(currNum) and n!=3):
 			primes+=1
 	print(float(primes/allNums))
 	
