@@ -14,7 +14,7 @@ If one complete new layer is wrapped around the spiral above, a square spiral wi
 
 import math
 
-def isPrime(num):
+def isPrime(num):#Code from https://en.wikipedia.org/wiki/Primality_test#Pseudocode
 	for n in range(3,int(math.sqrt(num)),2):
 		if(num%n==0):
 			return(False)
