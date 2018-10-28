@@ -1,5 +1,6 @@
 """
 """
+
 import itertools.permutations
 
 def is_perfect_cube(n):
