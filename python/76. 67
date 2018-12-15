@@ -1,2 +1,8 @@
 """
 """
+
+def getWays(n):
+  return(0)
+  
+num=0
+print(getWays(n))
