@@ -3,7 +3,8 @@
 
 import itertools.permutations
 
-def isCube(n):
+def findPerms(n):
 	return()
 
+cubes=[]
 num=1
