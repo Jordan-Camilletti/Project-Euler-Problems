@@ -3,8 +3,7 @@
 
 import itertools.permutations
 
-def is_perfect_cube(n):
-    c = int(n**(1/3.))
-    return (c**3 == n) or ((c+1)**3 == n)
-    
-currCube=1
+def isCube(n):
+	return()
+
+num=1
