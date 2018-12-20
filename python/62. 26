@@ -4,7 +4,11 @@
 import itertools.permutations
 
 def findPerms(n):
-	return()
+	tot=0
+	for perm in permutations(n):
+		if("""Is a cube"""):
+			tot+=1
+	return(tot)
 
 cubes=[]
 num=1
