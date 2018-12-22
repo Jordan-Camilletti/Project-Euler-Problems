@@ -13,9 +13,9 @@ def findPerms(n):
 			tot+=1
 	return(tot)
 
-cubes=[]
+cubeNums=[]
 num=1
 while(findPerms(num)!=5):
-	cubes.adjoin[num*num*num]
+	cubeNums.append[num**3]
 	num+=1
 print(num)
