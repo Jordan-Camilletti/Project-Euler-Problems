@@ -8,25 +8,22 @@ def isCube(n):
 	return(c**3==n) or ((c+1)**3==n)
 
 def findPerms(n):
-	tot=1
+	tot=0
+	cubes=[]
 	for perm in permutations(int(i) for i in str(n)):
 		n=0
 		for p in perm:
 			n=(n*10)+p
-		if(isCube(n)):
+		if(n not in cubes and isCube(n)):
 			tot+=1
+			cubes.append(n)
 	return(tot)
 
-cubeNums=[]
+"""cubeNums=[]
 num=0
 while(findPerms(num,cubeNums)!=5):
 	#cubeNums.append[num**3]
 	num+=1
 print(num)
-
-#print(findPerms(41063625))
-for perm in permutations(int(i) for i in str(41063625)):
-	n=0
-	for p in perm:
-		n=(n*10)+p
-	print(str(n)+" "+str(isCube(n)))
+"""
+print(findPerms(41063625))
