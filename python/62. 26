@@ -21,9 +21,10 @@ def findPerms(n,cubeNums):
 			cubes.append(n)
 	return(tot)
 
-cubeNums=[]
+triedNums=[]
 num=0
-while(findPerms(num,cubeNums)!=5):
-	cubeNums.append[num**3]
+while(num in triedNums or findPerms(num,cubeNums)!=5):
+	cubeNums.append(num**3)
+	triedNums.append(num)
 	num+=1
 print(num)
