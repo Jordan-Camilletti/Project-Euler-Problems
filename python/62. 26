@@ -23,10 +23,11 @@ def findPerms(n,tried):
 			cubes.append(n)
 	return(tot==3)
 
-triedNums=[]
+cubes=[]
 num=0
 while(not findPerms(num,triedNums)):
 	triedNums.append(num)
 	num+=1
 	print(num)
 print(num)
+#TODO test: add nums to array if cubes, check cube array for any perms of that num
