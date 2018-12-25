@@ -30,8 +30,4 @@ num=0
 while(findPerms(num**3,cubes)!=3):
 	num+=1
 	cubes.append(num**3)
-	print(num)
 print(num**3)
-print(cubes)
-print(findPerms(num**3,cubes))
-#TODO test: add nums to array if cubes, check cube array for any perms of that num
