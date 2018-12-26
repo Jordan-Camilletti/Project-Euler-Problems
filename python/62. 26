@@ -40,3 +40,4 @@ while(findPerms(num**3,cubes)!=3):
 	print(num)
 print(num**3)
 print(findSmallCube(num**3,cubes))
+#TODO: have 'cubes' clear if len(num**3) is bigger than the biggest number in 'cubes'
