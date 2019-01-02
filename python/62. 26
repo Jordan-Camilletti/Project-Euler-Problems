@@ -41,9 +41,13 @@ def findPerms(num,cubes):
 	return(tot)
 		
 
-"""cubes=[]
+cubes=[]
 num=0
-while(findPerms(num**3,cubes)!=4):
+while(3 not in cubes):
+	num+=1
+	cubes[translateNum(num**3)]+=1
+
+"""while(findPerms(num**3,cubes)!=4):
 	num+=1
 	if(len(str(num**3))!=len(str((num-1)**3))):
 		cubes=[]
@@ -51,9 +55,9 @@ while(findPerms(num**3,cubes)!=4):
 	print(cubes)
 	print(num)
 print(num**3)
-print(findSmallCube(num**3,cubes))"""
+print(findSmallCube(num**3,cubes))
 print(translateNum(123456789))
 print(translateNum(9876543210))
 print(translateNum(158))
-print(translateNum(6910430684))
+print(translateNum(6910430684))"""
 #TODO: translate number into 9 digit num based on digit occurance(123456789 = 111111111, 158 = 100010010). If the same 9 digit num occurs that it is a cube permutation
