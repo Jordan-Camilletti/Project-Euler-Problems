@@ -2,21 +2,6 @@
 """
 
 from itertools import permutations
-
-def isCube(n,cubes):
-	if(n in cubes):
-		return(True)
-	c=int(n**(1/3.))
-	return(c**3==n) or ((c+1)**3==n)
-	
-def translateNum(num):
-	newNum=[0,0,0,0,0,0,0,0,0,0]
-	for n in range(len(str(num))):
-		newNum[(int(num/(10**(n))%10))]+=1
-	n=0
-	for p in newNum:
-		n=(n*10)+p
-	return(n)
 	
 def findSmallCube(num,cubes):
 	small=num
@@ -40,12 +25,29 @@ def findPerms(num,cubes):
 			used.append(n)
 	return(tot)
 		
+def isCube(n,cubes):
+	if(n in cubes):
+		return(True)
+	c=int(n**(1/3.))
+	return(c**3==n) or ((c+1)**3==n)
+	
+def translateNum(num):
+	newNum=[0,0,0,0,0,0,0,0,0,0]
+	for n in range(len(str(num))):
+		newNum[(int(num/(10**(n))%10))]+=1
+	n=0
+	for p in newNum:
+		n=(n*10)+p
+	return(n)
 
 cubes=[]
 num=0
 while(3 not in cubes):
 	num+=1
-	cubes[translateNum(num**3)]+=1
+	if():
+		cubes[][1]+=1
+	else:
+		cubes.append([translateNum(num**3),1])
 
 """while(findPerms(num**3,cubes)!=4):
 	num+=1
