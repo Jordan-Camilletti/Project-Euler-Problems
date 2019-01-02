@@ -12,24 +12,6 @@ def findSmallCube(num,cubes):
 		if(isCube(n,cubes) and n<small):
 			small=n
 	return(small)
-
-def findPerms(num,cubes):
-	tot=0
-	used=[]
-	for perm in permutations(int(i) for i in str(num)):
-		n=0
-		for p in perm:
-			n=(n*10)+p
-		if(len(str(num))==len(str(n)) and n in cubes and n not in used):
-			tot+=1
-			used.append(n)
-	return(tot)
-		
-def isCube(n,cubes):
-	if(n in cubes):
-		return(True)
-	c=int(n**(1/3.))
-	return(c**3==n) or ((c+1)**3==n)
 	
 def alreadyUsed(n,cubes):
 	for n1 in cubes:
@@ -48,14 +30,22 @@ def translateNum(num):
 
 cubes=[]
 num=0
-while(3 not in cubes):
+#print([i[1] for i in cubes])
+while(3 not in [i[1] for i in cubes]):
+	print(num)
 	num+=1
-	if(alreadyUsed(num**3,cubes)!=-1):
+	#print(cubes)
+	#print("\n")
+	if(translateNum(num**3) in [i[0] for i in cubes]):#num**3 in [i[0] for i in cubes]
 		cubes[alreadyUsed(num**3,cubes)][1]+=1
 	else:
 		cubes.append([translateNum(num**3),1])
-
-"""while(findPerms(num**3,cubes)!=4):
+		
+#print(cubes)
+"""for n in cubes:
+	if(n[0]==1111112000):
+		print(n)"""
+"""while(findPerms(num**3,cubes)!=4):1111112000
 	num+=1
 	if(len(str(num**3))!=len(str((num-1)**3))):
 		cubes=[]
@@ -63,9 +53,5 @@ while(3 not in cubes):
 	print(cubes)
 	print(num)
 print(num**3)
-print(findSmallCube(num**3,cubes))
-print(translateNum(123456789))
-print(translateNum(9876543210))
-print(translateNum(158))
-print(translateNum(6910430684))"""
+print(findSmallCube(num**3,cubes))"""
 #TODO: translate number into 9 digit num based on digit occurance(123456789 = 111111111, 158 = 100010010). If the same 9 digit num occurs that it is a cube permutation
