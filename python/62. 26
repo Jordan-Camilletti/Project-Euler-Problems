@@ -41,4 +41,4 @@ while(5 not in [i[1] for i in cubes]):
 	else:
 		cubes.append([translateNum(num**3),1])
 print(findSmallCube((num-1)**3))
-#TODO: translate number into 9 digit num based on digit occurance(123456789 = 111111111, 158 = 100010010). If the same 9 digit num occurs that it is a cube permutation
+#TODO: test current output to see if it has 5 permutation cubes
