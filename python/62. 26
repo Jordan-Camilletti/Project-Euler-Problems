@@ -13,7 +13,10 @@ def translateNum(num):
 	newNum=[0,0,0,0,0,0,0,0,0,0]
 	for n in range(len(str(num))):
 		newNum[(int(num/(10**(n))%10))]+=1
-	return(newNum)#Find way to translate newNum from list into int
+	n=0
+	for p in newNum:
+		n=(n*10)+p
+	return(n)
 	
 def findSmallCube(num,cubes):
 	small=num
