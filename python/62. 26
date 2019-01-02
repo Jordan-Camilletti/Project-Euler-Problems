@@ -31,6 +31,12 @@ def isCube(n,cubes):
 	c=int(n**(1/3.))
 	return(c**3==n) or ((c+1)**3==n)
 	
+def alreadyUsed(n,cubes):
+	for n1 in cubes:
+		if(n1[0]==n):
+			return(n1)
+	return(-1)
+	
 def translateNum(num):
 	newNum=[0,0,0,0,0,0,0,0,0,0]
 	for n in range(len(str(num))):
@@ -44,8 +50,8 @@ cubes=[]
 num=0
 while(3 not in cubes):
 	num+=1
-	if():
-		cubes[][1]+=1
+	if(alreadyUsed(num**3,cubes)!=-1):
+		cubes[alreadyUsed(num**3,cubes)][1]+=1
 	else:
 		cubes.append([translateNum(num**3),1])
 
