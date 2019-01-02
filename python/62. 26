@@ -34,11 +34,14 @@ def translateNum(num):
 
 cubes=[]
 num=0
-while(5 not in [i[1] for i in cubes]):
+while(False):#5 not in [i[1] for i in cubes]
 	num+=1
 	if(translateNum(num**3) in [i[0] for i in cubes]):#num**3 in [i[0] for i in cubes]
 		cubes[alreadyUsed(num**3,cubes)][1]+=1
 	else:
 		cubes.append([translateNum(num**3),1])
+	if(3 in [i[1] for i in cubes]):
+		print(findSmallCube((num-1)**3))
+		cubes=[i for i in cubes if i[1]!=3]
 print(findSmallCube((num-1)**3))
 #TODO: test current output to see if it has 5 permutation cubes
