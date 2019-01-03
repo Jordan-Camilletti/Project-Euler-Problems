@@ -2,7 +2,7 @@
 
 Find the smallest cube for which exactly five permutations of its digits are cube."""
 
-def translateNum(num):
+def translateNum(num):#Added this function just so that the main code wouldn't look so messy
 	return(''.join(sorted(str(num))))
 
 cubes=[]#I know I could have combined 'cubes' and 'used' into a 2D array
