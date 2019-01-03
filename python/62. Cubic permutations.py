@@ -2,45 +2,13 @@
 
 Find the smallest cube for which exactly five permutations of its digits are cube."""
 
-from itertools import permutations
-
-def findPerms(num):
-	nums=[num]
-	for perm in permutations(int(i) for i in str(num)):
-		n=0
-		for p in perm:
-			n=(n*10)+p
-		if(isCube(n) and n not in nums):
-			nums.append(n)
-	return(nums)
-	
-def findSmallCube(num):
-	small=num
-	for perm in permutations(int(i) for i in str(num)):
-		n=0
-		for p in perm:
-			n=(n*10)+p
-		if(isCube(n) and n<small):
-			small=n
-	return(small)
-		
-def isCube(n):
-	c=int(n**(1/3.))
-	return(c**3==n) or ((c+1)**3==n)
-	
-def alreadyUsed(n,cubes):
-	#return(i for i in cubes if i[0]==n)
-	for n1 in cubes:
-		if(n1[0]==n):
-			return(n1)
-	return(-1)
-	
 def translateNum(num):
 	return(''.join(sorted(str(num))))
 
 cubes=[]
 used=[]
 num=0
+n=0
 while(5 not in used):#5 not in [i[1] for i in cubes]
 	if(translateNum(num**3) in cubes):
 		used[cubes.index(translateNum(num**3))]+=1
@@ -48,13 +16,6 @@ while(5 not in used):#5 not in [i[1] for i in cubes]
 		cubes.append(translateNum(num**3))
 		used.append(1)
 	num+=1
-	#print(num)
-	#print(num**3)
-	#print(cubes)
-print((num-1)**3)
-for n in range(num):
-	if(translateNum(n**3)==translateNum((num-1)**3)):
-		print(n**3)
-print(findSmallCube((num-1)**3))
-print(findPerms((num-1)**3))
-#TODO: test current output to see if it has 5 permutation cubes
+while(translateNum(n**3)!=translateNum((num-1)**3)):
+	n+=1
+print(n**3)
