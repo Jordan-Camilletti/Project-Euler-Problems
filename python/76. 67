@@ -1,7 +1,2 @@
 """
 """
-
-startNum=5
-ways=1
-nums=[startNum]
-while(len(nums)<startNum):
