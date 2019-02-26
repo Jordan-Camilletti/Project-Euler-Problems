@@ -1,4 +1,5 @@
-"""https://projecteuler.net/problem=76"""
+"""https://projecteuler.net/problem=76
+"""
 
 def ways(num1,num2=0,t=0):
 	print(str(num1)+" X "+str(num2))
