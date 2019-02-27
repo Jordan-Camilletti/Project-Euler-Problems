@@ -1,7 +1,7 @@
 """https://projecteuler.net/problem=76
 """
 
-def ways(num1,num2=0,t=0):
+def ways(num1,num2=0):
 	print(str(num1)+" X "+str(num2))
 	if(num1<num2):
 		return(0)
