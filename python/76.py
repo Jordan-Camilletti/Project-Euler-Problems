@@ -5,7 +5,6 @@ num=5
 ways=0
 nums=[0]*num
 nums[0]=num
-print(nums)
 while(0 in nums):
 	print(nums)
 	ways+=1
