@@ -1,20 +1,19 @@
 """https://projecteuler.net/problem=76
 """
 
-def ways(num1,num2=0):
-	print(str(num1)+" X "+str(num2))
-	if(num1<num2):
-		return(0)
-	if(num1==1 and num2==0):
-		print("\n")
-		return(1)
-	if(num2==0):
-		print("\n")
-		return(1+ways(num1-1,1))
-	if(num1>num2+1):
-		return(ways(num1-1,1)+ways(num2-1))
-	return(ways(num1-1,num2+1)+ways(num2))
-	#return(ways(num2)+ways(num1-1,num2+1))
-	
-print(ways(5))
-print(ways(5)-1)
+num=5
+ways=0
+nums=[0]*num
+nums[0]=num
+print(nums)
+#while(0 in nums):
+print(nums)
+ways+=1
+for n in range(len(nums)-1,-1,-1):
+	if(num[n]==1 and n!=len(nums)-1):
+		nums[n+1]=1
+	elif(num[n]!=0):
+		nums[n+1]+=1
+		nums[n]-=1
+		break
+		
