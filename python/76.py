@@ -3,12 +3,13 @@
 
 def twoToOne(nums):#Transforming 2,1 to 1,1,1
 	rtnNum=nums
-	for num in range(len(rtnNums)-1):
+	for num in range(len(rtnNum)-1):
 		if(rtnNum[num]==2 and rtnNum[num+1]==1):
 			for n in range(len(nums)-1,num+2,-1):
 				rtnNum[n]=rtnNum[n-1]
 			for n in range(num,num+3):
-				rtnNum[num]=1
+				rtnNum[n]=1
+	return(rtnNum)
 
 n=5
 ways=0
