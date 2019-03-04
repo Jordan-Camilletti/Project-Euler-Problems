@@ -19,11 +19,13 @@ move=False
 while(0 in nums):
 	ways+=1
 	move=False
-	for num in range(len(nums)):
+	while(nums!=twoToOne(nums)):
+		ways+=1
+		print("X"+twoToOne(nums))
+		nums=twoToOne(nums)
+	for num in range(len(nums)-1,-1,-1):
 		#print(str(num)+" X "+str(nums[num]))
-		if(nums[num]==1 and n!=len(nums)-1):
-			nums[num+1]=1
-		elif(nums[num]!=0):
+		if(nums[num]>1):
 			nums[num+1]+=1
 			nums[num]-=1
 			break
