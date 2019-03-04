@@ -11,7 +11,7 @@ def twoToOne(nums):#Transforming 2,1 to 1,1,1
 				rtnNum[n]=1
 	return(rtnNum)
 
-n=100
+n=10
 ways=0
 nums=[0]*n
 nums[0]=n
@@ -21,12 +21,12 @@ while(0 in nums):
 	move=False
 	for num in range(len(nums)-1,-1,-1):
 		#print(str(num)+" X "+str(nums[num]))
-		if(nums[num]==2 and nums[num+1]==1):
-			nums=twoToOne(nums)
-			break
 		if(nums[num]>1):
 			nums[num+1]+=1
 			nums[num]-=1
+			break
+		if(nums[num]==2 and nums[num+1]==1):
+			nums=twoToOne(nums)
 			break
 	print(nums)
 print(ways)
