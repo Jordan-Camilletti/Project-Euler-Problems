@@ -35,3 +35,4 @@ while(0 in nums):
 			break
 	print(nums)
 print(ways)
+print(ways-1)
