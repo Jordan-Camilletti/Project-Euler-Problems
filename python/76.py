@@ -11,10 +11,12 @@ def twoToOne(nums):#Transforming 2,1 to 1,1,1
 				rtnNum[n]=1
 	return(rtnNum)
 
-def findWays(mainNum,num):
-	if(num==1):
+def findWays(mainNum,num=mainNum-1):
+	if(mainNum<=1):
 		return(1)
-	return(1+findways(mainNum,
+	if(num<=0):
+		return(0)
+	return(1+findways(num)+findWays(mainNum-num))
 	
 n=10
 ways=0
