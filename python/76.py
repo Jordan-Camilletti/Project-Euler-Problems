@@ -1,5 +1,4 @@
-"""https://projecteuler.net/problem=76
-"""
+"""https://projecteuler.net/problem=76"""
 
 def twoToOne(nums):#Transforming 2,1 to 1,1,1
 	rtnNum=nums
