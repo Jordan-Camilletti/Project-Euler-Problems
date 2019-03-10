@@ -1,20 +1,15 @@
 """https://projecteuler.net/problem=76"""
 
-def mainFindWays(mainNum,num):
-	if(num<=1):
-		return(1)
-	return(subFindWays(mainNum,num)+mainFindWays(mainNum,num-1))
-	
-def subFindWays(mainNum,numA):
-	numB=mainNum-numA
-	if(numB<=2):#If numB is 1 or 2, return that number
-		print(("X"*numB)+str(numA)+" : "+str(numB))
-		return(numB)
-	if(numB>numA):
-		print(str(numA)+" : "+str(numB))
-		return(mainFindWays(numA,numA-1)+mainFindWays(numB,numB-1))
-	else:
-		print("X"+str(numA)+" : "+str(numB))
-		return(1+mainFindWays(numA,numA-1)+mainFindWays(numB,numB-1))
-	
-print(mainFindWays(5,4))
+num=6
+currNum=num
+ways=1
+inc=0
+while(currNum>=num/2):
+	ways+=inc
+	inc+=1
+	currNum-=1
+inc-=1
+while(currNum>1):
+	ways+=inc
+	currNum-=1
+print(ways)
