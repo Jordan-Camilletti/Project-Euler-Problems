@@ -8,4 +8,5 @@ code=[]
 with open("keylog.txt","r+") as lines:
     for line in lines.readline():
 		print(line)
+		code=addLog(code,line)
 print(len(code))
