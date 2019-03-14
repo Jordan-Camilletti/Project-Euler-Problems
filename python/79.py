@@ -2,6 +2,7 @@
 https://projecteuler.net/project/resources/p079_keylog.txt"""
 
 def addLog(code,log):
+	code+=log
 	return()
 
 code=[]
