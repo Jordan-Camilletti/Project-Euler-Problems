@@ -6,5 +6,6 @@ def findWaysA(maxXLen,maxYLen):
 			#print("X: "+str(xLen)+"\nY: "+str(yLen)+"\n")
 	return(ways)
 
-tot=0
-print(findWaysA(5,2))
+areaX=1
+areaY=1
+print(findWaysA(3,2))
