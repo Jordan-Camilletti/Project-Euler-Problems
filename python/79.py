@@ -7,7 +7,7 @@ def addLog(code,log):
 
 code=[]
 with open("keylog.txt","r+") as lines:
-    for line in lines.readline():
+	for line in lines:
 		print(line)
-		code=addLog(code,line)
+		#code=addLog(code,line)
 print(len(code))
