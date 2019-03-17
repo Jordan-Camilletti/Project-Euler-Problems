@@ -1,4 +1,4 @@
-def findWaysA(maxXLen,maxYLen):
+def findWays(maxXLen,maxYLen):
 	ways=0
 	for xLen in range(1,maxXLen+1):
 		for yLen in range(1,maxYLen+1):
@@ -8,4 +8,5 @@ def findWaysA(maxXLen,maxYLen):
 
 areaX=1
 areaY=1
-print(findWaysA(3,2))
+print(findWays(3,2))
+#TODO: add main loops for areaX and areaY
