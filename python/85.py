@@ -8,8 +8,6 @@ def findWays(maxXLen,maxYLen):
 
 areaX=1
 areaY=1
-print(findWays(3,2))
-#TODO: add main loops for areaX and areaY
 while(findWays(areaX,areaY)):
 	areaY=1
 	while(areaY<areaX):
