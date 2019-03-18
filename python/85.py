@@ -13,5 +13,6 @@ print(findWays(3,2))
 while(findWays(areaX,areaY)):
 	areaY=1
 	while(areaY<areaX):
-		areaY++
-	areaX++
+		areaY+=1
+	areaX+=1
+print("X: "+str(areaX)+"\nY: "+str(areaY)) 
