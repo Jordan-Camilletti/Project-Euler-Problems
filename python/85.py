@@ -8,10 +8,12 @@ def findWays(maxXLen,maxYLen):
 
 areaX=1
 areaY=1
-while(findWays(areaX,areaY)):
-	print(str(areaX)+" "+str(areaY))
+while(findWays(areaX,areaY)<2000000):
+	print(str(areaX)+" "+str(findWays(areaX,areaY)))
+	"""areaX+=1
+	areaY=areaX"""
 	areaY=1
 	while(areaY<areaX):
 		areaY+=1
 	areaX+=1
-print("X: "+str(areaX)+"\nY: "+str(areaY)+"\nArea: "+(areaX*areaY)) 
+print("X: "+str(areaX)+"\nY: "+str(areaY)+"\nArea: "+str(areaX*areaY)) 
