@@ -14,4 +14,4 @@ while(findWays(areaX,areaY)):
 	while(areaY<areaX):
 		areaY+=1
 	areaX+=1
-print("X: "+str(areaX)+"\nY: "+str(areaY)) 
+print("X: "+str(areaX)+"\nY: "+str(areaY)+"\nArea: "+(areaX*areaY)) 
