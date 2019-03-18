@@ -9,6 +9,7 @@ def findWays(maxXLen,maxYLen):
 areaX=1
 areaY=1
 while(findWays(areaX,areaY)):
+	print(str(areaX)+" "+str(areaY))
 	areaY=1
 	while(areaY<areaX):
 		areaY+=1
