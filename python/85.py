@@ -10,12 +10,6 @@ areaX=1
 areaY=1
 while(findWays(areaX,areaY)<2000000):
 	#print(str(areaX)+" "+str(findWays(areaX,areaY)))
-	areaY=1
-	while(areaY<areaX):#TODO: combind this loop into the main loop
-		if(findWays(areaX,areaY)>2000000):	
-			print(str(areaX*areaY)+" "+str(findWays(areaX,areaY)))
-		areaY+=1
-	areaX+=1
 print("\nX: "+str(areaX)+"\nY: "+str(areaY)+"\nArea: "+str(areaX*areaY)+"\n"+str(findWays(areaX,areaY))) 
 areaY-=1
 print("\nX: "+str(areaX)+"\nY: "+str(areaY)+"\nArea: "+str(areaX*areaY)+"\n"+str(findWays(areaX,areaY))) 
