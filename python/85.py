@@ -14,6 +14,7 @@ while(findWays(areaX,areaY)<2000000):
 	if(areaY>=areaX):
 		areaX+=1
 		areaY=1
+		
 print("\nX: "+str(areaX)+"\nY: "+str(areaY)+"\nArea: "+str(areaX*areaY)+"\n"+str(findWays(areaX,areaY))) 
 areaY-=1
 print("\nX: "+str(areaX)+"\nY: "+str(areaY)+"\nArea: "+str(areaX*areaY)+"\n"+str(findWays(areaX,areaY))) 
