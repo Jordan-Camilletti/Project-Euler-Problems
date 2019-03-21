@@ -11,7 +11,7 @@ areaY=1
 while(findWays(areaX,areaY)<2000000):
 	#print(str(areaX)+" "+str(findWays(areaX,areaY)))
 	areaY+=1
-	if(areaY>=areaX):
+	if(areaY>areaX):
 		areaX+=1
 		areaY=1
 		
