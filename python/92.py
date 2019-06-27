@@ -14,3 +14,9 @@ def findNewSquare(num):
 	return(0)
 	
 currNum=0
+sol1=[]#Numbers that lead to 1
+sol89=[]#Numbers that lead to 89
+while(currNum<10000000):
+	currNum+=1
+	
+	
