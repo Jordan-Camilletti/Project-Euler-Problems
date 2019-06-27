@@ -10,3 +10,7 @@ Therefore any chain that arrives at 1 or 89 will become stuck in an endless loop
 
 How many starting numbers below ten million will arrive at 89?
 """
+def findNewSquare(num):
+	return(0)
+	
+currNum=0
