@@ -50,12 +50,14 @@ def findNewSquare(num, sol1, sol89):
 	if(num in sol89):#TODO: add binary search to these
 		return(-4)
 	sum=0
+	while(num>=1):#TODO: test this
+		sum+=((num%10)**2)
+		num=int(num/10)
+		
 	
 	
 currNum=0
 sol1=[]#Numbers that lead to 1
 sol89=[]#Numbers that lead to 89
-while(currNum<10000000):
-	currNum+=1
-	
-	
+"""while(currNum<10000000):
+	currNum+=1"""
