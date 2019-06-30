@@ -51,7 +51,7 @@ def findNewSquare(num, sol1, sol89):
 		return(-4)
 	sum=0
 	while(num>=1):#TODO: test this
-		sum+=((num%10)**2)
+		sum+=((num%10)*(num%10))
 		num=int(num/10)
 		
 	
