@@ -51,13 +51,24 @@ def findNewSquare(num, sol1, sol89):
 		return(-4)
 	sum=0
 	while(num>=1):#TODO: test this
-		sum+=((num%10)**2)
+		sum+=((num%10)*(num%10))
 		num=int(num/10)
+	return(findNewSquare(sum,sol1,sol89))
 		
 	
 	
 currNum=0
 sol1=[]#Numbers that lead to 1
 sol89=[]#Numbers that lead to 89
-"""while(currNum<10000000):
-	currNum+=1"""
+total=0
+while(currNum<10000000):
+	currNum+=1
+	currSum=findNewSquare(currNum,sol1,sol89)
+	if(currSum==-1):#Leads to new 1
+		sol1.append(currNum)
+	elif(currSum==-3):#Leads to new 89
+		sol89.append(currNum)
+		total+=1
+	elif(currSum==-4):#Leads to old 89
+		total+=1
+print(total)
