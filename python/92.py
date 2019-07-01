@@ -53,6 +53,7 @@ def findNewSquare(num, sol1, sol89):
 	while(num>=1):#TODO: test this
 		sum+=((num%10)*(num%10))
 		num=int(num/10)
+	return(findNewSquare(sum,sol1,sol89))
 		
 	
 	
@@ -61,3 +62,4 @@ sol1=[]#Numbers that lead to 1
 sol89=[]#Numbers that lead to 89
 """while(currNum<10000000):
 	currNum+=1"""
+print(findNewSquare(44,sol1,sol89))
