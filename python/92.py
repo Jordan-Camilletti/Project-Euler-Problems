@@ -65,10 +65,10 @@ while(currNum<10000000):
 	currNum+=1
 	currSum=findNewSquare(currNum,sol1,sol89)
 	if(currSum==-1):#Leads to new 1
-		sol1.add(currNum)
-	else if(currSum==-3):#Leads to new 89
-		sol89.add(currNum)
+		sol1.append(currNum)
+	elif(currSum==-3):#Leads to new 89
+		sol89.append(currNum)
 		total+=1
-	else if(currSum==-4):#Leads to old 89
+	elif(currSum==-4):#Leads to old 89
 		total+=1
-	
+print(total)
