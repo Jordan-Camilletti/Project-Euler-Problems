@@ -58,8 +58,12 @@ def findNewSquare(num, sol1, sol89):
 	
 	
 currNum=0
-sol1=[]#Numbers that lead to 1
+sol1=[10]#Numbers that lead to 1
 sol89=[]#Numbers that lead to 89
-"""while(currNum<10000000):
-	currNum+=1"""
-print(findNewSquare(44,sol1,sol89))
+while(currNum<10000000):
+	currNum+=1
+	currSum=findNewSquare(currNum,sol1,sol89)
+	if(currSum==-1 or currSum==-2):#Leads to 1
+	
+	else if(currSum==-3 or currSum==-4):#Leads to 89
+	
