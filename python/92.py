@@ -41,7 +41,7 @@ def binarySearch (arr, num, l, r):
     # Check base case 
     if r >= l: 
   
-        mid = l + (r - l)/2
+        mid =int(l + (r - l)/2)
   
         # If element is present at the middle itself 
         if arr[mid] == num: 
@@ -96,4 +96,6 @@ while(currNum<10000000):
 		total+=1
 	elif(currSum==-4):#Leads to old 89
 		total+=1
+	if(currNum%100000==0):
+		print(currNum/100000)
 print(total)
