@@ -35,6 +35,9 @@ def binarySearch (arr, l, r, x):
         # Element is not present in the array 
         return -1
 		
+def binarySearch(arr,n,l,r):
+	mid=(l+(r-1))/2
+		
 
 def findNewSquare(num, sol1, sol89):
 	#-1=new number leads to 1
@@ -50,7 +53,7 @@ def findNewSquare(num, sol1, sol89):
 	if(num in sol89):#TODO: add binary search to these
 		return(-4)
 	sum=0
-	while(num>=1):#TODO: test this
+	while(num>=1):
 		sum+=((num%10)*(num%10))
 		num=int(num/10)
 	return(findNewSquare(sum,sol1,sol89))
