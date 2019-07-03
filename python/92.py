@@ -12,20 +12,18 @@ How many starting numbers below ten million will arrive at 89?
 """
 
 # Returns index of num in arr if present, else -1 
-def binarySearch(arr, num, l, r): 
-    # Check base case 
-    if r >= l: 
-        mid=int(l+(r-l)/2)
+def binarySearch(arr, num, left, right): 
+    if(right>=left):#Check base case 
+        mid=int(left+(right-left)/2)
   
         if(arr[mid] == num):#Testing middle 
             return(True)
         elif(arr[mid]>num):#Testing left half
-            return(binarySearch(arr, num, l, mid-1))
+            return(binarySearch(arr, num, left, mid-1))
         else:#Testing right half
-            return(binarySearch(arr, num, mid+1, r))
+            return(binarySearch(arr, num, mid+1, right))
   
-    else: 
-        # Element is not present in the array 
+    else:
         return(False)
 		
 def findNewSquare(num, sol1, sol89):
