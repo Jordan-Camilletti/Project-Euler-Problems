@@ -16,7 +16,7 @@ def binarySearch(arr, num, left, right):
     if(right>=left):#Check base case 
         mid=int(left+(right-left)/2)
   
-        if(arr[mid] == num):#Testing middle 
+        if(arr[mid]==num):#Testing middle 
             return(True)
         elif(arr[mid]>num):#Testing left half
             return(binarySearch(arr, num, left, mid-1))
