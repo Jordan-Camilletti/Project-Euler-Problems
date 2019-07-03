@@ -12,24 +12,16 @@ How many starting numbers below ten million will arrive at 89?
 """
 
 # Returns index of num in arr if present, else -1 
-def binarySearch (arr, num, l, r): 
-  
+def binarySearch(arr, num, l, r): 
     # Check base case 
     if r >= l: 
+        mid=int(l+(r-l)/2)
   
-        mid =int(l + (r - l)/2)
-  
-        # If element is present at the middle itself 
-        if arr[mid] == num: 
+        if(arr[mid] == num):#Testing middle 
             return(True)
-          
-        # If element is smaller than mid, then it can only 
-        # be present in left subarray 
-        elif arr[mid] > num: 
+        elif(arr[mid]>num):#Testing left half
             return(binarySearch(arr, num, l, mid-1))
-  
-        # Else the element can only be present in right subarray 
-        else: 
+        else:#Testing right half
             return(binarySearch(arr, num, mid+1, r))
   
     else: 
