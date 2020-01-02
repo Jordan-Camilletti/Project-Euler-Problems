@@ -4,11 +4,24 @@ By replacing the 3rd and 4th digits of 56**3 with the same digit, this 5-digit n
 
 Find the smallest prime which, by replacing part of the number (not necessarily adjacent digits) with the same digit, is part of an eight prime value family."""
 
-def isPrime(num):
-	return(0)
+def bSearch(num,primes):
+	if(len(primes)<1 or (len(primes)==1 and primes[0]!=num)):
+		return(False)
+	center=int(len(primes)/2)
+	if(num==primes[center]):
+		return(True)
+	elif(num>primes[center]):
+		return(bSearch(num,primes[center:]))
+	else:
+		return(bSearch(num,primes[:center]))
+
+def isPrime(num,primes):
+	if(bSearch(num,primes)):
+		return(True)
+	return(False)
 
 
 primes=[]
 currNum=1
 replacePrimes=0
-while(replacePrimes<8):
+#while(replacePrimes<8):
