@@ -31,12 +31,18 @@ def isPrime(num,primes):
 		i = i + 6
 	return(True)
 
+def primeSwitch(num):
+	#TODO: use this to replace the digits and test for primes
+	return(0)
 
-currNum=10
+primes=[]
+currNum=9
 replacePrimes=0
 while(replacePrimes<8):
-	if(isprime(currNum)):
-		replacePrimes+=1
-		
 	currNum+=1
-	replacePrimes=0
+	replacePrimes=1
+	if(isprime(currNum,primes)):
+		primes.append(currNum)
+		replacePrimes+=primeSwitch(currNum)
+		
+print(currNum)
