@@ -18,10 +18,25 @@ def bSearch(num,primes):
 def isPrime(num,primes):
 	if(bSearch(num,primes)):
 		return(True)
-	return(False)
+	if(n <= 1): 
+		return(False)
+	if(n <= 3): 
+		return(True)
+	if(n % 2 == 0 or n % 3 == 0): 
+		return(False)
+	i = 5
+	while(i * i <= n): 
+		if(n % i == 0 or n % (i + 2) == 0): 
+			return(False)
+		i = i + 6
+	return(True)
 
 
-primes=[]
-currNum=1
+currNum=10
 replacePrimes=0
-#while(replacePrimes<8):
+while(replacePrimes<8):
+	if(isprime(currNum)):
+		replacePrimes+=1
+		
+	currNum+=1
+	replacePrimes=0
