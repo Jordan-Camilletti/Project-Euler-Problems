@@ -32,6 +32,7 @@ def isPrime(num,primes):
 	return(True)
 
 def primeSwitch(num):
+	primeCount=0
 	#TODO: use this to replace the digits and test for primes
 	
 	return(0)
