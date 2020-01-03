@@ -15,12 +15,8 @@ def bSearch(num,primes):
 	else:
 		return(bSearch(num,primes[:center]))
 
-def isPrime(num,primes):
-	if(bSearch(num,primes)):
-		return(True)
-	if(n <= 1): 
-		return(False)
-	if(n <= 3): 
+def isPrime(n,primes):
+	if(bSearch(n,primes)):
 		return(True)
 	if(n % 2 == 0 or n % 3 == 0): 
 		return(False)
@@ -33,11 +29,13 @@ def isPrime(num,primes):
 
 def primeSwitch(num):
 	primeCount=0
+	for n in range(2**len(str(num))):
+		print(#n in binary)
 	#TODO: use this to replace the digits and test for primes
 	
 	return(0)
 
-primes=[]
+primes=[2,3,5,7]
 currNum=9
 replacePrimes=0
 while(replacePrimes<8):
