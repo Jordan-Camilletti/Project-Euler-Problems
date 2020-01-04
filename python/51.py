@@ -32,7 +32,6 @@ def primeSwitch(num):
 	for n in range(2**len(str(num))):
 		print(#n in binary)
 	#TODO: use this to replace the digits and test for primes
-	
 	return(0)
 
 primes=[2,3,5,7]
