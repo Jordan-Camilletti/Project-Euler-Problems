@@ -43,7 +43,6 @@ def primeSwitch(num,n):
 		if(isPrime(int("".join(swapNum)))):
 			currCount+=1
 		
-	#TODO: use this to replace the digits and test for primes
 	return(topCount)
 
 primes=[2,3,5,7]
