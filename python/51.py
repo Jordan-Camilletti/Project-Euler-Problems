@@ -27,34 +27,39 @@ def isPrime(n,primes):
 		i = i + 6
 	return(True)
 
+
+def joinNum(nums):#Turns a integer list into a single int
+	s = ''.join(map(str, nums))
+	return int(s)
+	
 """n=234
 rep=list(str(n))
 rep[1]="4"
 n=int("".join(rep))
 print(n)"""
-def primeSwitch(num,n):
+def primeSwitch(num,n,primes):
 	currCount=0#Primes per digit swap
 	replace=list("{0:b}".format(n+1))
 	replaceNum=list(str(num))
 	for n in range(9):
 		for r in range(len(replace)):
-			if(range[r]=="1"):
+			if(replace[r]=="1"):
 				replaceNum[r]=n
-		if(isPrime(int("".join(swapNum)))):
+		if(isPrime(joinNum(replaceNum),primes)):
 			currCount+=1
 		
-	return(topCount)
+	return(currCount)
 
 primes=[2,3,5,7]
 currNum=9
 replacePrimes=0
 while(replacePrimes<8):
 	currNum+=1
-	if(isprime(currNum,primes)):
+	if(isPrime(currNum,primes)):
 		primes.append(currNum)
 		for n in range(2**len(str(currNum))-1):
 			replacePrimes=0
-			replacePrimes=primeSwitch(currNum,n)
+			replacePrimes=primeSwitch(currNum,n,primes)
 			if(replacePrimes>=8):
 				print(currNum)
 primeSwitch(600)
