@@ -27,6 +27,11 @@ def isPrime(n,primes):
 		i = i + 6
 	return(True)
 
+"""n=234
+rep=list(str(n))
+rep[1]="4"
+n=int("".join(rep))
+print(n)"""
 def primeSwitch(num):
 	primeCount=0
 	for n in range(2**len(str(num))):
@@ -37,16 +42,10 @@ def primeSwitch(num):
 primes=[2,3,5,7]
 currNum=9
 replacePrimes=0
-
-n=234
-rep=list(str(n))
-rep[1]="4"
-n=int("".join(rep))
-print(n)
-"""while(replacePrimes<8):
+while(replacePrimes<8):
 	currNum+=1
 	if(isprime(currNum,primes)):
 		primes.append(currNum)
-		replacePrimes=primeSwitch(currNum)"""
+		replacePrimes=primeSwitch(currNum)
 		
 print(currNum)
