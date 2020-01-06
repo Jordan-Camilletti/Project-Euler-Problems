@@ -32,12 +32,19 @@ rep=list(str(n))
 rep[1]="4"
 n=int("".join(rep))
 print(n)"""
-def primeSwitch(num):
-	primeCount=0
-	for n in range(2**len(str(num))):
-		print(2)#n in binary)
+def primeSwitch(num,n):
+	currCount=0#Primes per digit swap
+	replace=list("{0:b}".format(n+1))
+	replaceNum=list(str(num))
+	for n in range(9):
+		for r in range(len(replace)):
+			if(range[r]=="1"):
+				replaceNum[r]=n
+		if(isPrime(int("".join(swapNum)))):
+			currCount+=1
+		
 	#TODO: use this to replace the digits and test for primes
-	return(0)
+	return(topCount)
 
 primes=[2,3,5,7]
 currNum=9
@@ -46,6 +53,11 @@ while(replacePrimes<8):
 	currNum+=1
 	if(isprime(currNum,primes)):
 		primes.append(currNum)
-		replacePrimes=primeSwitch(currNum)
+		for n in range(2**len(str(currNum))-1):
+			replacePrimes=0
+			replacePrimes=primeSwitch(currNum,n)
+			if(replacePrimes>=8):
+				print(currNum)
+primeSwitch(600)
 		
 print(currNum)
