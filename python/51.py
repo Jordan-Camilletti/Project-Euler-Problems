@@ -30,17 +30,23 @@ def isPrime(n,primes):
 def primeSwitch(num):
 	primeCount=0
 	for n in range(2**len(str(num))):
-		print(#n in binary)
+		print(2)#n in binary)
 	#TODO: use this to replace the digits and test for primes
 	return(0)
 
 primes=[2,3,5,7]
 currNum=9
 replacePrimes=0
-while(replacePrimes<8):
+
+n=234
+rep=list(str(n))
+rep[1]="4"
+n=int("".join(rep))
+print(n)
+"""while(replacePrimes<8):
 	currNum+=1
 	if(isprime(currNum,primes)):
 		primes.append(currNum)
-		replacePrimes=primeSwitch(currNum)
+		replacePrimes=primeSwitch(currNum)"""
 		
 print(currNum)
