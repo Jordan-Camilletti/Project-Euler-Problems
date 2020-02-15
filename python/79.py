@@ -6,3 +6,5 @@ Given that the three characters are always asked for in order, analyse the file 
 
 def contains(int main, int value):
   return(false)
+
+checks=[]
