@@ -8,3 +8,6 @@ def contains(int main, int value):
   return(false)
 
 checks=[]
+file=open("keylog.txt")
+for log in files:
+  checks+=log
