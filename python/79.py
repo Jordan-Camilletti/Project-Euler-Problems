@@ -11,3 +11,4 @@ checks=[]
 file=open("keylog.txt")
 for log in files:
   checks+=log
+print(checks)
