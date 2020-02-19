@@ -8,9 +8,6 @@ def contains(main, value, size):
 """	-1: not found
 	0 : value matches front of main
 	1 : value matches back of main"""
-	for n in range(len(main)-size+1):
-		if(main[n:n+size]==value):
-			return(True)
 	return(-1)
 	
 def combine(values):
@@ -18,8 +15,10 @@ def combine(values):
 It adds or combines these values into a 2nd array, which it then returns"""
 	combinedValues=[values[0]]
 	del(values[0])
+	for val in values:
+		
 
-values=[]#individual 3len codes
+values=[]#individual 3-len codes
 file=open("keylog.txt")
 for n in file.read().split("\n"):
 	values.append(n+"")
