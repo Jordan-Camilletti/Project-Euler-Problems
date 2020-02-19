@@ -5,9 +5,14 @@ The text file, keylog.txt, contains fifty successful login attempts.
 Given that the three characters are always asked for in order, analyse the file so as to determine the shortest possible secret passcode of unknown length."""
 
 def contains(main, value):
-  return(false)
+	for n in range(len(str(main))-2):
+		if(int(str(main)[n:n+3])==value):
+			return(True)
+	return(False)
 
 checks=[]
 file=open("keylog.txt")
-print(file.read())
+for n in file.read().split("\n"):
+	print(n+"X")
 file.close()
+print(contains(123456789,436))
