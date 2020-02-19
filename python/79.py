@@ -9,6 +9,5 @@ def contains(main, value):
 
 checks=[]
 file=open("keylog.txt")
-for log in file:
-  checks+=log
-print(checks)
+print(file.read())
+file.close()
