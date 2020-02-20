@@ -27,6 +27,9 @@ def combine(values):
 		result=addOn(val,values,combinedValues)
 		values=result[0]
 		combinedValues=result[1]
+		print(values)
+		print(combinedValues)#TODO: look into this index error
+		print("\n")
 	return(combinedValues)
 	"""for l in range(len(values[val])):
 		for cVal in range(len(combinedValues)):
@@ -55,6 +58,10 @@ def addOn(val, values, combinedValues):
 				del(values[val])
 				rtn=[values,combinedValues]
 				return(rtn)
+	combinedValues.append(values[val])
+	del(values[val])
+	rtn=[values,combinedValues]
+	return(rtn)
 
 values=[]#individual 3-len codes
 file=open("keylog.txt")
@@ -65,4 +72,5 @@ file.close()
 
 while(len(values)>1):
 	values=combine(values)
+print(values)
 print(len(values[0]))
