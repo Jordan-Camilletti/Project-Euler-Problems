@@ -4,25 +4,38 @@ The text file, keylog.txt, contains fifty successful login attempts.
 
 Given that the three characters are always asked for in order, analyse the file so as to determine the shortest possible secret passcode of unknown length."""
 
+"""	0: not found
+	>0: value is found at end of main
+	<0: value is found at start of main
+	This returns the length of character shared between main and value"""
 def contains(main, value, size):
-"""	-1: not found
-	0 : value matches front of main
-	1 : value matches back of main"""
-	return(-1)
+	if(size==0 and main==value):
+		return(size)
+	if(value[(size*-1):]==main[:size]):#Found at start of main
+		return(size*-1)
+	if(main[(size*-1):]==value[:size]):#Found at end of main
+		return(size)
+	return(0)#Not found
 	
-def combine(values):
 """This takes a list of values amd iterates through it once
 It adds or combines these values into a 2nd array, which it then returns"""
+def combine(values):
 	combinedValues=[values[0]]
 	del(values[0])
 	for val in values:
-		
+		for l in range(len(str(val))):
+			for cVal in combinedValues:
+				contain=contains(cVal,val,l)
+				#if(contain>0):
+				#elif(contain<0):
 
 values=[]#individual 3-len codes
 file=open("keylog.txt")
 for n in file.read().split("\n"):
-	values.append(n+"")
+	if(n+"" not in values):
+		values.append(n+"")
 file.close()
-while(len(values)>1):
+print(values)
+"""while(len(values)>1):
 	values=combine(values)
-print(len(values[0]))
+print(len(values[0]))"""
