@@ -24,49 +24,37 @@ def combine(values):
 	combinedValues=[values[0]]
 	del(values[0])
 	while(values):
-		result=addOn(0,values,combinedValues)
+		result=addOn(values,combinedValues)
 		values=result[0]
 		combinedValues=result[1]
-		#print(values)
-		#print(combinedValues)#TODO: look into this index error
-		#print("\n")
 	return(combinedValues)
-	"""for l in range(len(values[val])):
-		for cVal in range(len(combinedValues)):
-			contain=contains(combinedValues[cVal],values[val],l)
-			if(contain>0):#Add value on to the end
-				combinedValues[cVal]=combinedValues[cVal][:(-1*contain)]+values[val]
-				del(values[val])
-			elif(contain<0):#Add value on to the start
-				combinedValues[cVal]=values[val][:contain]+combinedValues[cVal]
-				del(values[val])"""
 
 """This goes through the process of adding the 2
 It was put into its own array to allow it to stop once they combined
 Returns a 2D array, [0] is values, [1] is combinedValues"""
-def addOn(val, values, combinedValues):
-	for l in range(len(values[val])):
+def addOn(values, combinedValues):
+	for l in range(len(values[0])):
 		for cVal in range(len(combinedValues)):
-			contain=contains(combinedValues[cVal],values[val],l)
+			contain=contains(combinedValues[cVal],values[0],l)
 			if(contain>0):#Add value on to the end
-				combinedValues[cVal]=combinedValues[cVal][:(-1*contain)]+values[val]
-				del(values[val])
+				combinedValues[cVal]=combinedValues[cVal][:(-1*contain)]+values[0]
+				del(values[0])
 				rtn=[values,combinedValues]
 				return(rtn)
 			elif(contain<0):#Add value on to the start
-				combinedValues[cVal]=values[val][:contain]+combinedValues[cVal]
-				del(values[val])
+				combinedValues[cVal]=values[0][:contain]+combinedValues[cVal]
+				del(values[0])
 				rtn=[values,combinedValues]
 				return(rtn)
-	combinedValues.append(values[val])
-	del(values[val])
+	combinedValues.append(values[0])
+	del(values[0])
 	rtn=[values,combinedValues]
 	return(rtn)
 
-values=[]#individual 3-len codes
-file=open("keylog.txt")
+values=[]
+file=open("keylog.txt")#individual 3-len codes
 for n in file.read().split("\n"):
-	if(n+"" not in values):
+	if(n+"" not in values):#Doesn't add dups
 		values.append(n+"")
 file.close()
 
