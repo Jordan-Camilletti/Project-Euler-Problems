@@ -23,13 +23,13 @@ Returns an array of combined values"""
 def combine(values):
 	combinedValues=[values[0]]
 	del(values[0])
-	for val in range(len(values)):
-		result=addOn(val,values,combinedValues)
+	while(values):
+		result=addOn(0,values,combinedValues)
 		values=result[0]
 		combinedValues=result[1]
-		print(values)
-		print(combinedValues)#TODO: look into this index error
-		print("\n")
+		#print(values)
+		#print(combinedValues)#TODO: look into this index error
+		#print("\n")
 	return(combinedValues)
 	"""for l in range(len(values[val])):
 		for cVal in range(len(combinedValues)):
