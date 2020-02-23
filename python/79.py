@@ -10,8 +10,3 @@ for n in file.read().split("\n"):
 	if(n+"" not in values):#Doesn't add dups
 		values.append(n+"")
 file.close()
-
-while(len(values)>1):
-	values=combine(values)
-print(values)
-print(len(values[0]))
