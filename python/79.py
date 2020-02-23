@@ -5,8 +5,11 @@ The text file, keylog.txt, contains fifty successful login attempts.
 Given that the three characters are always asked for in order, analyse the file so as to determine the shortest possible secret passcode of unknown length."""
 
 values=[]
+finalCode=""
 file=open("keylog.txt")#individual 3-len codes
 for n in file.read().split("\n"):
 	if(n+"" not in values):#Doesn't add dups
 		values.append(n+"")
 file.close()
+print(finalCode)
+print(len(finalCode))
