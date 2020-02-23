@@ -1,0 +1,23 @@
+package main;
+
+import java.io.*;
+import java.util.ArrayList;
+
+public class Main{
+	public static void main(String[] args){
+		ArrayList<String> values=new ArrayList<String>();
+		try{
+			File f=new File("keylog");
+			BufferedReader br=new BufferedReader(new FileReader(f));
+			String line;
+			while((line=br.readLine())!=null){
+				values.add(line);
+			}
+		}catch(FileNotFoundException e){
+			System.out.println(e);
+		}catch(IOException e){
+			System.out.println(e);
+		}
+		System.out.println(values);
+	}
+}
