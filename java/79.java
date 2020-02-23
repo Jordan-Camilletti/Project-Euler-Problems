@@ -29,9 +29,12 @@ public class Main{
 					if(nums.get(vals[1])==null){
 						nums.put(vals[1], new ArrayList<String>());
 					}
-					nums.get(vals[0]).add(vals[1]);
-					nums.get(vals[0]).add(vals[2]);
-					nums.get(vals[1]).add(vals[2]);
+					if(!nums.get(vals[0]).contains(vals[1]))//Doesn't add duplicates
+						nums.get(vals[0]).add(vals[1]);
+					if(!nums.get(vals[0]).contains(vals[2]))
+						nums.get(vals[0]).add(vals[2]);
+					if(!nums.get(vals[1]).contains(vals[2]))
+						nums.get(vals[1]).add(vals[2]);
 				}
 			}
 		}catch(FileNotFoundException e){
