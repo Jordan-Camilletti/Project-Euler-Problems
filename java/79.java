@@ -12,15 +12,27 @@ import java.util.Map;
 
 public class Main{
 	public static void main(String[] args){
-		ArrayList<String> values=new ArrayList<String>();
+		ArrayList<String> values=new ArrayList<String>();//Original 3 length codes
 		String password="";
-		Map<String, String> nums=new HashMap<String, String>();
+		Map<String, ArrayList<String>> nums=new HashMap<String, ArrayList<String>>();
 		try{
-			File f=new File("keylog");
+			File f=new File("keylog");//Reading file
 			BufferedReader br=new BufferedReader(new FileReader(f));
 			String line;
 			while((line=br.readLine())!=null){
-				values.add(line);
+				if(!values.contains(line)){//Doesn't add duplicates
+					values.add(line);
+					String[] vals=line.split("");//Used to get each individual number in the code
+					if(nums.get(vals[0])==null){
+						nums.put(vals[0], new ArrayList<String>());
+					}
+					if(nums.get(vals[1])==null){
+						nums.put(vals[1], new ArrayList<String>());
+					}
+					nums.get(vals[0]).add(vals[1]);
+					nums.get(vals[0]).add(vals[2]);
+					nums.get(vals[1]).add(vals[2]);
+				}
 			}
 		}catch(FileNotFoundException e){
 			System.out.println(e);
@@ -28,5 +40,6 @@ public class Main{
 			System.out.println(e);
 		}
 		System.out.println(values);
+		System.out.println(nums);
 	}
 }
