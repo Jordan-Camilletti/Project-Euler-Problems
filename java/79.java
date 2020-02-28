@@ -68,7 +68,7 @@ public class Main{
 			System.out.println(e);
 		}
 		//System.out.println(values);
-		//System.out.println(nums);//Numbers found along with an array of what numbers come after it
+		System.out.println(nums);//Numbers found along with an array of what numbers come after it
 		while(!isEmpty(nums)){
 			//System.out.println(isEmpty(nums));
 			longest=getLongest(nums);
