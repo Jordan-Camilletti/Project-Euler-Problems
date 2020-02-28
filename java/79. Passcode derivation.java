@@ -15,24 +15,12 @@ public class Main{
 		int longest=0;
 		String rtn="";
 		for(Map.Entry<String, ArrayList<String>> entry:m.entrySet()){
-			if(entry.getValue().size()>longest){
+			if(entry.getValue().size()>=longest){
 				longest=entry.getValue().size();
 				rtn=entry.getKey();
 			}
 		}
 		return(rtn);
-	}
-	
-	public static boolean isEmpty(Map<String, ArrayList<String>> m){//Returns if the array lists within map have any values in them
-		for(Map.Entry<String, ArrayList<String>> entry:m.entrySet()){
-			if(entry.getValue().size()>0)
-				return(false);
-		}
-		return(true);
-	}
-	
-	public static Map<String, ArrayList<String>> removeNum(Map<String, ArrayList<String>> m, int num){//Returns the original map without the num key
-		return(m);
 	}
 	
 	public static void main(String[] args){
@@ -48,18 +36,15 @@ public class Main{
 				if(!values.contains(line)){//Doesn't add duplicates
 					values.add(line);
 					String[] vals=line.split("");//Used to get each individual number in the code
-					if(nums.get(vals[0])==null){
-						nums.put(vals[0], new ArrayList<String>());
+					for(int n=0;n<3;n++){
+						if(nums.get(vals[n])==null){
+							nums.put(vals[n], new ArrayList<String>());
+						}
 					}
-					if(nums.get(vals[1])==null){
-						nums.put(vals[1], new ArrayList<String>());
+					for(int n=1;n<=3;n++){//This is just a fancy way of counting 00->01->02->12
+						if(!nums.get(vals[n/3]).contains(vals[1+(n/2)]))
+							nums.get(vals[n/3]).add(vals[1+(n/2)]);
 					}
-					if(!nums.get(vals[0]).contains(vals[1]))//Doesn't add duplicates
-						nums.get(vals[0]).add(vals[1]);
-					if(!nums.get(vals[0]).contains(vals[2]))
-						nums.get(vals[0]).add(vals[2]);
-					if(!nums.get(vals[1]).contains(vals[2]))
-						nums.get(vals[1]).add(vals[2]);
 				}
 			}
 		}catch(FileNotFoundException e){
@@ -68,9 +53,8 @@ public class Main{
 			System.out.println(e);
 		}
 		//System.out.println(values);
-		System.out.println(nums);//Numbers found along with an array of what numbers come after it
-		while(!isEmpty(nums)){
-			//System.out.println(isEmpty(nums));
+		//System.out.println(nums);//Numbers found along with an array of what numbers come after it
+		while(nums.size()>0){
 			longest=getLongest(nums);
 			//System.out.println(longest);
 			password+=longest;
