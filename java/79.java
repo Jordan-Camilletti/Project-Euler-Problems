@@ -11,10 +11,35 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Main{
+	public static String getLongest(Map<String, ArrayList<String>> m){//Returns the map value with the longest array list
+		int longest=0;
+		String rtn="";
+		for(Map.Entry<String, ArrayList<String>> entry:m.entrySet()){
+			if(entry.getValue().size()>longest){
+				longest=entry.getValue().size();
+				rtn=entry.getKey();
+			}
+		}
+		return(rtn);
+	}
+	
+	public static boolean isEmpty(Map<String, ArrayList<String>> m){//Returns if the array lists within map have any values in them
+		for(Map.Entry<String, ArrayList<String>> entry:m.entrySet()){
+			if(entry.getValue().size()>0)
+				return(false);
+		}
+		return(true);
+	}
+	
+	public static Map<String, ArrayList<String>> removeNum(Map<String, ArrayList<String>> m, int num){//Returns the original map without the num key
+		return(m);
+	}
+	
 	public static void main(String[] args){
 		ArrayList<String> values=new ArrayList<String>();//Original 3 length codes
 		String password="";
-		Map<String, ArrayList<String>> nums=new HashMap<String, ArrayList<String>>();//maps numbers to list of numbers after it
+		String longest;
+		Map<String, ArrayList<String>> nums=new HashMap<String, ArrayList<String>>();
 		try{
 			File f=new File("keylog");//Reading file
 			BufferedReader br=new BufferedReader(new FileReader(f));
@@ -42,7 +67,15 @@ public class Main{
 		}catch(IOException e){
 			System.out.println(e);
 		}
-		System.out.println(values);
-		System.out.println(nums);//Numbers found along with an array of what numbers come after it
+		//System.out.println(values);
+		//System.out.println(nums);//Numbers found along with an array of what numbers come after it
+		while(!isEmpty(nums)){
+			//System.out.println(isEmpty(nums));
+			longest=getLongest(nums);
+			//System.out.println(longest);
+			password+=longest;
+			nums.remove(longest);
+		}		
+		System.out.println(password);
 	}
 }
