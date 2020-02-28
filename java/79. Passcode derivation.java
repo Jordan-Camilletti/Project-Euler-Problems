@@ -54,11 +54,11 @@ public class Main{
 		}
 		//System.out.println(values);
 		//System.out.println(nums);//Numbers found along with an array of what numbers come after it
-		while(nums.size()>0){
-			longest=getLongest(nums);
+		while(nums.size()>0){//Loops through until all digits have been added
+			longest=getLongest(nums);//Gets number in front of the most digits and adds it to the front
 			//System.out.println(longest);
 			password+=longest;
-			nums.remove(longest);
+			nums.remove(longest);//Removes said number from map
 		}		
 		System.out.println(password);
 	}
