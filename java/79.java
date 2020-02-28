@@ -14,7 +14,7 @@ public class Main{
 	public static void main(String[] args){
 		ArrayList<String> values=new ArrayList<String>();//Original 3 length codes
 		String password="";
-		Map<String, ArrayList<String>> nums=new HashMap<String, ArrayList<String>>();
+		Map<String, ArrayList<String>> nums=new HashMap<String, ArrayList<String>>();//maps numbers to list of numbers after it
 		try{
 			File f=new File("keylog");//Reading file
 			BufferedReader br=new BufferedReader(new FileReader(f));
@@ -43,6 +43,6 @@ public class Main{
 			System.out.println(e);
 		}
 		System.out.println(values);
-		System.out.println(nums);
+		System.out.println(nums);//Numbers found along with an array of what numbers come after it
 	}
 }
