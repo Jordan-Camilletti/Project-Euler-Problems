@@ -12,6 +12,9 @@ Using triangles.txt (right click and 'Save Link/Target As...'), a 27K text file 
 
 NOTE: The first two examples in the file represent the triangles in the example given above."""
 
+def hasOrigin(triangle)
+  return(false)
+
 triangle=[0,0,0]
 with open('triangles.txt', 'r') as r:
   print(r)
