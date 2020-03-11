@@ -12,7 +12,7 @@ Using triangles.txt (right click and 'Save Link/Target As...'), a 27K text file 
 
 NOTE: The first two examples in the file represent the triangles in the example given above."""
 
-def hasOrigin(triangle)
+def hasOrigin(triangle):#Checks if the triangle has the origin within the given points
   return(false)
 
 triangle=[[0,0],[0,0],[0,0]]
