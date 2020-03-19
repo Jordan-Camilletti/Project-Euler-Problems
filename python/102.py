@@ -12,8 +12,8 @@ def hasOrigin(triangle):#Checks if the triangle has the origin within the given 
 sum=0
 triangle=[[0,0],[0,0],[0,0]]
 with open('triangles.txt', 'r') as r:
-  print(r)
-  triangle=r
-  if(hasOrigin(triangle)):
-	sum+=1
+	print(r)
+	triangle=r
+	if(hasOrigin(triangle)):
+		sum+=1
 print(sum)
