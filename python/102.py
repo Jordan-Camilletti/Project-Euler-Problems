@@ -16,4 +16,5 @@ with open('triangles.txt', 'r') as r:
 	triangle=r
 	if(hasOrigin(triangle)):
 		sum+=1
+		
 print(sum)
