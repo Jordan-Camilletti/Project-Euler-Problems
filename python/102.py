@@ -10,7 +10,7 @@ def hasOrigin(triangle):#Checks if the triangle has the origin within the given 
   return(false)
 
 def getSlope(pA,pB):#Returns the slope between two points
-	return(0)
+	return((pB[1]-pA[1])/(pB[0]-pA[0]))
 
 sum=0
 triangle=[[0,0],[0,0],[0,0]]
