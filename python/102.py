@@ -9,6 +9,9 @@ NOTE: The first two examples in the file represent the triangles in the example 
 def hasOrigin(triangle):#Checks if the triangle has the origin within the given points
   return(false)
 
+def getSlope(pA,pB):#Returns the slope between two points
+	return(0)
+
 sum=0
 triangle=[[0,0],[0,0],[0,0]]
 with open('triangles.txt', 'r') as r:
